@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Pengaduan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2>LOGO</h2>
+      <p><strong>Pengaduan Sekolah</strong></p>
+      <ul>
+        <li>Dashboard</li>
+        <li>Buat Laporan</li>
+        <li>Riwayat Laporan</li>
+        <li>Tanggapan</li>
+        <li>Respon</li>
+        <li>Cetak Laporan</li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <div class="topbar">
+        <div class="notif">🔔 Notifikasi</div>
+        <div class="profile-dropdown">
+          <div class="profile-icon" onclick="toggleDropdown()">👤</div>
+          <div id="dropdown-menu" class="dropdown-menu">
+            <a href="#">Edit Profil</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="dashboard-title">Selamat Datang</div>
+
+      <div class="boxes">
+        <div class="box">
+          <h3>Total Laporan</h3>
+          <p>2</p>
+        </div>
+        <div class="box">
+          <h3>Total Tanggapan</h3>
+          <p>5</p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function toggleDropdown() {
+        const menu = document.getElementById("dropdown-menu");
+        menu.classList.toggle("show");
+      }
+
+      // Optional: Hide dropdown when clicking outside
+      window.addEventListener("click", function (e) {
+        const menu = document.getElementById("dropdown-menu");
+        if (!e.target.closest(".profile-dropdown")) {
+          menu.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>
