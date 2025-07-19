@@ -9,6 +9,12 @@
 </head>
 
 <body class="flex bg-gray-100 min-h-screen">
+	<!-- Tombol Toggle Sidebar (untuk mobile) -->
+	<button id="toggleSidebar" class="sm:hidden fixed top-4 left-4 z-50 p-2 bg-blue-900 text-white rounded">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+		</svg>
+	</button>
 	<!-- Sidebar -->
 	<aside class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg">
 		<div class="text-center mb-10">
@@ -42,7 +48,7 @@
 				</svg>
 				Riwayat Laporan
 			</a>
-			<a href="#" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -50,7 +56,7 @@
 				</svg>
 				Tanggapan
 			</a>
-			<a href="#" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="respon.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -58,7 +64,7 @@
 				</svg>
 				Respon
 			</a>
-			<a href="#" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="cetak-laporan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -116,146 +122,95 @@
 		<!-- Laporan Items -->
 		<div id="laporan-container" class="space-y-4">
 
-			<!-- Item 1 -->
-			<div data-status="proses" data-id="123"
+			<!-- Laporan 1 -->
+			<div data-status="pending"
 				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="" class="w-16 h-16 mx-auto rounded-lg object-cover" />
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
 					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Rina Maulida</div>
-					<div class="font-medium text-gray-900">Jalan Utama</div>
-					<div class="text-xs text-gray-600">Jalan utama yang menghubungkan gedung sekolah ke asrama mengalami
-						banyak lubang dan membahayakan keselamatan siswa.</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
+					<div class="font-medium text-gray-900">Pintu Gerbang Utama</div>
+					<div class="text-xs text-gray-600">Pintu gerbang utama rusak dan tidak bisa dikunci, berpotensi
+						menimbulkan masalah keamanan saat malam hari.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Sarana & Prasarana</div>
 				</div>
 				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Mei 2025, 16:30</div>
+					<div class="text-sm font-semibold text-gray-800 mb-2">18 Juli 2025, 07:45</div>
+					<button
+						class="bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Pending</button>
+				</div>
+			</div>
+
+			<!-- Laporan 2 -->
+			<div data-status="proses"
+				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Dimas Prakoso</div>
+					<div class="font-medium text-gray-900">Ruang Multimedia</div>
+					<div class="text-xs text-gray-600">Beberapa komputer di ruang multimedia tidak bisa menyala, mohon
+						segera diperbaiki karena akan digunakan ujian.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Teknisi IT</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">17 Juli 2025, 10:20</div>
 					<button class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Proses</button>
 				</div>
 			</div>
 
-			<!-- Item 2 -->
-			<div data-status="selesai" data-id="123"
+			<!-- Laporan 3 -->
+			<div data-status="selesai"
 				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="" class="w-16 h-16 mx-auto rounded-lg object-cover" />
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: ABC</div>
-					<div class="font-medium text-gray-900">Lorem Ipsum</div>
-					<div class="text-xs text-gray-600">Deskripsi aduan selesai...</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : BK</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Mei 2025, 16:30</div>
-					<button class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Selesai</button>
-				</div>
-			</div>
-
-			<div data-status="selesai" data-id="123"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="" class="w-16 h-16 mx-auto rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: ABC</div>
-					<div class="font-medium text-gray-900">Lorem Ipsum</div>
-					<div class="text-xs text-gray-600">Deskripsi aduan selesai...</div>
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Siti Aminah</div>
+					<div class="font-medium text-gray-900">Toilet Belakang Gedung B</div>
+					<div class="text-xs text-gray-600">Toilet bagian belakang rusak dan air tidak mengalir, sudah
+						diperbaiki sekarang. Terima kasih.</div>
 					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
 				</div>
 				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Mei 2025, 16:30</div>
+					<div class="text-sm font-semibold text-gray-800 mb-2">16 Juli 2025, 08:10</div>
 					<button class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Selesai</button>
 				</div>
 			</div>
 
-			<div data-status="proses" data-id="123"
+			<!-- Laporan 4 -->
+			<div data-status="proses"
 				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="" class="w-16 h-16 mx-auto rounded-lg object-cover" />
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: ABC</div>
-					<div class="font-medium text-gray-900">Lorem Ipsum</div>
-					<div class="text-xs text-gray-600">Deskripsi aduan proses...</div>
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Budi Setiawan</div>
+					<div class="font-medium text-gray-900">Lapangan Basket</div>
+					<div class="text-xs text-gray-600">Beberapa lampu penerangan di lapangan basket mati, mohon diganti
+						agar kegiatan sore lebih aman.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Sarana & Prasarana</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">15 Juli 2025, 17:30</div>
+					<button class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Proses</button>
+				</div>
+			</div>
+
+			<!-- Laporan 5 -->
+			<div data-status="pending"
+				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Nur Hasanah</div>
+					<div class="font-medium text-gray-900">Kantin Sekolah</div>
+					<div class="text-xs text-gray-600">Banyak sampah menumpuk di sekitar kantin dan belum dibersihkan
+						sejak pagi. Harap ditindak.</div>
 					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Tata Usaha (TU)</div>
 				</div>
 				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Mei 2025, 16:30</div>
-					<button class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Proses</button>
-				</div>
-			</div>
-
-			<div data-status="selesai" data-id="123"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="" class="w-16 h-16 mx-auto rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: ABC</div>
-					<div class="font-medium text-gray-900">Lorem Ipsum</div>
-					<div class="text-xs text-gray-600">Deskripsi aduan selesai...</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kurikulum</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Mei 2025, 16:30</div>
-					<button class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Selesai</button>
-				</div>
-			</div>
-			<!-- Item 3 -->
-			<div data-status="pending" data-id="123"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="" class="w-16 h-16 mx-auto rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: ABC</div>
-					<div class="font-medium text-gray-900">Lorem Ipsum</div>
-					<div class="text-xs text-gray-600">Deskripsi aduan pending...</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Mei 2025, 16:30</div>
-					<button
-						class="bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Pending</button>
-				</div>
-			</div>
-			<div data-status="pending" data-id="123"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="" class="w-16 h-16 mx-auto rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: ABC</div>
-					<div class="font-medium text-gray-900">Lorem Ipsum</div>
-					<div class="text-xs text-gray-600">Deskripsi aduan pending...</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Tata Usaha (TU)</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Mei 2025, 16:30</div>
+					<div class="text-sm font-semibold text-gray-800 mb-2">19 Juli 2025, 09:00</div>
 					<button
 						class="bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Pending</button>
 				</div>
 			</div>
 
-			<div data-status="proses" data-id="123"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="" class="w-16 h-16 mx-auto rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: ABC</div>
-					<div class="font-medium text-gray-900">Lorem Ipsum</div>
-					<div class="text-xs text-gray-600">Deskripsi aduan proses...</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : BK</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Mei 2025, 16:30</div>
-					<button class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Proses</button>
-				</div>
-			</div>
-
-			<div data-status="pending" data-id="123"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="" class="w-16 h-16 mx-auto rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: ABC</div>
-					<div class="font-medium text-gray-900">Lorem Ipsum</div>
-					<div class="text-xs text-gray-600">Deskripsi aduan pending...</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kurikulum</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Mei 2025, 16:30</div>
-					<button
-						class="bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Pending</button>
-				</div>
-			</div>
 		</div>
+
 	</main>
 
 	<script>
@@ -263,6 +218,12 @@
 			const menu = document.getElementById('dropdown-menu');
 			menu.classList.toggle('hidden');
 		}
+		const toggleSidebarBtn = document.getElementById("toggleSidebar");
+		const sidebar = document.getElementById("sidebar");
+
+		toggleSidebarBtn.addEventListener("click", () => {
+			sidebar.classList.toggle("-translate-x-full");
+		});
 		// Filter Laporan
 		function filterLaporan(status) {
 			const cards = document.querySelectorAll('.laporan-card');

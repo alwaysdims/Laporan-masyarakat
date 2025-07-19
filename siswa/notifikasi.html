@@ -9,7 +9,12 @@
 </head>
 
 <body class="bg-gray-100 min-h-screen flex">
-
+	<!-- Tombol Toggle Sidebar (untuk mobile) -->
+	<button id="toggleSidebar" class="sm:hidden fixed top-4 left-4 z-50 p-2 bg-blue-900 text-white rounded">
+		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+		</svg>
+	</button>
 	<!-- Sidebar -->
 	<aside class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg">
 		<div class="text-center mb-10">
@@ -46,7 +51,7 @@
 				Riwayat Laporan
 			</a>
 
-			<a href="#" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -55,7 +60,7 @@
 				Tanggapan
 			</a>
 
-			<a href="#" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="respon.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -64,7 +69,7 @@
 				Respon
 			</a>
 
-			<a href="#" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="cetak-laporan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -148,7 +153,28 @@
 		</div>
 
 	</main>
+    <script>
+		function toggleDropdown() {
+			const dropdown = document.getElementById("dropdown-menu");
+			dropdown.classList.toggle("hidden");
+		}
 
+		const toggleSidebarBtn = document.getElementById("toggleSidebar");
+		const sidebar = document.getElementById("sidebar");
+
+		toggleSidebarBtn.addEventListener("click", () => {
+			sidebar.classList.toggle("-translate-x-full");
+		});
+
+		// Close dropdown when clicking outside
+		window.addEventListener("click", function (e) {
+			const menu = document.getElementById("dropdown-menu");
+			if (!e.target.closest("button") && !e.target.closest("#dropdown-menu")) {
+				menu.classList.add("hidden");
+			}
+		});
+
+	</script>
 </body>
 
 </html>
