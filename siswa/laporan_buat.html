@@ -4,12 +4,11 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Dashboard Pengaduan</title>
+	<title>Buat Laporan</title>
 	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-gray-100 min-h-screen flex">
-
 	<!-- Sidebar -->
 	<aside class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg">
 		<div class="text-center mb-10">
@@ -18,8 +17,7 @@
 		</div>
 
 		<nav class="space-y-2">
-			<a href="dashboard.html" 
-                class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
+			<a href="dashboard.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -29,8 +27,8 @@
 			</a>
 
 			<a href="laporan_buat.html"
-				class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+				class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-700" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 						d="M8 16h8M8 12h8m-8-4h8M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -73,15 +71,15 @@
 				</svg>
 				Cetak Laporan
 			</a>
-
 		</nav>
 	</aside>
+
 	<!-- Main Content -->
 	<main class="flex-1 p-6">
 		<!-- Topbar -->
         <div class="flex justify-between items-center bg-blue-900 text-white px-6 py-4 rounded-lg shadow mb-6">
             <div class="breadcrumb hidden sm:flex space-x-2 items-center">
-              <a href="#" class="text-2xl text-white font-semibold">Dashboard</a>
+              <a href="#" class="text-2xl text-white font-semibold">Buat Laporan</a>
             </div>
             <div class="flex items-center space-x-4">
               <input type="text" placeholder="Search..."
@@ -106,60 +104,102 @@
               </div>
             </div>
         </div>
-
-		<div class="mb-6">
-			<h1 class="text-2xl font-bold text-gray-800">Selamat Datang, <span class="text-blue-700">Admin!</span></h1>
-			<p class="text-sm text-gray-500 mt-1">Berikut adalah ringkasan laporan terbaru hari ini.</p>
-		</div>
-		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
-			<div class="report-box transform hover:scale-105 transition duration-300 ease-in-out">
-				<div class="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
-					<div class="flex justify-center mb-3">
-						<div class="bg-blue-100 p-3 rounded-full">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none"
-								viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-									d="M5.121 17.804A4.992 4.992 0 0112 15c1.657 0 3.156.804 4.121 2.054M15 11a3 3 0 10-6 0 3 3 0 006 0z" />
-							</svg>
-						</div>
-					</div>
-					<div class="text-3xl font-extrabold text-gray-800">2</div>
-					<p class="text-sm text-gray-500 mt-1">Total Laporan</p>
+		<!-- Form Buat Laporan -->
+		<div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-md border border-gray-200">
+			<div class="text-center mb-6">
+				<div class="flex justify-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600 mb-2" fill="none"
+						viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+							d="M12 20h9M12 4h9M3 4h.01M3 20h.01M4 12h16M4 12l4-4m0 8l-4-4" />
+					</svg>
 				</div>
+				<h2 class="text-2xl font-bold text-gray-800">Buat Laporan</h2>
 			</div>
 
 
-			<!-- Total Tanggapan -->
-			<div class="report-box transform hover:scale-105 transition duration-300 ease-in-out">
-				<div class="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
-					<div class="flex justify-center mb-3">
-						<div class="bg-green-100 p-3 rounded-full">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none"
-								viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-									d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H7l-4 4V10a2 2 0 012-2h2" />
-							</svg>
-						</div>
-					</div>
-					<div class="text-3xl font-extrabold text-gray-800">5</div>
-					<p class="text-sm text-gray-500 mt-1">Total Tanggapan</p>
+			<form class="space-y-5">
+				<!-- Nama Pengadu -->
+				<!-- Nama Pengadu -->
+				<div>
+					<label for="nama" class="block font-medium text-gray-700 mb-1 flex items-center gap-1">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none"
+							viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M5.121 17.804A4.992 4.992 0 0112 15c1.657 0 3.156.804 4.121 2.054M15 11a3 3 0 10-6 0 3 3 0 006 0z" />
+						</svg>
+						Nama Pengadu
+					</label>
+					<input type="text" id="nama" name="nama" placeholder="Masukkan nama"
+						class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:outline-none" />
 				</div>
-			</div>
+
+				<!-- Aduan -->
+				<div>
+					<label for="aduan" class="block font-medium text-gray-700 mb-1 flex items-center gap-1">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none"
+							viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M11 5H6a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2v-5m-5.586-7.586a2 2 0 112.828 2.828L11 16H8v-3l8.414-8.414z" />
+						</svg>
+						Aduan
+					</label>
+					<textarea id="aduan" name="aduan" rows="4" placeholder="Tuliskan aduan Anda..."
+						class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:outline-none"></textarea>
+				</div>
+
+				<!-- Upload Foto -->
+				<div>
+					<label for="foto" class="block font-medium text-gray-700 mb-1 flex items-center gap-1">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none"
+							viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M3 7h2l2-3h10l2 3h2a1 1 0 011 1v11a1 1 0 01-1 1H3a1 1 0 01-1-1V8a1 1 0 011-1zm9 3a4 4 0 100 8 4 4 0 000-8z" />
+						</svg>
+						Upload Foto
+					</label>
+					<input type="file" id="foto" name="foto"
+						class="w-full text-gray-700 border border-gray-300 rounded-md file:mr-4 file:py-2 file:px-4 file:border-0 file:text-sm file:font-semibold file:bg-blue-100 file:text-blue-700 hover:file:bg-blue-200" />
+				</div>
+
+				<!-- Jenis Aduan -->
+				<div>
+					<label for="jenis" class="block font-medium text-gray-700 mb-1 flex items-center gap-1">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" fill="none"
+							viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+								d="M7 7h.01M3 3h6l7 7-6 6H3V3z" />
+						</svg>
+						Tujuan Aduan
+					</label>
+					<select id="jenis" name="jenis"
+						class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring focus:ring-blue-200 focus:outline-none">
+						<option value="">-- Tujuan Aduan --</option>
+						<option value="BK">BK</option>
+						<option value="Kesiswaan">Kesiswaan</option>
+						<option value="Kurikulum">Kurikulum</option>
+						<option value="Tata Usaha (TU)">Tata Usaha (TU)</option>
+					</select>
+				</div>
 
 
+				<!-- Tombol Kirim -->
+				<div class="text-right">
+					<button type="submit"
+						class="bg-blue-700 text-white px-6 py-2 rounded-md shadow hover:bg-blue-800 transition">
+						Kirim Laporan
+					</button>
+				</div>
+			</form>
 		</div>
-
 	</main>
 
-	<!-- Script -->
 	<script>
 		function toggleDropdown() {
 			const dropdown = document.getElementById("dropdown-menu");
 			dropdown.classList.toggle("hidden");
 		}
 
-		// Close dropdown when clicking outside
 		window.addEventListener("click", function (e) {
 			const menu = document.getElementById("dropdown-menu");
 			if (!e.target.closest("button") && !e.target.closest("#dropdown-menu")) {
