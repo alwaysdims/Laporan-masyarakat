@@ -1,13 +1,243 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pengaduan Masyarakat SMKN 2 Karanganyar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="src/output.css" rel="stylesheet">
+  
 </head>
-<body>
-  <h1 class="text-3xl font-bold bg-red-100 text-center underline">
-    Hello world!
-  </h1>
+<body class="flex flex-col min-h-screen bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-5 lg:px-10 flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img
+          src="assets/image/OIP.jpg"
+          alt="Logo SMK Negeri 2 Karanganyar, emblem in blue with gears, wings and laurel"
+          class="h-12 w-12 object-contain rounded-full"
+        />
+        <span class="font-bold text-lg text-black-700 select-none">SMK Negeri 2 </span>
+        <br>
+        <span class="font-bold text-lg text-black-700 select-none">Karanganyar</span>
+      </div>
+
+      <!-- Navigation Links + Buttons -->
+      <div class="flex items-center space-x-6">
+        <ul class="hidden md:flex space-x-4 font-semibold text-gray-700">
+          <li><a href="#home" class="hover:text-blue-600 transition">Home</a></li>
+          <li><a href="#aduan" class="hover:text-blue-600 transition">Aduan</a></li>
+          <li><a href="#tentang" class="hover:text-blue-600 transition">Tentang</a></li>
+        </ul>
+
+        <div class="flex items-center space-x-3">
+          <button class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition">Login</button>
+          <button class="px-4 py-2 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-md transition">Register</button>
+        </div>
+
+        <!-- Mobile menu toggle button -->
+        <button id="navbar-toggle" class="md:hidden focus:outline-none text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <ul class="flex flex-col px-5 py-3 space-y-2 font-semibold text-gray-700">
+        <li><a href="#home" class="block hover:text-blue-600 transition">Home</a></li>
+        <li><a href="#aduan" class="block hover:text-blue-600 transition">Aduan</a></li>
+        <li><a href="#tentang" class="block hover:text-blue-600 transition">Tentang</a></li>
+        <li>
+          <button class="w-full px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition">Login</button>
+        </li>
+        <li>
+          <button class="w-full px-4 py-2 border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-md transition">Register</button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="container mx-auto px-5 lg:px-10 py-12 flex flex-col md:flex-row md:items-center gap-10">
+    <div class="flex-1">
+      <img
+        src="assets/image/Sejarah.webp"
+        alt="Exterior view of SMK Negeri 2 Karanganyar building with trees and blue sky during daytime, modern school complex"
+        class="rounded-lg shadow-lg w-full object-cover max-h-96"
+        onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/15a53732-4230-439b-aaf5-4a53e6388bab.png';"
+      />
+    </div>
+    <div class="flex-1 space-y-6">
+      <h1 class="text-4xl font-extrabold text-blue-500">Selamat Datang di Pengaduan Masyarakat SMKN 2 Karanganyar</h1>
+      <p class="text-lg leading-relaxed text-gray-700">
+        Sistem pengaduan masyarakat ini dibuat untuk memudahkan warga dan siswa melaporkan keluhan, masalah, atau aspirasi
+        kepada pihak sekolah SMKN 2 Karanganyar dengan cepat, transparan, dan mudah diakses.
+      </p>
+      <a href="">
+        <button class="px-4 py-2 mt-2 bg-blue-500 hover:bg-blue-800 text-white rounded-md transition">Adukan masalah</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- Statistics Section -->
+     <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-blue-100 p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-blue-700 mb-2">1,246</div>
+                    <div class="text-lg text-blue-800">Pengaduan Masuk</div>
+                </div>
+                <div class="bg-green-100 p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-green-700 mb-2">1,024</div>
+                    <div class="text-lg text-green-800">Tanggapan Disampaikan</div>
+                </div>
+                <div class="bg-purple-100 p-6 rounded-lg shadow-md text-center">
+                    <div class="text-4xl font-bold text-purple-700 mb-2">872</div>
+                    <div class="text-lg text-purple-800">Pengguna Terdaftar</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Aduan Section -->
+  <section id="aduan" class="container mx-auto px-5 lg:px-10 py-12">
+    <h2 class="text-3xl font-extrabold mb-8 text-blue-700 tracking-tight">Aduan Terbaru</h2>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <!-- Example of aduan card -->
+      <article class="bg-white rounded-lg shadow-lg flex flex-col">
+        <div class="relative h-48 rounded-t-lg overflow-hidden">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a8252294-4e6f-46f9-a4df-93c429f73db3.png"
+            alt="Portrait of a community member reporting issue, young woman wearing green shirt, smiling"
+            class="w-full h-full object-cover"
+            onerror="this.onerror=null;this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/e9e9108f-6111-410b-9482-0a841d455920.png';"
+          />
+          <div class="absolute bottom-0 left-0 bg-blue-700 bg-opacity-70 text-white px-3 py-1 rounded-tr-lg text-sm font-semibold">Rina Maulida</div>
+        </div>
+        <div class="flex-1 p-5 flex flex-col justify-between">
+          <div>
+            <time datetime="2024-06-15" class="block text-sm text-gray-500 mb-2">15 Juni 2024</time>
+            <p class="text-gray-700 text-sm leading-relaxed mb-5">
+              Jalan utama yang menghubungkan gedung sekolah ke asrama mengalami banyak lubang dan membahayakan keselamatan siswa.
+            </p>
+          </div>
+          <footer class="flex items-center justify-between pt-3 border-t border-gray-200">
+            <button class="text-blue-600 hover:underline font-semibold text-sm transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Lihat detail aduan Rina Maulida">
+              Detail
+            </button>
+            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-semibold select-none" aria-label="Status pengaduan: Proses">
+              Proses
+            </span>
+          </footer>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-lg flex flex-col">
+        <div class="relative h-48 rounded-t-lg overflow-hidden">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3d160b1a-2f7c-4fad-82fb-5ed1bc174569.png"
+            alt="Portrait of a man reporting an issue, middle aged with blue shirt looking concerned"
+            class="w-full h-full object-cover"
+            onerror="this.onerror=null;this.src='https://placehold.co/400x200?text=Foto+Error';"
+          />
+          <div class="absolute bottom-0 left-0 bg-blue-700 bg-opacity-70 text-white px-3 py-1 rounded-tr-lg text-sm font-semibold">Budi Santoso</div>
+        </div>
+        <div class="flex-1 p-5 flex flex-col justify-between">
+          <div>
+            <time datetime="2024-06-10" class="block text-sm text-gray-500 mb-2">10 Juni 2024</time>
+            <p class="text-gray-700 text-sm leading-relaxed mb-5">
+              Perlu penambahan lampu penerangan jalan di area parkir karena saat malam gelap dan rawan kecelakaan.
+            </p>
+          </div>
+          <footer class="flex items-center justify-between pt-3 border-t border-gray-200">
+            <button class="text-blue-600 hover:underline font-semibold text-sm transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Lihat detail aduan Budi Santoso">
+              Detail
+            </button>
+            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold select-none" aria-label="Status pengaduan: Selesai">
+              Selesai
+            </span>
+          </footer>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-lg shadow-lg flex flex-col">
+        <div class="relative h-48 rounded-t-lg overflow-hidden">
+          <img
+            src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4fafa2ce-4b9b-4dfc-b180-1ac532d065bb.png"
+            alt="Portrait of young female student reporting issue, wearing white school uniform and smiling"
+            class="w-full h-full object-cover"
+            onerror="this.onerror=null;this.src='https://placehold.co/400x200?text=Foto+Error';"
+          />
+          <div class="absolute bottom-0 left-0 bg-blue-700 bg-opacity-70 text-white px-3 py-1 rounded-tr-lg text-sm font-semibold">Dewi Lestari</div>
+        </div>
+        <div class="flex-1 p-5 flex flex-col justify-between">
+          <div>
+            <time datetime="2024-06-05" class="block text-sm text-gray-500 mb-2">5 Juni 2024</time>
+            <p class="text-gray-700 text-sm leading-relaxed mb-5">
+              Fasilitas Wi-Fi di ruang kelas dan perpustakaan sering bermasalah dan menghambat proses belajar mengajar.
+            </p>
+          </div>
+          <footer class="flex items-center justify-between pt-3 border-t border-gray-200">
+            <button class="text-blue-600 hover:underline font-semibold text-sm transition focus:outline-none focus:ring-2 focus:ring-blue-400 rounded" aria-label="Lihat detail aduan Dewi Lestari">
+              Detail
+            </button>
+            <span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs font-semibold select-none" aria-label="Status pengaduan: Ditolak">
+              Ditolak
+            </span>
+          </footer>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-900 text-gray-300 mt-auto">
+    <div class="container mx-auto px-5 lg:px-10 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div>
+        <h3 class="font-semibold text-xl text-white mb-4">Lokasi Sekolah</h3>
+        <div class="overflow-hidden rounded-lg shadow-lg mb-4">
+         
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126548.37462387834!2d110.84279492421925!3d-7.614450917054266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e654b99ab219bfd%3A0x4e63f4d5cebe448a!2sSMK%20Negeri%202%20Karanganyar!5e0!3m2!1sid!2sid!4v1752927749666!5m2!1sid!2sid"   class="w-full h-48 md:h-52 border-0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl text-white mb-4">Kontak</h3>
+        <address class="not-italic space-y-2 text-gray-300">
+          <p>Jl. Yos Sudarso, Jengglong, Bejen, Kec. Karanganyar, Kabupaten Karanganyar, Jawa Tengah 57716
+          </p>
+          <p>Email: <a href="mailto:info@smkn2karanganyar.sch.id" class="hover:text-blue-400 transition">info@smkn2karanganyar.sch.id</a></p>
+          <p>Telp: (0271) 123456</p>
+          <p>Fax: (0271) 654321</p>
+        </address>
+      </div>
+      <div>
+        <h3 class="font-semibold text-xl text-white mb-4">Tentang SMKN 2 Karanganyar</h3>
+        <p class="text-gray-400 leading-relaxed">
+          SMK Negeri 2 Karanganyar adalah sekolah menengah kejuruan yang berfokus pada pendidikan vokasi berkualitas, menyiapkan lulusan siap kerja dan berkompeten di bidangnya.
+        </p>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-700 text-center py-6 text-sm text-gray-400">
+      © 2024 SMKN 2 Karanganyar - Pengaduan Masyarakat. skanda.dev
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggleBtn = document.getElementById('navbar-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
+
