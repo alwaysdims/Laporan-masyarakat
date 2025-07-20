@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login SMK N 2 Karanganyar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .blue-shadow {
+      box-shadow: 0 4px 10px rgba(135, 206, 250, 0.7); 
+    }
+  </style>
+</head>
+<body class="h-screen flex font-sans">
+
+  <div class="w-[60%] bg-[#87CEFA] flex justify-center items-center">
+    <div class="flex items-center space-x-8 ml-10">
+      <img src="../assets/image/OIP-removebg-preview.png" alt="Logo SMK" class="w-40" />
+      <div class="text-white">
+        <h1 class="text-5xl font-bold leading-tight">SMK N 2</h1>
+        <h1 class="text-5xl font-bold leading-tight mt-1">Karanganyar</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-[40%] flex items-center justify-center">
+    <div class="w-full max-w-xs">
+    
+      <h2 class="text-2xl font-semibold text-gray-800 mb-8 leading-snug">
+        <b>Login</b> <br>
+        <span class="text-base font-normal text-gray-600">Suarakan pendapatmu sekarang</span>
+      </h2>
+
+      <form>
+        <label for="username" class="text-sm text-black">Username</label>
+        <input
+          type="text"
+          id="username"
+          placeholder="Masukkan username"
+          class="w-full mt-1 mb-4 px-4 py-2 rounded-xl border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-300 blue-shadow"
+        />
+
+        <label for="password" class="text-sm text-black">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Masukkan password"
+          class="w-full mt-1 mb-6 px-4 py-2 rounded-xl border border-transparent focus:outline-none focus:ring-2 focus:ring-blue-300 blue-shadow"
+        />
+
+        <button
+          type="submit"
+          disabled
+          class="w-full py-2 rounded-xl bg-[#87CEFA] text-white font-bold uppercase blue-shadow cursor-not-allowed"
+        >
+          LOGIN
+        </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
