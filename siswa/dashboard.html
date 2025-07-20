@@ -212,14 +212,27 @@
 				<div class="bg-white rounded-2xl shadow p-4">
 					<h2 class="text-lg font-semibold mb-4">Distribusi Status</h2>
 					<!-- Placeholder for Chart -->
-					<div class="flex justify-center items-center h-48">
-						<div class="w-32 h-32 rounded-full bg-gradient-to-tr from-green-400 to-blue-500"></div>
+					<div class="flex justify-center items-center h-64">
+						<svg viewBox="0 0 32 32" class="w-32 h-32 rotate-[-90deg]">
+							<!-- Pending - 20% -->
+							<circle r="16" cx="16" cy="16" fill="transparent" stroke="rgb(234 179 8)" stroke-width="32"
+								stroke-dasharray="20 80" />
+							<!-- Proses - 30% -->
+							<circle r="16" cx="16" cy="16" fill="transparent" stroke="rgb(34 197 94)" stroke-width="32"
+								stroke-dasharray="30 70" stroke-dashoffset="20" />
+							<!-- Selesai - 40% -->
+							<circle r="16" cx="16" cy="16" fill="transparent" stroke="rgb(37 99 235)" stroke-width="32"
+								stroke-dasharray="40 60" stroke-dashoffset="50" />
+							<!-- Ditolak - 10% -->
+							<circle r="16" cx="16" cy="16" fill="transparent" stroke="rgb(239 68 68)" stroke-width="32"
+								stroke-dasharray="10 90" stroke-dashoffset="90" />
+						</svg>
 					</div>
 					<div class="flex justify-around text-xs mt-4">
-						<span class="text-blue-600">■ Open</span>
-						<span class="text-orange-500">■ Onprogress</span>
-						<span class="text-green-600">■ Resolved</span>
-						<span class="text-red-500">■ Rejected</span>
+						<span class="text-yellow-600">■ Pending</span>
+						<span class="text-green-500">■ Proses</span>
+						<span class="text-blue-600">■ Selesai</span>
+						<span class="text-red-500">■ Ditolak</span>
 					</div>
 				</div>
 
