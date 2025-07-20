@@ -43,14 +43,13 @@
         </ul>
   
         <div class="flex items-center space-x-3">
-          <!-- Stylish Buttons -->
-          <button class="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:scale-105 transform transition duration-300 shadow-md">
+          <a href="loginregister/login.html" class="px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:scale-105 transform transition duration-300 shadow-md">
             Login
-          </button>
-          <button class="px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:scale-105 transform transition duration-300 shadow-md">
+          </a>
+          <a href="loginregister/register.html" class="px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:scale-105 transform transition duration-300 shadow-md">
             Register
-          </button>
-        </div>
+          </a>
+        </div>        
       </div>
   
       <!-- Mobile Toggle -->
@@ -69,13 +68,13 @@
         <li><a href="#tentang" class="block hover:text-blue-600 transition">Tentang</a></li>
         <li>
           <div class="flex flex-col gap-2 mt-2">
-            <button class="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:scale-105 transform transition duration-300 shadow-md">
+            <a href="loginregister/login.html" class="w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full hover:scale-105 transform transition duration-300 shadow-md text-center">
               Login
-            </button>
-            <button class="w-full px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:scale-105 transform transition duration-300 shadow-md">
+            </a>
+            <a href="loginregister/register.html" class="w-full px-4 py-2 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-600 hover:text-white hover:scale-105 transform transition duration-300 shadow-md text-center">
               Register
-            </button>
-          </div>
+            </a>
+          </div>          
         </li>
       </ul>
     </div>
@@ -241,6 +240,76 @@
           </footer>
         </div>
       </article>
+
+      <article class="bg-white rounded-lg shadow-lg flex flex-col">
+        <div class="relative h-48 rounded-t-lg overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1601933470928-c6f1c727ef62?auto=format&fit=crop&w=800&q=80"
+            alt="Siswa mengadu tentang harga kantin"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-0 left-0 bg-blue-700 bg-opacity-70 text-white px-3 py-1 rounded-tr-lg text-sm font-semibold">Andi Prasetyo</div>
+        </div>
+        <div class="flex-1 p-5 flex flex-col justify-between">
+          <div>
+            <time datetime="2024-07-18" class="block text-sm text-gray-500 mb-2">18 Juli 2024</time>
+            <p class="text-gray-700 text-sm leading-relaxed mb-5">
+              Harga makanan di kantin sekolah tidak konsisten dan beberapa siswa mengeluhkan harga yang terlalu mahal tanpa daftar harga yang jelas.
+            </p>
+          </div>
+          <footer class="flex items-center justify-between pt-3 border-t border-gray-200">
+            <button class="text-blue-600 hover:underline font-semibold text-sm">Detail</button>
+            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs font-semibold">Proses</span>
+          </footer>
+        </div>
+      </article>
+      
+      <article class="bg-white rounded-lg shadow-lg flex flex-col">
+        <div class="relative h-48 rounded-t-lg overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1581091870622-2d9a6d56f46c?auto=format&fit=crop&w=800&q=80"
+            alt="Siswa di laboratorium komputer"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-0 left-0 bg-blue-700 bg-opacity-70 text-white px-3 py-1 rounded-tr-lg text-sm font-semibold">Rizky Hidayat</div>
+        </div>
+        <div class="flex-1 p-5 flex flex-col justify-between">
+          <div>
+            <time datetime="2024-07-12" class="block text-sm text-gray-500 mb-2">12 Juli 2024</time>
+            <p class="text-gray-700 text-sm leading-relaxed mb-5">
+              Banyak komputer di laboratorium TIK tidak berfungsi atau lambat, sehingga kegiatan praktik terganggu dan tidak efektif.
+            </p>
+          </div>
+          <footer class="flex items-center justify-between pt-3 border-t border-gray-200">
+            <button class="text-blue-600 hover:underline font-semibold text-sm">Detail</button>
+            <span class="px-2 py-1 bg-red-100 text-red-800 rounded-full text-xs font-semibold">Ditolak</span>
+          </footer>
+        </div>
+      </article>
+      
+      <article class="bg-white rounded-lg shadow-lg flex flex-col">
+        <div class="relative h-48 rounded-t-lg overflow-hidden">
+          <img
+            src="https://images.unsplash.com/photo-1588776814546-ec7e198c8063?auto=format&fit=crop&w=800&q=80"
+            alt="Siswi mengeluh tentang toilet sekolah"
+            class="w-full h-full object-cover"
+          />
+          <div class="absolute bottom-0 left-0 bg-blue-700 bg-opacity-70 text-white px-3 py-1 rounded-tr-lg text-sm font-semibold">Siti Nurhaliza</div>
+        </div>
+        <div class="flex-1 p-5 flex flex-col justify-between">
+          <div>
+            <time datetime="2024-07-08" class="block text-sm text-gray-500 mb-2">8 Juli 2024</time>
+            <p class="text-gray-700 text-sm leading-relaxed mb-5">
+              Kondisi toilet di gedung timur sangat kotor dan sering tidak tersedia air, sehingga tidak nyaman bagi siswa perempuan.
+            </p>
+          </div>
+          <footer class="flex items-center justify-between pt-3 border-t border-gray-200">
+            <button class="text-blue-600 hover:underline font-semibold text-sm">Detail</button>
+            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">Selesai</span>
+          </footer>
+        </div>
+      </article>      
+      
     </div>
   </section>
 
