@@ -118,44 +118,99 @@
 			<h1 class="text-2xl font-bold text-gray-800">Selamat Datang, <span class="text-blue-700">Admin!</span></h1>
 			<p class="text-sm text-gray-500 mt-1">Berikut adalah ringkasan laporan terbaru hari ini.</p>
 		</div>
-		<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+		<div class="max-w-6xl mx-auto space-y-6">
 
-			<div class="report-box transform hover:scale-105 transition duration-300 ease-in-out">
-				<div class="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
-					<div class="flex justify-center mb-3">
-						<div class="bg-blue-100 p-3 rounded-full">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600" fill="none"
-								viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-									d="M5.121 17.804A4.992 4.992 0 0112 15c1.657 0 3.156.804 4.121 2.054M15 11a3 3 0 10-6 0 3 3 0 006 0z" />
-							</svg>
-						</div>
+			<!-- Top Cards -->
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+				<!-- Total Tiket -->
+				<div class="bg-white rounded-2xl shadow p-4">
+					<div class="flex items-center justify-between">
+						<h2 class="text-gray-500 text-sm font-medium">Total Tiket</h2>
+						<span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-md text-xs">📄</span>
 					</div>
-					<div class="text-3xl font-extrabold text-gray-800">2</div>
-					<p class="text-sm text-gray-500 mt-1">Total Laporan</p>
+					<p class="text-2xl font-semibold mt-2">2</p>
+					<p class="text-green-500 text-xs mt-1">⬆ 12% vs bulan lalu</p>
+				</div>
+
+				<!-- Tiket Aktif -->
+				<div class="bg-white rounded-2xl shadow p-4">
+					<div class="flex items-center justify-between">
+						<h2 class="text-gray-500 text-sm font-medium">Tiket Aktif</h2>
+						<span class="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-md text-xs">⏱</span>
+					</div>
+					<p class="text-2xl font-semibold mt-2">1</p>
+					<p class="text-red-500 text-xs mt-1">⬇ 3% vs bulan lalu</p>
+				</div>
+
+				<!-- Selesai -->
+				<div class="bg-white rounded-2xl shadow p-4">
+					<div class="flex items-center justify-between">
+						<h2 class="text-gray-500 text-sm font-medium">Selesai</h2>
+						<span class="bg-green-100 text-green-600 px-2 py-1 rounded-md text-xs">✔</span>
+					</div>
+					<p class="text-2xl font-semibold mt-2">1</p>
+					<p class="text-green-500 text-xs mt-1">⬆ 8% vs bulan lalu</p>
+				</div>
+
+				<!-- Rata-rata Waktu -->
+				<div class="bg-white rounded-2xl shadow p-4">
+					<div class="flex items-center justify-between">
+						<h2 class="text-gray-500 text-sm font-medium">Rata-rata Waktu</h2>
+						<span class="bg-purple-100 text-purple-600 px-2 py-1 rounded-md text-xs">⏳</span>
+					</div>
+					<p class="text-2xl font-semibold mt-2">1 Jam</p>
+					<p class="text-green-500 text-xs mt-1">⬇ 15% vs bulan lalu</p>
 				</div>
 			</div>
 
+			<!-- Bottom Section -->
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
 
-			<!-- Total Tanggapan -->
-			<div class="report-box transform hover:scale-105 transition duration-300 ease-in-out">
-				<div class="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-100">
-					<div class="flex justify-center mb-3">
-						<div class="bg-green-100 p-3 rounded-full">
-							<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-600" fill="none"
-								viewBox="0 0 24 24" stroke="currentColor">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-									d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H7l-4 4V10a2 2 0 012-2h2" />
-							</svg>
+				<!-- Tiket Terbaru -->
+				<div class="bg-white rounded-2xl shadow p-4 col-span-2">
+					<div class="flex items-center justify-between mb-4">
+						<h2 class="text-lg font-semibold">Tiket Terbaru</h2>
+						<a href="#" class="text-blue-500 text-sm hover:underline">Lihat Semua</a>
+					</div>
+					<div class="space-y-4">
+						<!-- Tiket 1 -->
+						<div class="border rounded-lg p-3 hover:shadow transition">
+							<p class="font-medium text-gray-800">Modem wifi terbakar</p>
+							<p class="text-xs text-gray-500">#TIC-19885</p>
+							<span
+								class="inline-block bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded mt-1">Resolved</span>
+							<p class="text-xs text-gray-400 mt-1">2 days ago</p>
+						</div>
+
+						<!-- Tiket 2 -->
+						<div class="border rounded-lg p-3 hover:shadow transition">
+							<p class="font-medium text-gray-800">Kabel wifi terputus</p>
+							<p class="text-xs text-gray-500">#TIC-62125</p>
+							<span
+								class="inline-block bg-green-100 text-green-600 text-xs px-2 py-1 rounded mt-1">Open</span>
+							<p class="text-xs text-gray-400 mt-1">2 days ago</p>
 						</div>
 					</div>
-					<div class="text-3xl font-extrabold text-gray-800">5</div>
-					<p class="text-sm text-gray-500 mt-1">Total Tanggapan</p>
 				</div>
+
+				<!-- Distribusi Status -->
+				<div class="bg-white rounded-2xl shadow p-4">
+					<h2 class="text-lg font-semibold mb-4">Distribusi Status</h2>
+					<!-- Placeholder for Chart -->
+					<div class="flex justify-center items-center h-48">
+						<div class="w-32 h-32 rounded-full bg-gradient-to-tr from-green-400 to-blue-500"></div>
+					</div>
+					<div class="flex justify-around text-xs mt-4">
+						<span class="text-blue-600">■ Open</span>
+						<span class="text-orange-500">■ Onprogress</span>
+						<span class="text-green-600">■ Resolved</span>
+						<span class="text-red-500">■ Rejected</span>
+					</div>
+				</div>
+
 			</div>
-
-
 		</div>
+
 
 	</main>
 
