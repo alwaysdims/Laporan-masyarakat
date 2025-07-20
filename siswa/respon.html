@@ -67,7 +67,7 @@
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 						d="M9 17v-6m4 6V9m4 8V5M5 17v-3" />
 				</svg>
-				Respon
+				Tanggapan
 			</a>
 
 			<a href="cetak-laporan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
@@ -86,7 +86,7 @@
 		<!-- Topbar -->
 		<div class="flex justify-between items-center bg-blue-900 text-white px-6 py-4 rounded-lg shadow mb-6">
 			<div class="breadcrumb hidden sm:flex space-x-2 items-center">
-				<a href="#" class="text-2xl text-white font-semibold">Dashboard</a>
+				<a href="#" class="text-2xl text-white font-semibold">Tanggapan</a>
 			</div>
 			<div class="flex items-center space-x-4">
 				<input type="text" placeholder="Search..."
@@ -131,8 +131,162 @@
 			</div>
 		</div>
 		<!-- Main Content Here -->
+		<div class="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+			<!-- Filter Bar -->
+			<div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-4 sm:space-y-0 mb-6">
+				<div class="flex items-center border rounded-lg px-3 py-2 w-full sm:w-64 bg-gray-100">
+					<svg class="w-5 h-5 text-gray-400 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+						stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"
+						focusable="false">
+						<circle cx="11" cy="11" r="7"></circle>
+						<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+					</svg>
+					<input type="text" placeholder="Cari laporan.."
+						class="bg-transparent outline-none w-full text-gray-700" />
+				</div>
 
+				<select
+					class="border rounded-lg px-3 py-2 w-full sm:w-48 bg-white text-gray-700 cursor-pointer focus:outline-blue-500">
+					<option>Semua Status</option>
+					<option>Pending</option>
+					<option>Proses</option>
+					<option>Selesai</option>
+					<option>Ditolak</option>
+				</select>
+
+				<select
+					class="border rounded-lg px-3 py-2 w-full sm:w-48 bg-white text-gray-700 cursor-pointer focus:outline-blue-500">
+					<option>Semua Tanggal</option>
+					<option>Hari Ini</option>
+					<option>Minggu Ini</option>
+					<option>Bulan Ini</option>
+				</select>
+			</div>
+
+			<!-- Table -->
+			<div class="overflow-x-auto">
+				<table class="w-full text-left border-collapse">
+					<thead>
+						<tr class="border-b border-gray-200 text-sm text-gray-500">
+							<th class="px-4 py-3 whitespace-nowrap">NO</th>
+							<th class="px-4 py-3 whitespace-nowrap">JUDUL</th>
+							<th class="px-4 py-3 whitespace-nowrap">PELAPOR</th>
+							<th class="px-4 py-3 whitespace-nowrap">STATUS</th>
+							<th class="px-4 py-3 whitespace-nowrap">TANGGAL</th>
+							<th class="px-4 py-3 whitespace-nowrap text-center">AKSI</th>
+						</tr>
+					</thead>
+					<tbody class="text-gray-700">
+						<!-- Row 1 -->
+						<tr class="border-b border-gray-100 hover:bg-gray-50">
+							<td class="px-4 py-3 whitespace-nowrap">
+								<a href="#" class="text-gray-600 font-medium hover:underline">1</a>
+							</td>
+							<td class="px-4 py-3 whitespace-nowrap">Gangguan jaringan wifi</td>
+							<td class="px-4 py-3 whitespace-nowrap flex items-center space-x-2">
+								<div
+									class="w-7 h-7 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-semibold select-none">
+									GA
+								</div>
+								<span>Grashela Ayu</span>
+							</td>
+							<td class="px-4 py-3 whitespace-nowrap">
+								<span
+									class="inline-block bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-1 rounded-full select-none">
+									Ditolak
+								</span>
+							</td>
+							
+							<td class="px-4 py-3 whitespace-nowrap">19 May 2025 20:51</td>
+							<td class="px-4 py-3 whitespace-nowrap text-center">
+								<button
+									class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded focus:ring-2 focus:ring-blue-400 focus:outline-none">
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
+										aria-hidden="true" focusable="false">
+										<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+									</svg>
+									<span>Jawab</span>
+								</button>
+							</td>
+						</tr>
+
+						<!-- Row 2 -->
+						<tr class="border-b border-gray-100 hover:bg-gray-50">
+							<td class="px-4 py-3 whitespace-nowrap">
+								<a href="#" class="text-gray-600 font-medium hover:underline">2</a>
+							</td>
+							<td class="px-4 py-3 whitespace-nowrap">Modem wifi terbakar</td>
+							<td class="px-4 py-3 whitespace-nowrap flex items-center space-x-2">
+								<div
+									class="w-7 h-7 rounded-full bg-green-600 text-white flex items-center justify-center text-xs font-semibold select-none">
+									GR
+								</div>
+								<span>Grashela</span>
+							</td>
+							<td class="px-4 py-3 whitespace-nowrap">
+								<span
+									class="inline-block bg-amber-100 text-amber-500 text-xs font-semibold px-2.5 py-1 rounded-full select-none">
+									Pending
+								</span>
+							</td>
+							
+							<td class="px-4 py-3 whitespace-nowrap">16 May 2025 13:04</td>
+							<td class="px-4 py-3 whitespace-nowrap text-center">
+								
+								<button
+									class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded focus:ring-2 focus:ring-blue-400 focus:outline-none">
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
+										aria-hidden="true" focusable="false">
+										<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+									</svg>
+									<span>Jawab</span>
+								</button>
+							</td>
+						</tr>
+
+						<!-- Row 3 -->
+						<tr class="hover:bg-gray-50">
+							<td class="px-4 py-3 whitespace-nowrap">
+								<a href="#" class="text-gray-600 font-medium hover:underline">3</a>
+							</td>
+							<td class="px-4 py-3 whitespace-nowrap">Kabel wifi terputus</td>
+							<td class="px-4 py-3 whitespace-nowrap flex items-center space-x-2">
+								<div
+									class="w-7 h-7 rounded-full bg-blue-700 text-white flex items-center justify-center text-xs font-semibold select-none">
+									RA
+								</div>
+								<span>Rafli</span>
+							</td>
+							<td class="px-4 py-3 whitespace-nowrap">
+								<span
+									class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full select-none">
+									Selesai
+								</span>
+							</td>
+							
+							<td class="px-4 py-3 whitespace-nowrap">16 May 2025 12:56</td>
+							<td class="px-4 py-3 whitespace-nowrap text-center">
+								<button
+									class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded focus:ring-2 focus:ring-blue-400 focus:outline-none">
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+										stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
+										aria-hidden="true" focusable="false">
+										<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+									</svg>
+									<span>Jawab</span>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</main>
+
+
+
 	<script>
 		function toggleDropdown() {
 			const menu = document.getElementById("dropdown-menu");
@@ -148,7 +302,6 @@
 				menu.classList.add("hidden");
 			}
 		});
-
 	</script>
 </body>
 
