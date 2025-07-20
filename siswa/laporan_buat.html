@@ -99,16 +99,32 @@
 					<span class="absolute top-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white bg-red-500"></span>
 				</a>
 
+				<!-- Header: Foto & Nama -->
 				<div class="relative">
+					<!-- Tombol Profil -->
 					<button onclick="toggleDropdown()"
 						class="p-1 rounded-full hover:ring-2 hover:ring-white transition">
-						<img src="image/profil.webp" alt="Profil"
+						<img src="image/admin.jpg" alt="Profil"
 							class="h-8 w-8 rounded-full object-cover border-2 border-white shadow" />
 					</button>
+
+					<!-- Dropdown -->
 					<div id="dropdown-menu"
-						class="absolute right-0 mt-2 w-40 bg-white text-gray-700 rounded shadow-lg hidden z-50">
-						<a href="#" class="block px-4 py-2 hover:bg-blue-50">Edit Profil</a>
-						<a href="#" class="block px-4 py-2 hover:bg-blue-50">Logout</a>
+						class="absolute right-0 mt-2 w-48 bg-white text-gray-700 rounded-xl shadow-lg hidden z-50">
+
+						<!-- Header: Foto & Nama -->
+						<div class="flex flex-col items-center py-4 px-4">
+							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
+								style="background-image: url('image/admin.jpg');">
+							</div>
+							<p class="mt-2 font-semibold text-gray-800">admin</p>
+						</div>
+
+						<hr class="border-gray-200" />
+
+						<!-- Menu -->
+						<a href="edit-profil.html" class="block px-4 py-2 hover:bg-blue-50 text-center">Edit Profil</a>
+						<a href="#" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
 					</div>
 				</div>
 			</div>
@@ -214,6 +230,21 @@
 
 		toggleSidebarBtn.addEventListener("click", () => {
 			sidebar.classList.toggle("-translate-x-full");
+		});
+
+		function toggleDropdown() {
+			const menu = document.getElementById("dropdown-menu");
+			menu.classList.toggle("hidden");
+		}
+
+		// Tutup dropdown saat klik di luar
+		window.addEventListener("click", function (e) {
+			const btn = document.querySelector("button[onclick='toggleDropdown()']");
+			const menu = document.getElementById("dropdown-menu");
+
+			if (!btn.contains(e.target) && !menu.contains(e.target)) {
+				menu.classList.add("hidden");
+			}
 		});
 
 		// Close dropdown when clicking outside
