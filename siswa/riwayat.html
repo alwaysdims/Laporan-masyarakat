@@ -340,12 +340,24 @@
 		toggleSidebarBtn.addEventListener("click", () => {
 			sidebar.classList.toggle("-translate-x-full");
 		});
-		
+
 
 		function toggleDropdown() {
 			const menu = document.getElementById("dropdown-menu");
 			menu.classList.toggle("hidden");
 		}
+
+		document.addEventListener("DOMContentLoaded", function () {
+			const laporanCards = document.querySelectorAll(".laporan-card");
+
+			laporanCards.forEach(card => {
+				card.addEventListener("click", function () {
+					const status = card.getAttribute("data-status");
+					localStorage.setItem("statusLaporan", status); // Simpan status
+					window.location.href = "detail-riwayat.html"; // Arahkan ke halaman detail
+				});
+			});
+		});
 
 		function filterLaporan(status, clickedButton) {
 			// Ganti border aktif hanya pada tombol yang diklik
