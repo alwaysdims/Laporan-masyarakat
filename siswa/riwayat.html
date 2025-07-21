@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Riwayat Pengaduan</title>
 	<script src="https://cdn.tailwindcss.com"></script>
-	
+
 	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </head>
@@ -88,7 +88,7 @@
 			<div class="flex items-center space-x-4">
 				<input type="text" placeholder="Search..."
 					class="px-4 py-2 rounded-full border border-white focus:outline-none focus:ring-2 focus:ring-white bg-white text-black" />
-					<button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
+				<button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
 					class="relative inline-flex items-center  text-sm font-medium  text-center text-gray-100 hover:text-gray-100 focus:outline-none light:hover:text-white light:text-gray-400"
 					type="button">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -128,13 +128,14 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Kesiswaan</span></div>
-										
-									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
-									
+
+								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
+									consectetur ullam repellat...</span>
+
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-						
+
 						<a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
 							<div class="shrink-0">
 								<img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
@@ -152,14 +153,15 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Waka Kurikulum</span></div>
-										
-									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
-									
+
+								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
+									consectetur ullam repellat...</span>
+
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-						
-						
+
+
 					</div>
 					<a href="notifikasi.html"
 						class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 light:bg-gray-800 light:hover:bg-gray-700 light:text-white">
@@ -207,13 +209,27 @@
 
 		<!-- Tab Menu -->
 		<!-- Tabs -->
-		<div class="flex space-x-6 border-b border-gray-200 mb-4">
-			<button onclick="filterLaporan('all')"
-				class="text-green-600 border-b-2 border-green-600 pb-2 font-medium">Riwayat</button>
-			<button onclick="filterLaporan('pending')" class="text-gray-500 pb-2 hover:text-black">Pending</button>
-			<button onclick="filterLaporan('proses')" class="text-gray-500 pb-2 hover:text-black">Proses</button>
-			<button onclick="filterLaporan('selesai')" class="text-gray-500 pb-2 hover:text-black">Selesai</button>
-			<button onclick="filterLaporan('ditolak')" class="text-gray-500 pb-2 hover:text-black">Ditolak</button>
+		<div class="flex space-x-4 mb-4">
+			<button onclick="filterLaporan('all', this)" id="btn-all"
+				class="filter-button text-green-600 border-b-2 border-green-600 pb-2 font-medium">
+				Riwayat
+			</button>
+			<button onclick="filterLaporan('pending', this)" id="btn-pending"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Pending
+			</button>
+			<button onclick="filterLaporan('proses', this)" id="btn-proses"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Proses
+			</button>
+			<button onclick="filterLaporan('selesai', this)" id="btn-selesai"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Selesai
+			</button>
+			<button onclick="filterLaporan('ditolak', this)" id="btn-ditolak"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Ditolak
+			</button>
 		</div>
 
 		<!-- Laporan Items -->
@@ -221,7 +237,7 @@
 
 			<!-- Laporan 1 -->
 			<div data-status="pending"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
+				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
 					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Rina Maulida</div>
@@ -233,13 +249,13 @@
 				<div class="flex flex-col items-end">
 					<div class="text-sm font-semibold text-gray-800 mb-2">18 Juli 2025, 07:45</div>
 					<button
-						class="bg-yellow-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Pending</button>
+						class="text-xs font-semibold bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full">Pending</button>
 				</div>
 			</div>
 
 			<!-- Laporan 2 -->
 			<div data-status="proses"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
+				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
 					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Dimas Prakoso</div>
@@ -250,13 +266,14 @@
 				</div>
 				<div class="flex flex-col items-end">
 					<div class="text-sm font-semibold text-gray-800 mb-2">17 Juli 2025, 10:20</div>
-					<button class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Proses</button>
+					<button
+						class="text-xs font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">Proses</button>
 				</div>
 			</div>
 
 			<!-- Laporan 3 -->
 			<div data-status="selesai"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
+				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
 					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Siti Aminah</div>
@@ -267,13 +284,14 @@
 				</div>
 				<div class="flex flex-col items-end">
 					<div class="text-sm font-semibold text-gray-800 mb-2">16 Juli 2025, 08:10</div>
-					<button class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Selesai</button>
+					<button
+						class="text-xs font-semibold bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Selesai</button>
 				</div>
 			</div>
 
 			<!-- Laporan 4 -->
 			<div data-status="proses"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
+				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
 					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Budi Setiawan</div>
@@ -284,13 +302,14 @@
 				</div>
 				<div class="flex flex-col items-end">
 					<div class="text-sm font-semibold text-gray-800 mb-2">15 Juli 2025, 17:30</div>
-					<button class="bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Proses</button>
+					<button
+						class="text-xs font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">Proses</button>
 				</div>
 			</div>
 
 			<!-- Laporan 5 -->
 			<div data-status="ditolak"
-				class="laporan-card bg-white rounded-xl shadow border px-4 py-3 flex items-start space-x-4">
+				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
 					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Nur Hasanah</div>
@@ -301,7 +320,8 @@
 				</div>
 				<div class="flex flex-col items-end">
 					<div class="text-sm font-semibold text-gray-800 mb-2">19 Juli 2025, 09:00</div>
-					<button class="bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full">Ditolak</button>
+					<button
+						class="text-xs font-semibold bg-red-100 text-red-600 px-2 py-1 rounded-full">Ditolak</button>
 				</div>
 			</div>
 
@@ -320,8 +340,23 @@
 		toggleSidebarBtn.addEventListener("click", () => {
 			sidebar.classList.toggle("-translate-x-full");
 		});
-		// Filter Laporan
-		function filterLaporan(status) {
+		
+
+		function toggleDropdown() {
+			const menu = document.getElementById("dropdown-menu");
+			menu.classList.toggle("hidden");
+		}
+
+		function filterLaporan(status, clickedButton) {
+			// Ganti border aktif hanya pada tombol yang diklik
+			document.querySelectorAll('.filter-button').forEach(btn => {
+				btn.classList.remove('text-green-600', 'border-b-2', 'border-green-600', 'font-medium');
+				btn.classList.add('text-gray-500');
+			});
+
+			clickedButton.classList.remove('text-gray-500');
+			clickedButton.classList.add('text-green-600', 'border-b-2', 'border-green-600', 'font-medium');
+
 			const cards = document.querySelectorAll('.laporan-card');
 			cards.forEach(card => {
 				const cardStatus = card.getAttribute('data-status');
@@ -333,12 +368,6 @@
 			});
 		}
 
-		function toggleDropdown() {
-			const menu = document.getElementById("dropdown-menu");
-			menu.classList.toggle("hidden");
-		}
-
-		// Tutup dropdown saat klik di luar
 		window.addEventListener("click", function (e) {
 			const btn = document.querySelector("button[onclick='toggleDropdown()']");
 			const menu = document.getElementById("dropdown-menu");
