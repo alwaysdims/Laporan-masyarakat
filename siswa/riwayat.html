@@ -210,15 +210,35 @@
 		<!-- Tab Menu -->
 		<!-- Tabs -->
 
-		<div class="flex space-x-6 border-b lg:px-10 border-gray-200 mb-4">
+		<!-- <div class="flex space-x-6 border-b lg:px-10 border-gray-200 mb-4">
 			<button onclick="filterLaporan('all')"
 				class="text-green-600 border-b-2 border-green-600 pb-2 font-medium">Riwayat</button>
 			<button onclick="filterLaporan('pending')" class="text-gray-500 pb-2 hover:text-black">Pending</button>
 			<button onclick="filterLaporan('proses')" class="text-gray-500 pb-2 hover:text-black">Proses</button>
 			<button onclick="filterLaporan('selesai')" class="text-gray-500 pb-2 hover:text-black">Selesai</button>
-			<button onclick="filterLaporan('ditolak')" class="text-gray-500 pb-2 hover:text-black">Ditolak</button>
+			<button onclick="filterLaporan('ditolak')" class="text-gray-500 pb-2 hover:text-black">Ditolak</button> -->
 
-		
+		<div class="flex space-x-4 mb-4 lg:px-10">
+			<button onclick="filterLaporan('all', this)" id="btn-all"
+				class="filter-button text-green-600 border-b-2 border-green-600 pb-2 font-medium">
+				Riwayat
+			</button>
+			<button onclick="filterLaporan('pending', this)" id="btn-pending"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Pending
+			</button>
+			<button onclick="filterLaporan('proses', this)" id="btn-proses"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Proses
+			</button>
+			<button onclick="filterLaporan('selesai', this)" id="btn-selesai"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Selesai
+			</button>
+			<button onclick="filterLaporan('ditolak', this)" id="btn-ditolak"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Ditolak
+			</button>
 		</div>
 
 		<!-- Laporan Items -->
