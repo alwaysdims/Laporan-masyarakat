@@ -131,158 +131,137 @@
 			</div>
 		</div>
 		<!-- Main Content Here -->
-		<div class="max-w-7xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+		<div class="max-w-7xl mx-auto bg-white p-6 mt-10 rounded-lg shadow-lg">
 			<!-- Filter Bar -->
 			<div class="flex flex-col sm:flex-row sm:items-center sm:space-x-4 space-y-4 sm:space-y-0 mb-6">
-				<div class="flex items-center border rounded-lg px-3 py-2 w-full sm:w-64 bg-gray-100">
-					<svg class="w-5 h-5 text-gray-400 mr-2" fill="none" stroke="currentColor" stroke-width="2"
-						stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"
-						focusable="false">
-						<circle cx="11" cy="11" r="7"></circle>
-						<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-					</svg>
-					<input type="text" placeholder="Cari laporan.."
-						class="bg-transparent outline-none w-full text-gray-700" />
-				</div>
-
-				<select
-					class="border rounded-lg px-3 py-2 w-full sm:w-48 bg-white text-gray-700 cursor-pointer focus:outline-blue-500">
-					<option>Semua Status</option>
-					<option>Pending</option>
-					<option>Proses</option>
-					<option>Selesai</option>
-					<option>Ditolak</option>
-				</select>
-
-				<select
-					class="border rounded-lg px-3 py-2 w-full sm:w-48 bg-white text-gray-700 cursor-pointer focus:outline-blue-500">
-					<option>Semua Tanggal</option>
-					<option>Hari Ini</option>
-					<option>Minggu Ini</option>
-					<option>Bulan Ini</option>
-				</select>
+			  <!-- Search -->
+			  <div class="flex items-center border rounded-lg px-3 py-2 w-full sm:w-64 bg-gray-100">
+				<svg class="w-5 h-5 text-gray-400 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+					 stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+				  <circle cx="11" cy="11" r="7"></circle>
+				  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+				</svg>
+				<input id="searchInput" type="text" placeholder="Cari laporan.."
+					   class="bg-transparent outline-none w-full text-gray-700" />
+			  </div>
+		  
+			  <!-- Filter Status -->
+			  <select id="statusFilter"
+					  class="border rounded-lg px-3 py-2 w-full sm:w-48 bg-white text-gray-700 focus:outline-blue-500">
+				<option value="">Semua Status</option>
+				<option value="Pending">Pending</option>
+				<option value="Proses">Proses</option>
+				<option value="Selesai">Selesai</option>
+				<option value="Ditolak">Ditolak</option>
+			  </select>
+		  
+			  <!-- Filter Tanggal -->
+			  <select id="dateFilter"
+					  class="border rounded-lg px-3 py-2 w-full sm:w-48 bg-white text-gray-700 focus:outline-blue-500">
+				<option value="">Semua Tanggal</option>
+				<option value="today">Hari Ini</option>
+				<option value="week">Minggu Ini</option>
+				<option value="month">Bulan Ini</option>
+			  </select>
 			</div>
-
+		  
 			<!-- Table -->
 			<div class="overflow-x-auto">
-				<table class="w-full text-left border-collapse">
-					<thead>
-						<tr class="border-b border-gray-200 text-sm text-gray-500">
-							<th class="px-4 py-3 whitespace-nowrap">NO</th>
-							<th class="px-4 py-3 whitespace-nowrap">JUDUL</th>
-							<th class="px-4 py-3 whitespace-nowrap">PELAPOR</th>
-							<th class="px-4 py-3 whitespace-nowrap">STATUS</th>
-							<th class="px-4 py-3 whitespace-nowrap">TANGGAL</th>
-							<th class="px-4 py-3 whitespace-nowrap text-center">AKSI</th>
-						</tr>
-					</thead>
-					<tbody class="text-gray-700">
-						<!-- Row 1 -->
-						<tr class="border-b border-gray-100 hover:bg-gray-50">
-							<td class="px-4 py-3 whitespace-nowrap">
-								<a href="#" class="text-gray-600 font-medium hover:underline">1</a>
-							</td>
-							<td class="px-4 py-3 whitespace-nowrap">Gangguan jaringan wifi</td>
-							<td class="px-4 py-3 whitespace-nowrap flex items-center space-x-2">
-								<div
-									class="w-7 h-7 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-semibold select-none">
-									GA
-								</div>
-								<span>Grashela Ayu</span>
-							</td>
-							<td class="px-4 py-3 whitespace-nowrap">
-								<span
-									class="inline-block bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-1 rounded-full select-none">
-									Ditolak
-								</span>
-							</td>
-							
-							<td class="px-4 py-3 whitespace-nowrap">19 May 2025 20:51</td>
-							<td class="px-4 py-3 whitespace-nowrap text-center">
-								<button
-									class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded focus:ring-2 focus:ring-blue-400 focus:outline-none">
-									<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-										stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
-										aria-hidden="true" focusable="false">
-										<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-									</svg>
-									<span>Jawab</span>
-								</button>
-							</td>
-						</tr>
-
-						<!-- Row 2 -->
-						<tr class="border-b border-gray-100 hover:bg-gray-50">
-							<td class="px-4 py-3 whitespace-nowrap">
-								<a href="#" class="text-gray-600 font-medium hover:underline">2</a>
-							</td>
-							<td class="px-4 py-3 whitespace-nowrap">Modem wifi terbakar</td>
-							<td class="px-4 py-3 whitespace-nowrap flex items-center space-x-2">
-								<div
-									class="w-7 h-7 rounded-full bg-green-600 text-white flex items-center justify-center text-xs font-semibold select-none">
-									GR
-								</div>
-								<span>Grashela</span>
-							</td>
-							<td class="px-4 py-3 whitespace-nowrap">
-								<span
-									class="inline-block bg-amber-100 text-amber-500 text-xs font-semibold px-2.5 py-1 rounded-full select-none">
-									Pending
-								</span>
-							</td>
-							
-							<td class="px-4 py-3 whitespace-nowrap">16 May 2025 13:04</td>
-							<td class="px-4 py-3 whitespace-nowrap text-center">
-								
-								<button
-									class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded focus:ring-2 focus:ring-blue-400 focus:outline-none">
-									<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-										stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
-										aria-hidden="true" focusable="false">
-										<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-									</svg>
-									<span>Jawab</span>
-								</button>
-							</td>
-						</tr>
-
-						<!-- Row 3 -->
-						<tr class="hover:bg-gray-50">
-							<td class="px-4 py-3 whitespace-nowrap">
-								<a href="#" class="text-gray-600 font-medium hover:underline">3</a>
-							</td>
-							<td class="px-4 py-3 whitespace-nowrap">Kabel wifi terputus</td>
-							<td class="px-4 py-3 whitespace-nowrap flex items-center space-x-2">
-								<div
-									class="w-7 h-7 rounded-full bg-blue-700 text-white flex items-center justify-center text-xs font-semibold select-none">
-									RA
-								</div>
-								<span>Rafli</span>
-							</td>
-							<td class="px-4 py-3 whitespace-nowrap">
-								<span
-									class="inline-block bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full select-none">
-									Selesai
-								</span>
-							</td>
-							
-							<td class="px-4 py-3 whitespace-nowrap">16 May 2025 12:56</td>
-							<td class="px-4 py-3 whitespace-nowrap text-center">
-								<button
-									class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded focus:ring-2 focus:ring-blue-400 focus:outline-none">
-									<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-										stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"
-										aria-hidden="true" focusable="false">
-										<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-									</svg>
-									<span>Jawab</span>
-								</button>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+			  <table class="w-full text-left border-collapse">
+				<thead>
+				<tr class="border-b border-gray-200 text-sm text-gray-500">
+				  <th class="px-4 py-3">NO</th>
+				  <th class="px-4 py-3">JUDUL</th>
+				  <th class="px-4 py-3">PELAPOR</th>
+				  <th class="px-4 py-3">STATUS</th>
+				  <th class="px-4 py-3">TANGGAL</th>
+				  <th class="px-4 py-3 text-center">AKSI</th>
+				</tr>
+				</thead>
+				<tbody id="tableBody" class="text-gray-700">
+		  
+				<!-- Row 1 -->
+				<tr class="border-b border-gray-100 hover:bg-gray-50"
+					data-title="Gangguan jaringan wifi"
+					data-status="Ditolak"
+					data-date="2025-05-19T20:51:00">
+				  <td class="px-4 py-3">1</td>
+				  <td class="px-4 py-3">Gangguan jaringan wifi</td>
+				  <td class="px-4 py-3 flex items-center space-x-2">
+					<div class="w-7 h-7 rounded-full bg-blue-500 text-white flex items-center justify-center text-xs font-semibold">GA</div>
+					<span>Grashela Ayu</span>
+				  </td>
+				  <td class="px-4 py-3">
+					<span class="bg-red-100 text-red-700 text-xs font-semibold px-2.5 py-1 rounded-full">Ditolak</span>
+				  </td>
+				  <td class="px-4 py-3">19 May 2025 20:51</td>
+				  <td class="px-4 py-3 text-center">
+					<button class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded flex items-center space-x-2">
+					  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						   stroke-linejoin="round" viewBox="0 0 24 24">
+						<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+					  </svg>
+					  <span>Jawab</span>
+					</button>
+				  </td>
+				</tr>
+		  
+				<!-- Row 2 -->
+				<tr class="border-b border-gray-100 hover:bg-gray-50"
+					data-title="Modem wifi terbakar"
+					data-status="Pending"
+					data-date="2025-05-16T13:04:00">
+				  <td class="px-4 py-3">2</td>
+				  <td class="px-4 py-3">Modem wifi terbakar</td>
+				  <td class="px-4 py-3 flex items-center space-x-2">
+					<div class="w-7 h-7 rounded-full bg-green-600 text-white flex items-center justify-center text-xs font-semibold">GR</div>
+					<span>Grashela</span>
+				  </td>
+				  <td class="px-4 py-3">
+					<span class="bg-amber-100 text-amber-500 text-xs font-semibold px-2.5 py-1 rounded-full">Pending</span>
+				  </td>
+				  <td class="px-4 py-3">16 May 2025 13:04</td>
+				  <td class="px-4 py-3 text-center">
+					<button class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded flex items-center space-x-2">
+					  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						   stroke-linejoin="round" viewBox="0 0 24 24">
+						<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+					  </svg>
+					  <span>Jawab</span>
+					</button>
+				  </td>
+				</tr>
+		  
+				<!-- Row 3 -->
+				<tr class="hover:bg-gray-50"
+					data-title="Kabel wifi terputus"
+					data-status="Selesai"
+					data-date="2025-05-16T12:56:00">
+				  <td class="px-4 py-3">3</td>
+				  <td class="px-4 py-3">Kabel wifi terputus</td>
+				  <td class="px-4 py-3 flex items-center space-x-2">
+					<div class="w-7 h-7 rounded-full bg-blue-700 text-white flex items-center justify-center text-xs font-semibold">RA</div>
+					<span>Rafli</span>
+				  </td>
+				  <td class="px-4 py-3">
+					<span class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Selesai</span>
+				  </td>
+				  <td class="px-4 py-3">16 May 2025 12:56</td>
+				  <td class="px-4 py-3 text-center">
+					<button class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded flex items-center space-x-2">
+					  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+						   stroke-linejoin="round" viewBox="0 0 24 24">
+						<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+					  </svg>
+					  <span>Jawab</span>
+					</button>
+				  </td>
+				</tr>
+		  
+				</tbody>
+			  </table>
 			</div>
-		</div>
+		  </div>
 	</main>
 
 
@@ -302,6 +281,56 @@
 				menu.classList.add("hidden");
 			}
 		});
+
+		const searchInput = document.getElementById("searchInput");
+  const statusFilter = document.getElementById("statusFilter");
+  const dateFilter = document.getElementById("dateFilter");
+  const rows = document.querySelectorAll("tbody tr");
+
+  function filterTable() {
+    const keyword = searchInput.value.toLowerCase();
+    const status = statusFilter.value;
+    const date = dateFilter.value;
+    const now = new Date();
+
+    rows.forEach(row => {
+      const title = row.dataset.title.toLowerCase();
+      const rowStatus = row.dataset.status;
+      const rowDate = new Date(row.dataset.date);
+
+      let matchKeyword = title.includes(keyword);
+      let matchStatus = !status || rowStatus === status;
+      let matchDate = true;
+
+      if (date === "today") {
+        matchDate = isSameDay(rowDate, now);
+      } else if (date === "week") {
+        const oneWeekAgo = new Date();
+        oneWeekAgo.setDate(now.getDate() - 7);
+        matchDate = rowDate >= oneWeekAgo;
+      } else if (date === "month") {
+        const oneMonthAgo = new Date();
+        oneMonthAgo.setMonth(now.getMonth() - 1);
+        matchDate = rowDate >= oneMonthAgo;
+      }
+
+      if (matchKeyword && matchStatus && matchDate) {
+        row.style.display = "";
+      } else {
+        row.style.display = "none";
+      }
+    });
+  }
+
+  function isSameDay(date1, date2) {
+    return date1.getDate() === date2.getDate() &&
+           date1.getMonth() === date2.getMonth() &&
+           date1.getFullYear() === date2.getFullYear();
+  }
+
+  searchInput.addEventListener("input", filterTable);
+  statusFilter.addEventListener("change", filterTable);
+  dateFilter.addEventListener("change", filterTable);
 	</script>
 </body>
 
