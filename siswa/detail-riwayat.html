@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Detail Aduan</title>
 	<script src="https://cdn.tailwindcss.com"></script>
-	
+
 	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </head>
@@ -94,7 +94,7 @@
 			<div class="flex items-center space-x-4">
 				<input type="text" placeholder="Search..."
 					class="px-4 py-2 rounded-full border border-white focus:outline-none focus:ring-2 focus:ring-white bg-white text-black" />
-					<button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
+				<button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
 					class="relative inline-flex items-center  text-sm font-medium  text-center text-gray-100 hover:text-gray-100 focus:outline-none light:hover:text-white light:text-gray-400"
 					type="button">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -134,13 +134,14 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Kesiswaan</span></div>
-										
-									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
-									
+
+								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
+									consectetur ullam repellat...</span>
+
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-						
+
 						<a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
 							<div class="shrink-0">
 								<img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
@@ -158,14 +159,15 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Waka Kurikulum</span></div>
-										
-									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
-									
+
+								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
+									consectetur ullam repellat...</span>
+
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-						
-						
+
+
 					</div>
 					<a href="notifikasi.html"
 						class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 light:bg-gray-800 light:hover:bg-gray-700 light:text-white">
@@ -178,7 +180,7 @@
 							View all
 						</div>
 					</a>
-					</div>
+				</div>
 
 				<!-- Header: Foto & Nama -->
 				<div class="relative">
@@ -218,22 +220,42 @@
 		</div>
 
 		<!-- Progress Status -->
-		<div id="progressBar" class="flex items-center justify-between max-w-md mx-auto mb-6">
-			<div class="flex flex-col items-center">
-				<div id="dot-pending" class="w-4 h-4 bg-gray-300 rounded-full"></div>
+		<div id="progressBar" class="flex items-center justify-between max-w-md mx-auto mb-6 relative">
+			<!-- Pending -->
+			<div class="flex flex-col items-center z-10">
+				<div id="dot-pending"
+					class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
+				</div>
 				<span class="text-sm text-gray-600 mt-1">Pending</span>
 			</div>
-			<div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
-			<div class="flex flex-col items-center">
-				<div id="dot-proses" class="w-4 h-4 bg-gray-300 rounded-full"></div>
+
+			<!-- Garis 1: Pending -> Proses -->
+			<div id="bar-pending-proses"
+				class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
+			</div>
+
+			<!-- Proses -->
+			<div class="flex flex-col items-center z-10">
+				<div id="dot-proses"
+					class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
+				</div>
 				<span class="text-sm text-gray-600 mt-1">Proses</span>
 			</div>
-			<div class="flex-1 h-0.5 bg-gray-300 mx-2"></div>
-			<div class="flex flex-col items-center">
-				<div id="dot-selesai" class="w-4 h-4 bg-gray-300 rounded-full"></div>
+
+			<!-- Garis 2: Proses -> Selesai -->
+			<div id="bar-pending-selesai"
+				class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
+			</div>
+
+			<!-- Selesai -->
+			<div class="flex flex-col items-center z-10">
+				<div id="dot-selesai"
+					class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
+				</div>
 				<span class="text-sm text-gray-600 mt-1">Selesai</span>
 			</div>
 		</div>
+
 
 		<!-- Isi Aduan -->
 		<div class="bg-white rounded-lg p-4 shadow mb-4">
@@ -250,22 +272,22 @@
 			<div class="flex items-center space-x-3">
 				<!-- Gambar -->
 				<img src="image/admin.jpg" alt="Admin" class="w-12 h-12 rounded-full object-cover" />
-			  
+
 				<!-- Konten -->
 				<div>
 					<div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs mt-1">
-					  <span class="block text-green-500 font-semibold">Kesiswaan</span>
-					<p>Terima kasih atas laporannya</p>
-				  </div>
+						<span class="block text-green-500 font-semibold">Kesiswaan</span>
+						<p>Terima kasih atas laporannya</p>
+					</div>
 				</div>
 			</div>
-			  
-			  
+
+
 
 			<!-- Pesan dari Pengadu -->
 			<div class="flex items-start space-x-2 self-end">
 				<div class="bg-blue-100 text-sm p-2 rounded-lg max-w-xs">
-					
+
 					<span class="block text-blue-500 font-semibold">Rina Maulida</span>
 					<p>Laporan saya bagaimana ya?</p>
 				</div>
@@ -292,6 +314,51 @@
 
 	</main>
 	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			const status = localStorage.getItem("statusLaporan") || "pending";
+
+			const dots = {
+				pending: document.getElementById("dot-pending"),
+				proses: document.getElementById("dot-proses"),
+				selesai: document.getElementById("dot-selesai")
+			};
+
+			const bars = {
+				pending_proses: document.getElementById("bar-pending-proses"),
+				proses_selesai: document.getElementById("bar-proses-selesai")
+			};
+
+			// Reset semua warna
+			Object.values(dots).forEach(dot => {
+				dot.classList.remove("border-yellow-400", "border-green-400", "border-blue-500");
+				dot.classList.add("border-gray-300");
+			});
+
+			Object.values(bars).forEach(bar => {
+				bar.classList.remove("bg-yellow-300", "bg-green-300", "bg-blue-400");
+				bar.classList.add("bg-gray-300");
+			});
+
+			// Aktifkan status sesuai progress
+			if (status === "pending") {
+				dots.pending.classList.replace("border-gray-300", "border-yellow-400");
+			}
+
+			if (status === "proses") {
+				dots.pending.classList.replace("border-gray-300", "border-yellow-400");
+				dots.proses.classList.replace("border-gray-300", "border-green-400");
+				bars.pending_proses.classList.replace("bg-gray-300", "bg-yellow-300"); // kuning
+			}
+
+			if (status === "selesai") {
+				dots.pending.classList.replace("border-gray-300", "border-yellow-400");
+				dots.proses.classList.replace("border-gray-300", "border-green-400");
+				dots.selesai.classList.replace("border-gray-300", "border-blue-500");
+				bars.pending_proses.classList.replace("bg-gray-300", "bg-yellow-300");
+				bars.proses_selesai.classList.replace("bg-gray-300", "bg-green-300"); // hijau
+			}
+		})
+
 		function toggleDropdown() {
 			const dropdown = document.getElementById("dropdown-menu");
 			dropdown.classList.toggle("hidden");
@@ -334,6 +401,31 @@
 			menu.classList.toggle("hidden");
 		}
 
+		document.addEventListener("DOMContentLoaded", function () {
+			const status = localStorage.getItem("statusLaporan");
+
+			// Reset semua ke abu-abu
+			const pending = document.getElementById("dot-pending");
+			const proses = document.getElementById("dot-proses");
+			const selesai = document.getElementById("dot-selesai");
+
+			[pending, proses, selesai].forEach(dot => {
+				dot.classList.remove("bg-yellow-400", "bg-green-400", "bg-blue-500");
+				dot.classList.add("bg-gray-300");
+			});
+
+			// Atur warna sesuai status
+			if (status === "pending") {
+				pending.classList.replace("bg-gray-300", "bg-yellow-400");
+			} else if (status === "proses") {
+				pending.classList.replace("bg-gray-300", "bg-yellow-400");
+				proses.classList.replace("bg-gray-300", "bg-green-400");
+			} else if (status === "selesai") {
+				pending.classList.replace("bg-gray-300", "bg-yellow-400");
+				proses.classList.replace("bg-gray-300", "bg-green-400");
+				selesai.classList.replace("bg-gray-300", "bg-blue-500");
+			}
+		});
 		// Tutup dropdown saat klik di luar
 		window.addEventListener("click", function (e) {
 			const btn = document.querySelector("button[onclick='toggleDropdown()']");

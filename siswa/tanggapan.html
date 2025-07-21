@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Tanggapan Pengaduan</title>
 	<script src="https://cdn.tailwindcss.com"></script>
-	
+
 	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </head>
@@ -89,12 +89,12 @@
 		<!-- Topbar -->
 		<div class="flex justify-between items-center bg-blue-900 text-white px-6 py-4 rounded-lg shadow mb-6">
 			<div class="breadcrumb hidden sm:flex space-x-2 items-center">
-				<a href="#" class="text-2xl text-white font-semibold">Dashboard</a>
+				<a href="#" class="text-2xl text-white font-semibold">Tanggapan</a>
 			</div>
 			<div class="flex items-center space-x-4">
 				<input type="text" placeholder="Search..."
 					class="px-4 py-2 rounded-full border border-white focus:outline-none focus:ring-2 focus:ring-white bg-white text-black" />
-					<button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
+				<button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
 					class="relative inline-flex items-center  text-sm font-medium  text-center text-gray-100 hover:text-gray-100 focus:outline-none light:hover:text-white light:text-gray-400"
 					type="button">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -134,13 +134,14 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Kesiswaan</span></div>
-										
-									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
-									
+
+								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
+									consectetur ullam repellat...</span>
+
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-						
+
 						<a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
 							<div class="shrink-0">
 								<img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
@@ -158,14 +159,15 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Waka Kurikulum</span></div>
-										
-									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
-									
+
+								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
+									consectetur ullam repellat...</span>
+
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-						
-						
+
+
 					</div>
 					<a href="notifikasi.html"
 						class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 light:bg-gray-800 light:hover:bg-gray-700 light:text-white">
@@ -209,35 +211,42 @@
 				</div>
 			</div>
 		</div>
-		<div id="tanggapan-container" class="space-y-4 p-4 bg-gray-50 ">
-			<!-- Judul -->
-			<h2 class="text-2xl font-semibold text-gray-800">Daftar Tanggapan</h2>
-
+		<div id="tanggapan-container"
+			class="space-y-6 p-6 bg-gradient-to-b from-gray-50 to-white rounded-2xl shadow-inner">
+			
 			<!-- Tanggapan Card -->
-			<div class="bg-white border rounded-xl shadow-sm p-4 flex flex-col space-y-2">
-				<div class="flex items-center justify-between">
-					<div class="text-sm text-gray-600">Ditanggapi oleh: <span class="font-medium text-blue-600">Admin
-							Desa</span></div>
-					<div class="text-xs text-gray-400">20 Juli 2025, 10:30 WIB</div>
+			<a href="detail-riwayat.html"
+				class="block group bg-white border border-gray-200 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] p-5 animate-slide-fade">
+				<div class="flex items-center justify-between mb-2">
+					<div class="text-sm text-gray-600">
+						Ditanggapi oleh:
+						<span class="font-semibold text-blue-600 group-hover:text-blue-800 transition-colors">Admin
+							Desa</span>
+					</div>
+					<div class="text-xs text-gray-400 italic">20 Juli 2025, 10:30 WIB</div>
 				</div>
-				<p class="text-gray-800 text-sm">
+				<p class="text-gray-800 text-sm leading-relaxed">
 					Terima kasih atas laporannya. Kami akan segera menindaklanjuti perbaikan jalan yang rusak.
 				</p>
-			</div>
+			</a>
 
 			<!-- Tanggapan Card -->
-			<div class="bg-white border rounded-xl shadow-sm p-4 flex flex-col space-y-2">
-				<div class="flex items-center justify-between">
-					<div class="text-sm text-gray-600">Ditanggapi oleh: <span class="font-medium text-blue-600">Petugas
-							Satpol PP</span></div>
-					<div class="text-xs text-gray-400">19 Juli 2025, 15:45 WIB</div>
+			<a href="detail-riwayat.html"
+				class="block group bg-white border border-gray-200 rounded-2xl shadow-lg transition-all duration-300 hover:shadow-lg hover:scale-[1.02] p-5 animate-slide-fade">
+				<div class="flex items-center justify-between mb-2">
+					<div class="text-sm text-gray-600">
+						Ditanggapi oleh:
+						<span class="font-semibold text-blue-600 group-hover:text-blue-800 transition-colors">Petugas
+							Satpol PP</span>
+					</div>
+					<div class="text-xs text-gray-400 italic">19 Juli 2025, 15:45 WIB</div>
 				</div>
-				<p class="text-gray-800 text-sm">
+				<p class="text-gray-800 text-sm leading-relaxed">
 					Sudah kami tindaklanjuti. Petugas sudah ke lokasi dan memberikan teguran kepada pemilik warung.
 				</p>
-			</div>
-		</div>
+			</a>
 
+		</div>
 
 	</main>
 	<script>
