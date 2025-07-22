@@ -318,23 +318,28 @@
                                         readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, fuga debitis maxime, ut illum sequi eius non excepturi ipsa atque quae dicta qui impedit illo. Obcaecati ipsa non eligendi fugiat?</textarea>
                                 </div>
 
-                                <!-- Pilihan Aksi -->
+                         <!-- Ikon Penolakan -->
                                 <div class="mb-4">
                                     <label class="block mb-1 font-medium text-gray-700">Status Laporan</label>
-                                    <select
-                                        class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3">
-                                        <option value="">Pilih Aksi</option>
-                                        <option value="tolak">Tolak Laporan</option>
-                                        <option value="terima">Terima Laporan</option>
-                                    </select>
+                                    <div class="flex items-center space-x-3">
+                                    <!-- Gambar atau ikon penolakan -->
+                                    <button onclick="setStatusTolak()" 
+                                            class="p-2 bg-red-100 hover:bg-red-200 rounded-full shadow-md transition duration-200">
+                                        <!-- Ikon silang -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                        </svg>
+                                    </button>
+                                    <span class="text-sm text-red-600 font-semibold">Laporan Ditolak</span>
+                                    </div>
                                 </div>
-
                                 <!-- Alasan -->
                                 <div class="mb-6">
                                     <label class="block mb-1 font-medium text-gray-700">Alasan</label>
-                                    <textarea rows="3"
+                                    <textarea rows="3" readonly
                                         class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
-                                        placeholder="Tulis alasan penolakan atau penerimaan laporan..."></textarea>
+                                        placeholder="Tulis alasan penolakan atau penerimaan laporan...">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi velit illo, ullam optio temporibus nobis quas aspernatur quia suscipit similique est, eveniet repudiandae voluptas corrupti praesentium fuga deleniti non itaque.
+                                    </textarea>
                                 </div>
 
                                 <!-- Tombol -->
@@ -345,7 +350,7 @@
                                     </button>
                                     <button
                                         class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg">
-                                        Kirim
+                                        Selesai
                                     </button>
                                 </div>
                             </div>
@@ -526,12 +531,17 @@
                                 <!-- Pilihan Aksi -->
                                 <div class="mb-4">
                                     <label class="block mb-1 font-medium text-gray-700">Status Laporan</label>
-                                    <select
-                                        class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3">
-                                        <option value="">Pilih Aksi</option>
-                                        <option value="tolak">Tolak Laporan</option>
-                                        <option value="terima">Terima Laporan</option>
-                                    </select>
+                                     <!-- Tombol Selesai -->
+                                    <div class="flex items-center space-x-3">
+                                        <button onclick="setStatus('selesai')" id="btnSelesai"
+                                            class="p-2 bg-green-100 hover:bg-green-200 rounded-full shadow transition">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" stroke-width="2">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </button>
+                                        <span class="text-green-600 font-semibold " id="labelSelesai">Laporan Selesai</span>
+                                    </div>
                                 </div>
 
                                 <!-- Alasan -->
@@ -539,7 +549,7 @@
                                     <label class="block mb-1 font-medium text-gray-700">Alasan</label>
                                     <textarea rows="3"
                                         class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
-                                        placeholder="Tulis alasan penolakan atau penerimaan laporan..."></textarea>
+                                        readonly placeholder="Tulis alasan penolakan atau penerimaan laporan...">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas cupiditate molestiae vero rem nihil ab voluptatem maxime ipsum, sit commodi, sapiente labore quisquam maiores repudiandae veritatis minus, perspiciatis possimus. Numquam.</textarea>
                                 </div>
 
                                 <!-- Tombol -->
@@ -550,7 +560,7 @@
                                     </button>
                                     <button
                                         class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg">
-                                        Kirim
+                                        Selesai
                                     </button>
                                 </div>
                             </div>
