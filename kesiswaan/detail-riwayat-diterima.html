@@ -197,18 +197,30 @@
 		<!-- Foto & Judul -->
 		<div class="flex flex-col items-center mb-6">
 			<!-- Ganti dengan ikon ceklis hijau -->
-			<div class="p-3 rounded-full border-4 border-yellow-200 hover:border-yellow-400 transition-all duration-300">
+			<div class="p-3 rounded-full border-4 border-yellow-300 hover:border-yellow-400 transition-all duration-300">
 				<svg xmlns="http://www.w3.org/2000/svg"
-					class="w-24 h-24 text-yellow-500 hover:text-yellow-600 animate-bounce transition-colors duration-300"
-					fill="none" viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="M9 12l2 2 4-4m-6 8h6a2 2 0 002-2V7a2 2 0 00-2-2h-3.586a1 1 0 01-.707-.293l-1.414-1.414A1 1 0 0010 3H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+					viewBox="0 0 24 24"
+					fill="currentColor"
+					class="w-24 h-24 text-yellow-500 hover:text-yellow-600 animate-pulse transition duration-300 ease-in-out">
+					<path fill-rule="evenodd" d="M6 3.75A.75.75 0 016.75 3h10.5a.75.75 0 01.75.75v2.25c0 .621-.504 1.125-1.125 1.125h-.27a.75.75 0 00-.53.22l-2.71 2.71a.75.75 0 000 1.06l2.71 2.71c.14.14.22.33.22.53v.27c0 .621.504 1.125 1.125 1.125h.27a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75v-2.25c0-.621.504-1.125 1.125-1.125h.27a.75.75 0 00.53-.22l2.71-2.71a.75.75 0 000-1.06l-2.71-2.71a.75.75 0 00-.53-.22h-.27A1.125 1.125 0 016 6V3.75z" clip-rule="evenodd" />
 				</svg>
+
+
+				<script>module.exports = {
+					theme: {
+					  extend: {
+						animation: {
+						  'spin-slow': 'spin 3s linear infinite',
+						},
+					  },
+					},
+				  }
+				  </script>
 			</div>
 
 
 			<!-- Judul diubah jadi "Selesai" -->
-			<h1 class="text-xl font-bold text-blue-600">Diterima</h1>
+			<h1 class="text-xl font-bold text-yellow-600">Diterima</h1>
 		</div>
 
 
@@ -217,7 +229,7 @@
 			<!-- Diterima -->
 			<div class="flex flex-col items-center z-10">
 				<div id="dot-diterima"
-					class="w-5 h-5 rounded-full border-4 border-yellow-300 bg-white transition-colors duration-300 shadow-md">
+					class="w-5 h-5 rounded-full border-4 border-yellow-300 bg-yellow-400 transition-colors duration-300 shadow-md">
 				</div>
 				<span class="text-sm text-yellow-600 mt-1">Diterima</span>
 			</div>
