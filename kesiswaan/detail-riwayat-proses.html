@@ -194,17 +194,18 @@
             </div>
         </div>
 
-       <!-- Foto & Judul -->
+        <!-- Foto & Judul -->
         <div class="flex flex-col items-center mb-6">
             <!-- Ganti dengan ikon ceklis hijau -->
-           <div class="p-3 rounded-full border-4 border-green-200 hover:border-green-500 transition-all duration-300">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 text-green-500 hover:text-green-600 animate-spin transition-colors duration-300" fill="none" viewBox="0 0 24 24"
-        stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 4v5h.582m15.356-.028A9.003 9.003 0 0012 3a9 9 0 00-8.418 5.972M20 20v-5h-.581m-15.357.028A9.003 9.003 0 0012 21a9 9 0 008.418-5.972" />
-    </svg>
-</div>
-            
+            <div class="p-3 rounded-full border-4 border-green-200 hover:border-green-500 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="w-24 h-24 text-green-500 hover:text-green-600 animate-spin transition-colors duration-300"
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 4v5h.582m15.356-.028A9.003 9.003 0 0012 3a9 9 0 00-8.418 5.972M20 20v-5h-.581m-15.357.028A9.003 9.003 0 0012 21a9 9 0 008.418-5.972" />
+                </svg>
+            </div>
+
             <!-- Judul diubah jadi "Selesai" -->
             <h1 class="text-xl font-bold text-green-600">Proses</h1>
         </div>
@@ -215,22 +216,22 @@
             <!-- Pending -->
             <div class="flex flex-col items-center z-10">
                 <div id="dot-pending"
-                    class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
+                    class="w-5 h-5 rounded-full border-4 border-yellow-300 bg-white transition-colors duration-300 shadow-md">
                 </div>
-                <span class="text-sm text-gray-600 mt-1">Pending</span>
+                <span class="text-sm text-yellow-600 mt-1">Pending</span>
             </div>
 
             <!-- Garis 1: Pending -> Proses -->
             <div id="bar-pending-proses"
-                class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
+                class="flex-1 h-1 bg-green-400 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
             </div>
 
             <!-- Proses -->
             <div class="flex flex-col items-center z-10">
                 <div id="dot-proses"
-                    class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
+                    class="w-5 h-5 rounded-full border-4 border-green-500 bg-white transition-colors duration-300 shadow-md">
                 </div>
-                <span class="text-sm text-gray-600 mt-1">Proses</span>
+                <span class="text-sm text-green-600 mt-1">Proses</span>
             </div>
 
             <!-- Garis 2: Proses -> Selesai -->
@@ -253,28 +254,31 @@
             <div class="flex items-start space-x-4">
                 <!-- Gambar Thumbnail -->
                 <!-- Thumbnail Gambar -->
-               
-                <img 
-                src="../assets/image/Sejarah.webp" 
-                onclick="showFullImage('modalBuktiLaporan', '../assets/image/Sejarah.webp')" 
-                class="w-24 h-24 object-cover rounded-lg shadow cursor-pointer">
 
-                 <!-- Modal Gambar Besar di modalBuktiLaporan -->
-                 <div id="modalBuktiLaporan" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4 py-10">
+                <img src="../assets/image/Sejarah.webp"
+                    onclick="showFullImage('modalBuktiLaporan', '../assets/image/Sejarah.webp')"
+                    class="w-24 h-24 object-cover rounded-lg shadow cursor-pointer">
+
+                <!-- Modal Gambar Besar di modalBuktiLaporan -->
+                <div id="modalBuktiLaporan"
+                    class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4 py-10">
                     <div class="relative">
-                    <!-- Tombol Close -->
-                    <button onclick="closeImageModal('modalBuktiLaporan')" class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <!-- Gambar Besar -->
-                    <img id="modalImage_modalBuktiLaporan" src="" alt="Gambar Besar" class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
+                        <!-- Tombol Close -->
+                        <button onclick="closeImageModal('modalBuktiLaporan')"
+                            class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                        <!-- Gambar Besar -->
+                        <img id="modalImage_modalBuktiLaporan" src="" alt="Gambar Besar"
+                            class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
                     </div>
                 </div>
 
                 <!-- JavaScript -->
-               
+
                 <!-- Konten Aduan -->
                 <div>
                     <!-- Judul -->
@@ -301,7 +305,7 @@
             <div class="flex items-center space-x-3 space-x-reverse self-end flex-row-reverse">
                 <!-- Gambar -->
                 <img src="image/admin.jpg" alt="Admin" class="w-12 h-12 rounded-full object-cover" />
-            
+
                 <!-- Konten -->
                 <div>
                     <div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs mt-1 ">
@@ -309,19 +313,19 @@
                         <p>Terima kasih atas laporannya</p>
                     </div>
                 </div>
-            </div>            
+            </div>
 
             <!-- Pesan dari Pengadu -->
             <div class="flex items-start space-x-2">
                 <!-- Gambar di kiri -->
                 <img src="image/user.jpg" alt="Pengadu" class="w-12 h-12 rounded-full object-cover" />
-            
+
                 <!-- Bubble chat -->
                 <div class="bg-blue-100 text-sm p-2 rounded-lg max-w-xs">
                     <span class="block text-blue-500 font-semibold">Rina Maulida</span>
                     <p>Laporan saya bagaimana ya?</p>
                 </div>
-            </div>            
+            </div>
 
             <!-- Balasan Admin -->
             <div class="flex items-start space-x-2 space-x-reverse self-end flex-row-reverse">
@@ -335,40 +339,41 @@
             <div class="flex items-start space-x-2">
                 <!-- Gambar di kiri -->
                 <img src="image/user.jpg" alt="Pengadu" class="w-12 h-12 rounded-full object-cover" />
-            
+
                 <!-- Bubble chat -->
                 <div class="bg-blue-100 text-sm p-2 rounded-lg max-w-xs">
                     <span class="block text-blue-500 font-semibold">Rina Maulida</span>
                     <p>Baik terimakasih </p>
                 </div>
-            </div>      
+            </div>
 
 
+        </div>
         <!-- Input Chat -->
         <div class="flex items-center bg-white rounded-lg shadow p-2">
             <!-- Input teks -->
             <label for="file-upload" class="cursor-pointer mr-2 text-gray-500 hover:text-blue-600">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round"
                         d="M3 7.5A1.5 1.5 0 014.5 6h3.379a1.5 1.5 0 001.06-.44l.94-.94A1.5 1.5 0 0110.94 4.5h2.12a1.5 1.5 0 011.061.44l.939.94A1.5 1.5 0 0016.122 6H19.5a1.5 1.5 0 011.5 1.5v10.5a1.5 1.5 0 01-1.5 1.5h-15A1.5 1.5 0 013 18V7.5z" />
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M15 13.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 13.5a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
             </label>
             <input type="file" id="file-upload" accept="image/*" class="hidden" />
             <input type="text" placeholder="Ketik tanggapan..." class="flex-1 px-3 py-2 outline-none text-sm" />
-        
+
             <!-- Input file (ikon kamera) -->
-        
+
             <!-- Tombol Kirim -->
             <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">Kirim</button>
         </div>
         
 
+
+
     </main>
     <script>
-
         document.addEventListener("DOMContentLoaded", function () {
             const status = localStorage.getItem("statusLaporan") || "pending";
 
@@ -493,7 +498,7 @@
         });
 
         // Fungsi untuk menampilkan gambar besar
-        
+
         function showFullImage(modalId, src) {
             document.getElementById(modalId).classList.remove("hidden");
             document.getElementById("modalImage_" + modalId).src = src;
@@ -502,10 +507,6 @@
         function closeImageModal(modalId) {
             document.getElementById(modalId).classList.add("hidden");
         }
-
-  
-
-              
     </script>
 </body>
 
