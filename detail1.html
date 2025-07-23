@@ -7,31 +7,24 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
+  <style>body { font-family: 'Inter', sans-serif; }</style>
 </head>
 <body class="relative bg-white text-gray-800 overflow-x-hidden min-h-screen flex flex-col">
-
-  <!-- SVG Lingkaran Kiri-Atas -->
-    <div class="absolute top-[-200px] left-[-200px] z-0 pointer-events-none">
-        <svg width="800" height="800" viewBox="0 0 800 800" fill="none">
-        <circle cx="400" cy="400" r="350" fill="url(#gradient)" />
-        <defs>
-            <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#93C5FD" />
-            <stop offset="100%" stop-color="#BFDBFE" />
-            </linearGradient>
-        </defs>
-        </svg>
-    </div>  
-
-  <!-- Blur Latar Kanan-Bawah -->
+  <div class="absolute top-[-200px] left-[-200px] z-0 pointer-events-none">
+    <svg width="800" height="800" viewBox="0 0 800 800" fill="none">
+      <circle cx="400" cy="400" r="350" fill="url(#gradient)" />
+      <defs>
+        <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#93C5FD" />
+          <stop offset="100%" stop-color="#BFDBFE" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
   <div class="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-blue-200 rounded-full filter blur-[120px] opacity-50 z-0"></div>
 
-  <nav class="bg-white shadow-md py-4 sticky top-0 z-50">
+<!-- Navbar -->
+<nav class="bg-white shadow-md py-4 sticky top-0 z-50">
     <div class="container mx-auto px-5 lg:px-20 flex items-center justify-between h-16">
       <!-- Logo -->
       <div class="flex items-center space-x-3">
@@ -97,33 +90,21 @@
 
   <!-- Main Content -->
   <main class="relative z-10 max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-start flex-grow" data-aos="fade-up">
-    
-    <!-- Gambar Pengaduan -->
     <div class="rounded-xl overflow-hidden shadow-lg">
       <img src="assets/image/Sejarah.webp" alt="Foto pengaduan" class="w-full h-full object-cover">
     </div>
-
-    <!-- Detail Pengaduan -->
     <div class="space-y-5">
-      <span class="inline-block bg-blue-100 text-blue-700 text-sm px-4 py-1 rounded-full font-semibold">Selesai</span>
-      
-      <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">
-        Harga makanan di kantin sekolah tidak konsisten
-      </h2>
-      
-      <p class="text-sm text-gray-500">
-        Dikirim oleh <strong>A*** P*******</strong> pada <strong>18 Juli 2024</strong>
-      </p>
-      
+      <span class="inline-block bg-yellow-100 text-yellow-700 text-sm px-4 py-1 rounded-full font-semibold">Pending</span>
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">Banyak komputer di lab TIK rusak dan lambat</h2>
+      <p class="text-sm text-gray-500">Dikirim oleh <strong>M*** R******</strong> pada <strong>12 Juli 2024</strong></p>
       <div class="bg-gray-100 p-4 rounded-lg text-gray-700 shadow-sm">
         <p>
-          Beberapa siswa mengeluhkan harga yang terlalu mahal tanpa daftar harga yang jelas. Hal ini menyebabkan kebingungan dan ketidaknyamanan dalam membeli makanan saat istirahat.
+          Banyak perangkat komputer di laboratorium TIK mengalami kerusakan, performa lambat, bahkan beberapa tidak bisa digunakan sama sekali. Hal ini mengganggu kelancaran kegiatan praktik siswa.
         </p>
       </div>
-
-      <div class="bg-green-50 border-l-4 border-green-500 p-4 rounded-md shadow-sm">
-        <h3 class="font-semibold text-green-700 mb-1">Tanggapan:</h3>
-        <p class="text-gray-700">Terima kasih atas laporannya. Kami akan meminta kantin untuk menyediakan daftar harga tetap yang bisa dilihat oleh semua siswa.</p>
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-md shadow-sm">
+        <h3 class="font-semibold text-yellow-700 mb-1">Tanggapan:</h3>
+        <p class="text-gray-700">Laporan sedang ditinjau oleh pihak sekolah. Perbaikan akan dilakukan secepat mungkin setelah proses pendataan selesai.</p>
       </div>
     </div>
   </main>
@@ -166,9 +147,6 @@
     </div>
   </footer>
 
-  <!-- AOS Init -->
-  <script>
-    AOS.init({ duration: 800 });
-  </script>
+  <script>AOS.init({ duration: 800 });</script>
 </body>
 </html>
