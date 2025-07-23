@@ -26,8 +26,7 @@
 		</div>
 
 		<nav class="space-y-2">
-			<a href="dashboard.html"
-				class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="dashboard.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -35,17 +34,18 @@
 				</svg>
 				Dashboard
 			</a>
-            
-            <a href="tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H7l-4 4V10a2 2 0 012-2h2" />
-                </svg>
-                Tanggapan
-            </a>
 
-			<a href="riwayat_tanggapan.html" class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
+			<a href="tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+					stroke="currentColor">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+						d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H7l-4 4V10a2 2 0 012-2h2" />
+				</svg>
+				Tanggapan
+			</a>
+
+			<a href="riwayat_tanggapan.html"
+				class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -74,7 +74,11 @@
 				<a href="#" class="text-2xl text-white font-semibold">Riwayat Laporan</a>
 			</div>
 			<div class="flex items-center space-x-4">
+<<<<<<< HEAD
+				<button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
+=======
 			    <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
+>>>>>>> 8f1fc1348b90262ac65a880a541b59b6dc9b1d16
 					class="relative inline-flex items-center  text-sm font-medium  text-center text-gray-100 hover:text-gray-100 focus:outline-none light:hover:text-white light:text-gray-400"
 					type="button">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -180,14 +184,15 @@
 							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
 								style="background-image: url('image/admin.jpg');">
 							</div>
-							<p class="mt-2 font-semibold text-gray-800">admin</p>
+							<p class="mt-2 font-semibold text-blue-800">siswa</p>
 						</div>
 
 						<hr class="border-gray-200" />
 
 						<!-- Menu -->
 						<a href="edit-profil.html" class="block px-4 py-2 hover:bg-blue-50 text-center">Edit Profil</a>
-						<a href="#" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
+						<a href="/laporan-masyarakat/index.html"
+							class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
 					</div>
 				</div>
 			</div>
@@ -209,10 +214,6 @@
 				class="filter-button text-green-600 border-b-2 border-green-600 pb-2 font-medium">
 				Riwayat
 			</button>
-			<button onclick="filterLaporan('pending', this)" id="btn-pending"
-				class="filter-button text-gray-500 pb-2 hover:text-black">
-				Pending
-			</button>
 			<button onclick="filterLaporan('proses', this)" id="btn-proses"
 				class="filter-button text-gray-500 pb-2 hover:text-black">
 				Proses
@@ -231,6 +232,59 @@
 		<div id="laporan-container" class="space-y-4 lg:px-10">
 
 			<!-- Laporan 1 -->
+<<<<<<< HEAD
+			<div onclick="window.location.href='detail-riwayat-proses.html'" data-status="proses"
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Rina Maulida</div>
+					<div class="font-medium text-gray-900">Pintu Gerbang Utama</div>
+					<div class="text-xs text-gray-600">Pintu gerbang utama rusak dan tidak bisa dikunci, berpotensi
+						menimbulkan masalah keamanan saat malam hari.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Sarana & Prasarana</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">18 Juli 2025, 07:45</div>
+					<button
+						class="text-xs font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">Proses</button>
+				</div>
+			</div>
+			<!-- Laporan 2 -->
+			<div onclick="window.location.href='detail-riwayat-proses.html'" data-status="proses"
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Dimas Prakoso</div>
+					<div class="font-medium text-gray-900">Ruang Multimedia</div>
+					<div class="text-xs text-gray-600">Beberapa komputer di ruang multimedia tidak bisa menyala, mohon
+						segera diperbaiki karena akan digunakan ujian.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Teknisi IT</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">17 Juli 2025, 10:20</div>
+					<button
+						class="text-xs font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">Proses</button>
+				</div>
+			</div>
+
+			<!-- Laporan 3 -->
+			<div onclick="window.location.href='detail-riwayat-selesai.html'" data-status="selesai"
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Siti Aminah</div>
+					<div class="font-medium text-gray-900">Toilet Belakang Gedung B</div>
+					<div class="text-xs text-gray-600">Toilet bagian belakang rusak dan air tidak mengalir, sudah
+						diperbaiki sekarang. Terima kasih.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">16 Juli 2025, 08:10</div>
+					<button
+						class="text-xs font-semibold bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Selesai</button>
+				</div>
+			</div>
+=======
              <a href="" data-status="pending"
              class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4" >
               
@@ -287,10 +341,11 @@
                              class="text-xs font-semibold bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Selesai</button>
                      </div>
              </a>
+>>>>>>> 8f1fc1348b90262ac65a880a541b59b6dc9b1d16
 
 			<!-- Laporan 4 -->
-			<div data-status="proses"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4">
+			<div onclick="window.location.href='detail-riwayat-proses.html'" data-status="proses"
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
 					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Budi Setiawan</div>
@@ -307,8 +362,8 @@
 			</div>
 
 			<!-- Laporan 5 -->
-			<div data-status="ditolak"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4">
+			<div onclick="window.location.href='detail-riwayat-ditolak.html'" data-status="ditolak"
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
 					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Nur Hasanah</div>
