@@ -197,30 +197,32 @@
 		<!-- Foto & Judul -->
 		<div class="flex flex-col items-center mb-6">
 			<!-- Ganti dengan ikon ceklis hijau -->
-			<div class="p-3 rounded-full border-4 border-yellow-300 hover:border-yellow-400 transition-all duration-300">
-				<svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24"
-					fill="currentColor"
+			<div
+				class="p-3 rounded-full border-4 border-yellow-300 hover:border-yellow-400 transition-all duration-300">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
 					class="w-24 h-24 text-yellow-500 hover:text-yellow-600 animate-pulse transition duration-300 ease-in-out">
-					<path fill-rule="evenodd" d="M6 3.75A.75.75 0 016.75 3h10.5a.75.75 0 01.75.75v2.25c0 .621-.504 1.125-1.125 1.125h-.27a.75.75 0 00-.53.22l-2.71 2.71a.75.75 0 000 1.06l2.71 2.71c.14.14.22.33.22.53v.27c0 .621.504 1.125 1.125 1.125h.27a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75v-2.25c0-.621.504-1.125 1.125-1.125h.27a.75.75 0 00.53-.22l2.71-2.71a.75.75 0 000-1.06l-2.71-2.71a.75.75 0 00-.53-.22h-.27A1.125 1.125 0 016 6V3.75z" clip-rule="evenodd" />
+					<path fill-rule="evenodd"
+						d="M6 3.75A.75.75 0 016.75 3h10.5a.75.75 0 01.75.75v2.25c0 .621-.504 1.125-1.125 1.125h-.27a.75.75 0 00-.53.22l-2.71 2.71a.75.75 0 000 1.06l2.71 2.71c.14.14.22.33.22.53v.27c0 .621.504 1.125 1.125 1.125h.27a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75v-2.25c0-.621.504-1.125 1.125-1.125h.27a.75.75 0 00.53-.22l2.71-2.71a.75.75 0 000-1.06l-2.71-2.71a.75.75 0 00-.53-.22h-.27A1.125 1.125 0 016 6V3.75z"
+						clip-rule="evenodd" />
 				</svg>
 
 
-				<script>module.exports = {
-					theme: {
-					  extend: {
-						animation: {
-						  'spin-slow': 'spin 3s linear infinite',
+				<script>
+					module.exports = {
+						theme: {
+							extend: {
+								animation: {
+									'spin-slow': 'spin 3s linear infinite',
+								},
+							},
 						},
-					  },
-					},
-				  }
-				  </script>
+					}
+				</script>
 			</div>
 
 
 			<!-- Judul diubah jadi "Selesai" -->
-			<h1 class="text-xl font-bold text-yellow-600">Diterima</h1>
+			<h1 class="text-xl font-bold text-yellow-600">Pending</h1>
 		</div>
 
 
@@ -231,7 +233,7 @@
 				<div id="dot-diterima"
 					class="w-5 h-5 rounded-full border-4 border-yellow-300 bg-yellow-400 transition-colors duration-300 shadow-md">
 				</div>
-				<span class="text-sm text-yellow-600 mt-1">Diterima</span>
+				<span class="text-sm text-yellow-600 mt-1">Pending</span>
 			</div>
 
 			<!-- Garis 1: z -> Proses -->
@@ -312,24 +314,20 @@
 
 
 		<!-- Riwayat Tanggapan -->
-		<div class="bg-white rounded-lg p-4 shadow mb-4 h-64 overflow-y-auto space-y-4 flex flex-col">
-
-			<!-- Pesan dari Admin -->
-			<div class="flex items-center space-x-3 space-x-reverse self-end flex-row-reverse">
-				<!-- Gambar -->
-				<img src="image/admin.jpg" alt="Admin" class="w-12 h-12 rounded-full object-cover" />
-
-				<!-- Konten -->
-				<div>
-					<div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs mt-1 ">
-						<span class="block text-green-500 font-semibold">Kesiswaan</span>
-						<p>Aduan telah kami terima. Akan segera kami tindak lanjuti.</p>
-					</div>
-				</div>
+		<div
+			class="bg-white rounded-lg p-4 shadow mb-4 h-64 overflow-y-auto space-y-4 flex flex-col justify-center items-center">
+			<!-- Notifikasi Pending -->
+			<div class="text-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 text-yellow-500 mx-auto animate-bounce"
+					viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+					stroke-linejoin="round">
+					<path d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+				</svg>
+				<p class="mt-3 text-yellow-600 text-lg font-semibold">Menunggu Persetujuan</p>
+				<p class="text-sm text-gray-500">Laporan kamu sedang diproses oleh admin.</p>
 			</div>
-
-			<!-- Pesan dari Pengadu -->
 		</div>
+
 
 
 		<!-- Input Chat -->
@@ -351,7 +349,7 @@
 			<!-- Tombol Kirim -->
 			<button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">Kirim</button>
 		</div>
-	</div>
+		</div>
 
 	</main>
 	<script>
@@ -488,7 +486,6 @@
 		function closeImageModal(modalId) {
 			document.getElementById(modalId).classList.add("hidden");
 		}
-
 	</script>
 </body>
 
