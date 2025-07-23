@@ -115,7 +115,7 @@
                             </div>
                             <div class="w-full ps-3">
                                 <div class="text-gray-500 text-sm light:text-gray-400"> <span
-                                        class="font-semibold text-gray-900 light:text-white">Kesiswaan</span></div>
+                                        class="font-semibold text-gray-900 light:text-white">Kurikulum</span></div>
 
                                 <span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
                                     consectetur ullam repellat...</span>
@@ -179,17 +179,18 @@
 
                         <!-- Header: Foto & Nama -->
                         <div class="flex flex-col items-center py-4 px-4">
-                            <div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
-                                style="background-image: url('image/admin.jpg');">
-                            </div>
-                            <p class="mt-2 font-semibold text-gray-800">admin</p>
-                        </div>
+							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
+								style="background-image: url('image/admin.jpg');">
+							</div>
+							<p class="mt-2 font-semibold text-green-600">Kurikulum</p>
+						</div>
 
                         <hr class="border-gray-200" />
 
                         <!-- Menu -->
                         <a href="edit-profil.html" class="block px-4 py-2 hover:bg-blue-50 text-center">Edit Profil</a>
-                        <a href="/laporan-masyarakat/index.html" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
+                        <a href="/laporan-masyarakat/index.html"
+                            class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
                     </div>
                 </div>
             </div>
@@ -244,7 +245,7 @@
                         </tr>
                     </thead>
                     <tbody id="tableBody" class="text-gray-700">
-                        
+
 
                         <!-- Row 1 -->
                         <tr class="border-b border-gray-100 hover:bg-gray-50" data-title="Gangguan jaringan wifi"
@@ -264,99 +265,109 @@
                             <td class="px-4 py-3">19 May 2025 20:51</td>
                             <td class="px-4 py-3">
                                 <span
-                                    class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Kesiswaan</span>
+                                    class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Kurikulum</span>
                             </td>
                             <!-- Tombol untuk membuka modal -->
                             <!-- Tombol untuk membuka modal -->
                             <!-- Modal -->
                             <!-- Tombol untuk membuka modal -->
                             <td class="px-4 py-3 text-center">
-                                <button onclick="document.getElementById('modalJawabDitolak').classList.remove('hidden')"
-                                class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                                <span>Jawab</span>
-                            </button>
+                                <button
+                                    onclick="document.getElementById('modalJawabDitolak').classList.remove('hidden')"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded flex items-center space-x-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    <span>Jawab</span>
+                                </button>
                             </td>
                             <div id="modalJawabDitolak"
-                            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden overflow-y-auto">
-                            <div class="bg-white rounded-lg w-full max-w-2xl mx-4 my-2 p-6 relative max-h-[90vh] h-fit overflow-y-auto"
-                                style="margin-top: 10px; margin-bottom: 10px;">
-                                <!-- Judul -->
-                                <h2 class="text-xl font-bold mb-4 text-center">Detail Laporan</h2>
+                                class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden overflow-y-auto">
+                                <div class="bg-white rounded-lg w-full max-w-2xl mx-4 my-2 p-6 relative max-h-[90vh] h-fit overflow-y-auto"
+                                    style="margin-top: 10px; margin-bottom: 10px;">
+                                    <!-- Judul -->
+                                    <h2 class="text-xl font-bold mb-4 text-center">Detail Laporan</h2>
 
-                                <!-- Gambar Kecil -->
-                               <!-- Thumbnail Gambar -->
-                                <div class="flex justify-center mb-4">
-                                    <img 
-                                    src="../assets/image/Sejarah.webp" 
-                                    onclick="showFullImage('modalfotoDitolak', '../assets/image/Sejarah.webp')" 
-                                    class="cursor-pointer rounded-lg shadow-md w-48 h-48 object-cover hover:scale-105 duration-200">
-                                </div>
-                                
-                               <!-- Modal Gambar Besar di modalfotoDitolak -->
-                                <div id="modalfotoDitolak" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4 py-10">
-                                    <div class="relative">
-                                    <!-- Tombol Close -->
-                                    <button onclick="closeImageModal('modalfotoDitolak')" class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-md">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                        </svg>
-                                    </button>
-                                    <!-- Gambar Besar -->
-                                    <img id="modalImage_modalfotoDitolak" src="" alt="Gambar Besar" class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
+                                    <!-- Gambar Kecil -->
+                                    <!-- Thumbnail Gambar -->
+                                    <div class="flex justify-center mb-4">
+                                        <img src="../assets/image/Sejarah.webp"
+                                            onclick="showFullImage('modalfotoDitolak', '../assets/image/Sejarah.webp')"
+                                            class="cursor-pointer rounded-lg shadow-md w-48 h-48 object-cover hover:scale-105 duration-200">
                                     </div>
-                                </div>
-  
-                                <!-- Isi Laporan -->
-                                <div class="mb-4 text-gray-700">
-                                    <label class="block mb-1 font-medium text-gray-700">Deskripsi laporan</label>
-                                    <textarea rows="3"
-                                        class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
-                                        readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, fuga debitis maxime, ut illum sequi eius non excepturi ipsa atque quae dicta qui impedit illo. Obcaecati ipsa non eligendi fugiat?</textarea>
-                                </div>
 
-                         <!-- Ikon Penolakan -->
-                                <div class="mb-4">
-                                    <label class="block mb-1 font-medium text-gray-700">Status Laporan</label>
-                                    <div class="flex items-center space-x-3">
-                                    <!-- Gambar atau ikon penolakan -->
-                                    <button onclick="setStatusTolak()" 
-                                            class="p-2 bg-red-100 hover:bg-red-200 rounded-full shadow-md transition duration-200">
-                                        <!-- Ikon silang -->
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                        </svg>
-                                    </button>
-                                    <span class="text-sm text-red-600 font-semibold">Laporan Ditolak</span>
+                                    <!-- Modal Gambar Besar di modalfotoDitolak -->
+                                    <div id="modalfotoDitolak"
+                                        class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4 py-10">
+                                        <div class="relative">
+                                            <!-- Tombol Close -->
+                                            <button onclick="closeImageModal('modalfotoDitolak')"
+                                                class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-md">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black"
+                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </button>
+                                            <!-- Gambar Besar -->
+                                            <img id="modalImage_modalfotoDitolak" src="" alt="Gambar Besar"
+                                                class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- Alasan -->
-                                <div class="mb-6">
-                                    <label class="block mb-1 font-medium text-gray-700">Alasan</label>
-                                    <textarea rows="3" readonly
-                                        class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
-                                        placeholder="Tulis alasan penolakan atau penerimaan laporan...">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi velit illo, ullam optio temporibus nobis quas aspernatur quia suscipit similique est, eveniet repudiandae voluptas corrupti praesentium fuga deleniti non itaque.
+
+                                    <!-- Isi Laporan -->
+                                    <div class="mb-4 text-gray-700">
+                                        <label class="block mb-1 font-medium text-gray-700">Deskripsi laporan</label>
+                                        <textarea rows="3"
+                                            class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
+                                            readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, fuga debitis maxime, ut illum sequi eius non excepturi ipsa atque quae dicta qui impedit illo. Obcaecati ipsa non eligendi fugiat?</textarea>
+                                    </div>
+
+                                    <!-- Ikon Penolakan -->
+                                    <div class="mb-4">
+                                        <label class="block mb-1 font-medium text-gray-700">Status Laporan</label>
+                                        <div class="flex items-center space-x-3">
+                                            <!-- Gambar atau ikon penolakan -->
+                                            <button onclick="setStatusTolak()"
+                                                class="p-2 bg-red-100 hover:bg-red-200 rounded-full shadow-md transition duration-200">
+                                                <!-- Ikon silang -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600"
+                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </button>
+                                            <span class="text-sm text-red-600 font-semibold">Laporan Ditolak</span>
+                                        </div>
+                                    </div>
+                                    <!-- Alasan -->
+                                    <div class="mb-6">
+                                        <label class="block mb-1 font-medium text-gray-700">Alasan</label>
+                                        <textarea rows="3" readonly
+                                            class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
+                                            placeholder="Tulis alasan penolakan atau penerimaan laporan...">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi velit illo, ullam optio temporibus nobis quas aspernatur quia suscipit similique est, eveniet repudiandae voluptas corrupti praesentium fuga deleniti non itaque.
                                     </textarea>
-                                </div>
+                                    </div>
 
-                                <!-- Tombol -->
-                                <div class="flex justify-end space-x-4">
-                                    <button onclick="document.getElementById('modalJawabDitolak').classList.add('hidden')"
-                                        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-lg">
-                                        Kembali
-                                    </button>
-                                    <button
-                                        class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg">
-                                        Selesai
-                                    </button>
+                                    <!-- Tombol -->
+                                    <div class="flex justify-end space-x-4">
+                                        <button
+                                            onclick="document.getElementById('modalJawabDitolak').classList.add('hidden')"
+                                            class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-lg">
+                                            Kembali
+                                        </button>
+                                        <button
+                                            class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg">
+                                            Selesai
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            </div>
 
-                            
+
                         </tr>
 
                         <!-- Row 2 -->
@@ -377,10 +388,11 @@
                             <td class="px-4 py-3">16 May 2025 13:04</td>
                             <td class="px-4 py-3">
                                 <span
-                                    class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Kesiswaan</span>
+                                    class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Kurikulum</span>
                             </td>
                             <td class="px-4 py-3 text-center">
-                                <button onclick="document.getElementById('modalJawabPending').classList.remove('hidden')"
+                                <button
+                                    onclick="document.getElementById('modalJawabPending').classList.remove('hidden')"
                                     class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded flex items-center space-x-2">
                                     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -399,23 +411,28 @@
                                     <h2 class="text-xl font-bold mb-4 text-center">Detail Laporan</h2>
 
                                     <div class="flex justify-center mb-4">
-                                        <img 
-                                        src="image/admin.jpg" 
-                                        onclick="showFullImage('modalfotoPending', 'image/admin.jpg')" 
-                                        class="cursor-pointer rounded-lg shadow-md w-48 h-48 object-cover hover:scale-105 duration-200">
+                                        <img src="image/admin.jpg"
+                                            onclick="showFullImage('modalfotoPending', 'image/admin.jpg')"
+                                            class="cursor-pointer rounded-lg shadow-md w-48 h-48 object-cover hover:scale-105 duration-200">
                                     </div>
-                                    
-                                   <!-- Modal Gambar Besar di modalfotoPending -->
-                                    <div id="modalfotoPending" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4 py-10">
+
+                                    <!-- Modal Gambar Besar di modalfotoPending -->
+                                    <div id="modalfotoPending"
+                                        class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4 py-10">
                                         <div class="relative">
-                                        <!-- Tombol Close -->
-                                        <button onclick="closeImageModal('modalfotoPending')" class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-md">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </button>
-                                        <!-- Gambar Besar -->
-                                        <img id="modalImage_modalfotoPending" src="" alt="Gambar Besar" class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
+                                            <!-- Tombol Close -->
+                                            <button onclick="closeImageModal('modalfotoPending')"
+                                                class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-md">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black"
+                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </button>
+                                            <!-- Gambar Besar -->
+                                            <img id="modalImage_modalfotoPending" src="" alt="Gambar Besar"
+                                                class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
                                         </div>
                                     </div>
 
@@ -448,7 +465,8 @@
 
                                     <!-- Tombol -->
                                     <div class="flex justify-end space-x-4">
-                                        <button onclick="document.getElementById('modalJawabPending').classList.add('hidden')"
+                                        <button
+                                            onclick="document.getElementById('modalJawabPending').classList.add('hidden')"
                                             class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-lg">
                                             Kembali
                                         </button>
@@ -479,92 +497,103 @@
                             <td class="px-4 py-3">16 May 2025 12:56</td>
                             <td class="px-4 py-3">
                                 <span
-                                    class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Kesiswaan</span>
+                                    class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Kurikulum</span>
                             </td>
                             <td class="px-4 py-3 text-center">
-                                <button onclick="document.getElementById('modalJawabSelesai').classList.remove('hidden')"
-                                class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded flex items-center space-x-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                                </svg>
-                                <span>Jawab</span>
-                            </button>
+                                <button
+                                    onclick="document.getElementById('modalJawabSelesai').classList.remove('hidden')"
+                                    class="bg-blue-600 hover:bg-blue-700 text-white text-sm px-3 py-1.5 rounded flex items-center space-x-2">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                    <span>Jawab</span>
+                                </button>
                             </td>
                             <div id="modalJawabSelesai"
-                            class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden overflow-y-auto">
+                                class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden overflow-y-auto">
                                 <div class="bg-white rounded-lg w-full max-w-2xl mx-4 my-2 p-6 relative max-h-[90vh] h-fit overflow-y-auto"
                                     style="margin-top: 10px; margin-bottom: 10px;">
                                     <!-- Judul -->
                                     <h2 class="text-xl font-bold mb-4 text-center">Detail Laporan</h2>
 
                                     <div class="flex justify-center mb-4">
-                                        <img 
-                                        src="image/user.jpg" 
-                                        onclick="showFullImage('modalfotoSelesai', 'image/user.jpg')" 
-                                        class="cursor-pointer rounded-lg shadow-md w-48 h-48 object-cover hover:scale-105 duration-200">
+                                        <img src="image/user.jpg"
+                                            onclick="showFullImage('modalfotoSelesai', 'image/user.jpg')"
+                                            class="cursor-pointer rounded-lg shadow-md w-48 h-48 object-cover hover:scale-105 duration-200">
                                     </div>
-                                    
-                                   <!-- Modal Gambar Besar di modalfotoSelesai -->
-                                    <div id="modalfotoSelesai" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4 py-10">
+
+                                    <!-- Modal Gambar Besar di modalfotoSelesai -->
+                                    <div id="modalfotoSelesai"
+                                        class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4 py-10">
                                         <div class="relative">
-                                        <!-- Tombol Close -->
-                                        <button onclick="closeImageModal('modalfotoSelesai')" class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-md">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                                            </svg>
-                                        </button>
-                                        <!-- Gambar Besar -->
-                                        <img id="modalImage_modalfotoSelesai" src="" alt="Gambar Besar" class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
+                                            <!-- Tombol Close -->
+                                            <button onclick="closeImageModal('modalfotoSelesai')"
+                                                class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-md">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black"
+                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </button>
+                                            <!-- Gambar Besar -->
+                                            <img id="modalImage_modalfotoSelesai" src="" alt="Gambar Besar"
+                                                class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
                                         </div>
                                     </div>
 
 
-                                <!-- Isi Laporan -->
-                                <div class="mb-4 text-gray-700">
-                                    <label class="block mb-1 font-medium text-gray-700">Deskripsi laporan</label>
-                                    <textarea rows="3"
-                                        class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
-                                        readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, fuga debitis maxime, ut illum sequi eius non excepturi ipsa atque quae dicta qui impedit illo. Obcaecati ipsa non eligendi fugiat?</textarea>
-                                </div>
+                                    <!-- Isi Laporan -->
+                                    <div class="mb-4 text-gray-700">
+                                        <label class="block mb-1 font-medium text-gray-700">Deskripsi laporan</label>
+                                        <textarea rows="3"
+                                            class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
+                                            readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, fuga debitis maxime, ut illum sequi eius non excepturi ipsa atque quae dicta qui impedit illo. Obcaecati ipsa non eligendi fugiat?</textarea>
+                                    </div>
 
-                                <!-- Pilihan Aksi -->
-                                <div class="mb-4">
-                                    <label class="block mb-1 font-medium text-gray-700">Status Laporan</label>
-                                     <!-- Tombol Selesai -->
-                                    <div class="flex items-center space-x-3">
-                                        <button onclick="setStatus('selesai')" id="btnSelesai"
-                                            class="p-2 bg-green-100 hover:bg-green-200 rounded-full shadow transition">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor" stroke-width="2">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                            </svg>
+                                    <!-- Pilihan Aksi -->
+                                    <div class="mb-4">
+                                        <label class="block mb-1 font-medium text-gray-700">Status Laporan</label>
+                                        <!-- Tombol Selesai -->
+                                        <div class="flex items-center space-x-3">
+                                            <button onclick="setStatus('selesai')" id="btnSelesai"
+                                                class="p-2 bg-green-100 hover:bg-green-200 rounded-full shadow transition">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-green-600"
+                                                    fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                                                    stroke-width="2">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M5 13l4 4L19 7" />
+                                                </svg>
+                                            </button>
+                                            <span class="text-green-600 font-semibold " id="labelSelesai">Laporan
+                                                Selesai</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Alasan -->
+                                    <div class="mb-6">
+                                        <label class="block mb-1 font-medium text-gray-700">Alasan</label>
+                                        <textarea rows="3"
+                                            class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
+                                            readonly
+                                            placeholder="Tulis alasan penolakan atau penerimaan laporan...">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas cupiditate molestiae vero rem nihil ab voluptatem maxime ipsum, sit commodi, sapiente labore quisquam maiores repudiandae veritatis minus, perspiciatis possimus. Numquam.</textarea>
+                                    </div>
+
+                                    <!-- Tombol -->
+                                    <div class="flex justify-end space-x-4">
+                                        <button
+                                            onclick="document.getElementById('modalJawabSelesai').classList.add('hidden')"
+                                            class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-lg">
+                                            Kembali
                                         </button>
-                                        <span class="text-green-600 font-semibold " id="labelSelesai">Laporan Selesai</span>
+                                        <button
+                                            class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg">
+                                            Selesai
+                                        </button>
                                     </div>
                                 </div>
-
-                                <!-- Alasan -->
-                                <div class="mb-6">
-                                    <label class="block mb-1 font-medium text-gray-700">Alasan</label>
-                                    <textarea rows="3"
-                                        class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
-                                        readonly placeholder="Tulis alasan penolakan atau penerimaan laporan...">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas cupiditate molestiae vero rem nihil ab voluptatem maxime ipsum, sit commodi, sapiente labore quisquam maiores repudiandae veritatis minus, perspiciatis possimus. Numquam.</textarea>
-                                </div>
-
-                                <!-- Tombol -->
-                                <div class="flex justify-end space-x-4">
-                                    <button onclick="document.getElementById('modalJawabSelesai').classList.add('hidden')"
-                                        class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-semibold py-2 px-4 rounded-lg">
-                                        Kembali
-                                    </button>
-                                    <button
-                                        class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-lg">
-                                        Selesai
-                                    </button>
-                                </div>
                             </div>
-                        </div>
                         </tr>
 
                     </tbody>
@@ -574,7 +603,6 @@
     </main>
 
     <script>
-
         function showFullImage(modalId, src) {
             document.getElementById(modalId).classList.remove("hidden");
             document.getElementById("modalImage_" + modalId).src = src;
