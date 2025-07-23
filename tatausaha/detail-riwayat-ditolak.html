@@ -4,29 +4,29 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Profil Siswa</title>
+	<title>Dashboard Pengaduan</title>
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-	<script src="https://unpkg.com/@phosphor-icons/web"></script>
-	<link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-gray-100 min-h-screen flex">
+	<!-- Tombol Toggle Sidebar (untuk mobile) -->
 	<button id="toggleSidebar" class="sm:hidden fixed top-4 left-4 z-50 p-2 bg-blue-900 text-white rounded">
 		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 		</svg>
 	</button>
 	<!-- Sidebar -->
-	<aside id="sidebar" class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg">
+	<aside id="sidebar"  class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg">
 		<div class="text-center mb-10">
 			<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 mx-auto rounded-full mb-2" />
 			<h1 class="text-sm font-bold leading-tight">PENGADUAN<br />SKANDAKRA</h1>
 		</div>
 
 		<nav class="space-y-2">
-			<a href="dashboard.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="dashboard.html"
+				class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -34,23 +34,23 @@
 				</svg>
 				Dashboard
 			</a>
+            
+            <a href="tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H7l-4 4V10a2 2 0 012-2h2" />
+                </svg>
+                Tanggapan
+            </a>
 
-			<a href="laporan_buat.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-					stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="M8 16h8M8 12h8m-8-4h8M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-				</svg>
-				Buat Laporan
-			</a>
-
-			<a href="riwayat.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="riwayat_tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 						d="M9 5h6m2 0a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h2m2-1h2a1 1 0 011 1v0a1 1 0 01-1 1h-2a1 1 0 01-1-1v0a1 1 0 011-1z" />
 				</svg>
-				Riwayat Laporan
+				Riwayat Tanggapan
 			</a>
 
 			<a href="cetak-laporan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
@@ -113,14 +113,13 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Kesiswaan</span></div>
-
-								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
-									consectetur ullam repellat...</span>
-
+										
+									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
+									
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-
+						
 						<a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
 							<div class="shrink-0">
 								<img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
@@ -138,15 +137,14 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Waka Kurikulum</span></div>
-
-								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
-									consectetur ullam repellat...</span>
-
+										
+									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
+									
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-
-
+						
+						
 					</div>
 					<a href="notifikasi.html"
 						class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 light:bg-gray-800 light:hover:bg-gray-700 light:text-white">
@@ -179,82 +177,69 @@
 							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
 								style="background-image: url('image/admin.jpg');">
 							</div>
-							<a href="profil.html"
-								class="mt-2 font-semibold text-blue-800 hover:underline hover:text-blue-600 transition">
-								siswa
-							</a>
+							<p class="mt-2 font-semibold text-green-500">Tata Usaha</p>
 						</div>
 
 						<hr class="border-gray-200" />
 
 						<!-- Menu -->
 						<a href="edit-profil.html" class="block px-4 py-2 hover:bg-blue-50 text-center">Edit Profil</a>
-						<a href="#" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
+						<a href="/laporan-masyarakat/index.html" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
-			<div class="w-full max-w-3xl bg-gray rounded-2xl shadow-lg overflow-hidden hover:shadow-lg hover:scale-[1.02] p-5 animate-slide-fade">
-				
-				<!-- Header -->
-				<div class="bg-gradient-to-r from-blue-500 to-blue-700 text-black px-8 py-6 rounded-t-2xl">
-					<div class="flex items-center justify-between">
-						<div>
-							<h1 class="text-2xl font-bold">Profil Siswa</h1>
-							<p class="text-sm">Laporan Masyarakat SKANDAKRA</p>
-						</div>
-					</div>
-				</div>
-		
-				<!-- Konten Profil -->
-				<div class="flex flex-col md:flex-row items-center md:items-start p-8 space-y-6 md:space-y-0 md:space-x-8">
-					<div class="relative">
-						<img id="profilePreview" src="image/user.jpg" alt="Foto Profil"
-							class="w-36 h-36 rounded-full object-cover border-4 border-blue-500 shadow" />
-						<!-- Tombol Upload -->
-						<label for="uploadFoto"
-							class="absolute bottom-0 right-0 bg-white p-2 rounded-full shadow cursor-pointer hover:bg-blue-100 transition">
-							<i class="ph ph-camera text-xl text-blue-600"></i>
-						</label>
-						<input type="file" id="uploadFoto" class="hidden" accept="image/*" />
-					</div>
-		
-					<div class="flex-1 text-center md:text-left space-y-2">
-						<h2 class="text-xl font-semibold text-gray-800">Nama: Orlando Dimas</h2>
-						<p class="text-gray-600">Email: orlando.dimas@example.com</p>
-						<p class="text-gray-600">No Telepon: 0821-2345-6789</p>
-						<p class="text-gray-600">Username: orlando_d</p>
-						<p class="text-gray-600">Password: ********</p>
-					</div>
-				</div>
-		
-				<!-- Footer -->
-				<footer class="mt-10 bg-white-600 text-black text-center py-4">
-					<p class="text-sm font-medium">
-						SMK Negeri 2 Karanganyar — Jl. Lawu No. 390, Cangakan, Karanganyar, Jawa Tengah
-					</p>
-					<p class="text-xs text-blue-500 mt-1">© 2025 Website Pengaduan Masyarakat</p>
-				</footer>
-			</div>
-		</div>
-		
-		<!-- Script Preview Foto -->
-		<script>
-			document.getElementById('uploadFoto').addEventListener('change', function (event) {
-				const file = event.target.files[0];
-				if (file) {
-					const reader = new FileReader();
-					reader.onload = function (e) {
-						document.getElementById('profilePreview').src = e.target.result;
-					};
-					reader.readAsDataURL(file);
-				}
-			});
-
-		</script>
-
-</body>
-
-</html>
+        <div class="max-w-3xl mx-auto bg-white shadow-md rounded-xl p-6 mt-6">
+            <div class="mb-6 border-b pb-4">
+              <h2 class="text-2xl font-bold text-red-600 mb-1">Detail Pengaduan - Ditolak</h2>
+              <p class="text-sm text-gray-500">Status laporan kamu: <span class="font-semibold text-red-600">Ditolak</span></p>
+            </div>
+          
+            <div class="flex flex-col md:flex-row gap-6">
+              <img src="image/logo-smkn2kra.webp" alt="Logo Sekolah" class="w-24 h-24 rounded-lg object-cover shadow-md" />
+          
+              <div class="flex-1 space-y-2">
+                <div>
+                  <h3 class="font-semibold text-gray-800">Judul Pengaduan:</h3>
+                  <p class="text-gray-700">Kantin Sekolah</p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Nama Pengadu:</h3>
+                  <p class="text-gray-700">Nur Hasanah</p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Tanggal Pengaduan:</h3>
+                  <p class="text-gray-700">19 Juli 2025, 09:00</p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Ditujukan Kepada:</h3>
+                  <p class="text-gray-700">Tata Usaha (TU)</p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Isi Pengaduan:</h3>
+                  <p class="text-gray-700 text-justify">
+                    Banyak sampah menumpuk di sekitar kantin dan belum dibersihkan sejak pagi. Harap ditindak.
+                  </p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Alasan Penolakan:</h3>
+                  <p class="text-red-600 italic">
+                    Laporan sudah pernah diajukan sebelumnya dan sedang dalam proses penanganan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mt-8 text-right">
+              <a href="riwayat.html"
+                class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition text-sm font-semibold">
+                Kembali ke Riwayat
+              </a>
+            </div>
+          </div>
+          
