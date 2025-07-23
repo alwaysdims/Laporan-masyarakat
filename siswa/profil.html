@@ -26,8 +26,7 @@
 		</div>
 
 		<nav class="space-y-2">
-			<a href="dashboard.html"
-				class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
+			<a href="dashboard.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -197,8 +196,8 @@
 		</div>
 
 		<div class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
-			<div
-				class="w-full max-w-3xl bg-gray rounded-2xl shadow-lg overflow-hidden hover:shadow-lg hover:scale-[1.02] p-5 animate-slide-fade">
+			<div class="w-full max-w-3xl bg-gray rounded-2xl shadow-lg overflow-hidden hover:shadow-lg hover:scale-[1.02] p-5 animate-slide-fade">
+				
 				<!-- Header -->
 				<div class="bg-gradient-to-r from-blue-500 to-blue-700 text-black px-8 py-6 rounded-t-2xl">
 					<div class="flex items-center justify-between">
@@ -206,15 +205,11 @@
 							<h1 class="text-2xl font-bold">Profil Siswa</h1>
 							<p class="text-sm">Laporan Masyarakat SKANDAKRA</p>
 						</div>
-						<!-- <button class="bg-white text-blue-600 px-4 py-2 rounded-lg shadow hover:bg-gray-100 transition">
-							<i class="ph ph-pencil-simple"></i> Edit
-						</button> -->
 					</div>
 				</div>
-
+		
 				<!-- Konten Profil -->
-				<div
-					class="flex flex-col md:flex-row items-center md:items-start p-8 space-y-6 md:space-y-0 md:space-x-8">
+				<div class="flex flex-col md:flex-row items-center md:items-start p-8 space-y-6 md:space-y-0 md:space-x-8">
 					<div class="relative">
 						<img id="profilePreview" src="image/user.jpg" alt="Foto Profil"
 							class="w-36 h-36 rounded-full object-cover border-4 border-blue-500 shadow" />
@@ -225,19 +220,17 @@
 						</label>
 						<input type="file" id="uploadFoto" class="hidden" accept="image/*" />
 					</div>
-
-					<div class="flex-1 text-center md:text-left space-y-1">
+		
+					<div class="flex-1 text-center md:text-left space-y-2">
 						<h2 class="text-xl font-semibold text-gray-800">Nama: Orlando Dimas</h2>
-						<p class="text-gray-600">NIS: 9002</p>
-						<p class="text-gray-600">Kelas: XII RPL F</p>
-						<p class="text-gray-600">
-							Jurusan:
-							<span class="inline-block px-2 py-1 rounded bg-green-100 text-green-800 font-medium">
-								Rekayasa Perangkat Lunak (RPL)
-							</span>
-						</p>
+						<p class="text-gray-600">Email: orlando.dimas@example.com</p>
+						<p class="text-gray-600">No Telepon: 0821-2345-6789</p>
+						<p class="text-gray-600">Username: orlando_d</p>
+						<p class="text-gray-600">Password: ********</p>
 					</div>
 				</div>
+		
+				<!-- Footer -->
 				<footer class="mt-10 bg-white-600 text-black text-center py-4">
 					<p class="text-sm font-medium">
 						SMK Negeri 2 Karanganyar — Jl. Lawu No. 390, Cangakan, Karanganyar, Jawa Tengah
@@ -246,6 +239,7 @@
 				</footer>
 			</div>
 		</div>
+		
 		<!-- Script Preview Foto -->
 		<script>
 			document.getElementById('uploadFoto').addEventListener('change', function (event) {

@@ -181,7 +181,7 @@
                             <div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
                                 style="background-image: url('image/admin.jpg');">
                             </div>
-                            <p class="mt-2 font-semibold text-gray-800">admin</p>
+                            <p class="mt-2 font-semibold text-green-500">Tata Usaha</p>
                         </div>
 
                         <hr class="border-gray-200" />
@@ -197,18 +197,16 @@
        <!-- Foto & Judul -->
         <div class="flex flex-col items-center mb-6">
             <!-- Ganti dengan ikon ceklis hijau -->
-            <div class="p-3 rounded-full border-4 border-blue-200 hover:border-blue-500 transition-all duration-300">
-                <svg xmlns="http://www.w3.org/2000/svg"
-                    class="w-24 h-24 text-blue-500 hover:text-blue-600 animate-pulse transition-colors duration-300"
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5 13l4 4L19 7" />
-                </svg>
-            </div>
-            
+           <div class="p-3 rounded-full border-4 border-green-200 hover:border-green-500 transition-all duration-300">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 text-green-500 hover:text-green-600 animate-spin transition-colors duration-300" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 4v5h.582m15.356-.028A9.003 9.003 0 0012 3a9 9 0 00-8.418 5.972M20 20v-5h-.581m-15.357.028A9.003 9.003 0 0012 21a9 9 0 008.418-5.972" />
+    </svg>
+</div>
             
             <!-- Judul diubah jadi "Selesai" -->
-            <h1 class="text-xl font-bold text-blue-600">Selesai</h1>
+            <h1 class="text-xl font-bold text-green-600">Proses</h1>
         </div>
 
 
@@ -217,35 +215,35 @@
             <!-- Pending -->
             <div class="flex flex-col items-center z-10">
                 <div id="dot-pending"
-                    class="w-5 h-5 rounded-full border-4 border-yellow-300 bg-white transition-colors duration-300 shadow-md">
+                    class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
                 </div>
-                <span class="text-sm text-yellow-600 mt-1">Pending</span>
+                <span class="text-sm text-gray-600 mt-1">Pending</span>
             </div>
 
             <!-- Garis 1: Pending -> Proses -->
             <div id="bar-pending-proses"
-                class="flex-1 h-1 bg-green-400 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
+                class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
             </div>
 
             <!-- Proses -->
             <div class="flex flex-col items-center z-10">
                 <div id="dot-proses"
-                    class="w-5 h-5 rounded-full border-4 border-green-400 bg-green-400 transition-colors duration-300 shadow-md">
+                    class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
                 </div>
-                <span class="text-sm text-green-600 mt-1">Proses</span>
+                <span class="text-sm text-gray-600 mt-1">Proses</span>
             </div>
 
             <!-- Garis 2: Proses -> Selesai -->
             <div id="bar-pending-selesai"
-                class="flex-1 h-1 bg-blue-400 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
+                class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
             </div>
 
             <!-- Selesai -->
             <div class="flex flex-col items-center z-10">
                 <div id="dot-selesai"
-                    class="w-5 h-5 rounded-full border-4 border-blue-400 bg-white transition-colors duration-300 shadow-md">
+                    class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
                 </div>
-                <span class="text-sm text-blue-600 mt-1">Selesai</span>
+                <span class="text-sm text-gray-600 mt-1">Selesai</span>
             </div>
         </div>
 
@@ -307,7 +305,7 @@
                 <!-- Konten -->
                 <div>
                     <div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs mt-1 ">
-                        <span class="block text-green-500 font-semibold">Kesiswaan</span>
+                        <span class="block text-green-500 font-semibold">Tata Usaha</span>
                         <p>Terima kasih atas laporannya</p>
                     </div>
                 </div>
@@ -329,7 +327,7 @@
             <div class="flex items-start space-x-2 space-x-reverse self-end flex-row-reverse">
                 <img src="image/admin.jpg" alt="Admin" class="w-12 h-12 rounded-full object-cover" />
                 <div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs">
-                    <span class="block text-green-500 font-semibold">Kesiswaan</span>
+                    <span class="block text-green-500 font-semibold">Tata Usaha</span>
                     <p>Sedang kami proses</p>
                 </div>
             </div>
@@ -344,50 +342,6 @@
                     <p>Baik terimakasih </p>
                 </div>
             </div>      
-            
-            <div class="flex flex-col items-end self-end mb-4 max-w-xs">
-                <!-- Foto Bukti Selesai -->
-              <!-- Gambar Kecil -->
-
-                
-              <img 
-              src="image/user.jpg" 
-              onclick="showFullImage('modalBuktiLaporanSelesai', 'image/user.jpg')" 
-              class="w-48 h-32 object-cover rounded-lg shadow mb-2 cursor-pointer">
-
-               <!-- Modal Gambar Besar di modalBuktiLaporanSelesai -->
-               <div id="modalBuktiLaporanSelesai" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center px-4 py-10">
-                  <div class="relative">
-                  <!-- Tombol Close -->
-                  <button onclick="closeImageModal('modalBuktiLaporanSelesai')" class="absolute -top-4 -right-4 bg-white rounded-full p-1 shadow-md">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                  </button>
-                  <!-- Gambar Besar -->
-                  <img id="modalImage_modalBuktiLaporanSelesai" src="" alt="Gambar Besar" class="max-w-full max-h-[90vh] rounded-lg shadow-lg">
-                  </div>
-              </div>
-
-                
-              
-              
-                <!-- Komentar dan foto admin di sebelah kanan -->
-                <div class="flex items-end justify-end space-x-2">
-                  <!-- Isi Komentar -->
-                  <div class="bg-gray-100 text-sm p-2 rounded-lg  shadow">
-                      <span class="block text-green-500 font-semibold">Kesiswaan</span>
-                      <p>Laporan sudah kami tindak lanjuti, terima kasih.</p>
-                    </div>
-                    <img src="image/admin.jpg" alt="Admin" class="w-12 h-12 rounded-full object-cover" />
-              
-                  <!-- Foto Admin di kanan -->
-                </div>
-              </div>
-              
-              
-            
-        </div>
 
 
         <!-- Input Chat -->

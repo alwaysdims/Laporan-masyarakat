@@ -4,9 +4,8 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Buat Laporan</title>
+	<title>Riwayat Tanggapan</title>
 	<script src="https://cdn.tailwindcss.com"></script>
-
 	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </head>
@@ -19,14 +18,15 @@
 		</svg>
 	</button>
 	<!-- Sidebar -->
-	<aside class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg">
+	<aside id="sidebar"  class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg">
 		<div class="text-center mb-10">
 			<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 mx-auto rounded-full mb-2" />
 			<h1 class="text-sm font-bold leading-tight">PENGADUAN<br />SKANDAKRA</h1>
 		</div>
 
 		<nav class="space-y-2">
-			<a href="dashboard.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="dashboard.html"
+				class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -34,8 +34,8 @@
 				</svg>
 				Dashboard
 			</a>
-
-			<a href="laporan_buat.html" class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
+            
+            <a href="laporan_buat.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -44,7 +44,7 @@
 				Buat Laporan
 			</a>
 
-			<a href="riwayat.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="riwayat.html" class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -64,15 +64,15 @@
 
 		</nav>
 	</aside>
-
 	<!-- Main Content -->
-	<main class="flex-1 p-6">
+	<main class="flex-1 p-6 ">
 		<!-- Topbar -->
 		<div class="flex justify-between items-center bg-blue-900 text-white px-6 py-4 rounded-lg shadow mb-6">
 			<div class="breadcrumb hidden sm:flex space-x-2 items-center">
-				<a href="#" class="text-2xl text-white font-semibold">Buat Laporan</a>
+				<a href="#" class="text-2xl text-white font-semibold">Dashboard</a>
 			</div>
 			<div class="flex items-center space-x-4">
+
 				<button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
 					class="relative inline-flex items-center  text-sm font-medium  text-center text-gray-100 hover:text-gray-100 focus:outline-none light:hover:text-white light:text-gray-400"
 					type="button">
@@ -113,14 +113,13 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Kesiswaan</span></div>
-
-								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
-									consectetur ullam repellat...</span>
-
+										
+									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
+									
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-
+						
 						<a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
 							<div class="shrink-0">
 								<img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
@@ -138,15 +137,14 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Waka Kurikulum</span></div>
-
-								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
-									consectetur ullam repellat...</span>
-
+										
+									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
+									
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-
-
+						
+						
 					</div>
 					<a href="notifikasi.html"
 						class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 light:bg-gray-800 light:hover:bg-gray-700 light:text-white">
@@ -161,7 +159,7 @@
 					</a>
 				</div>
 
-				<!-- Header: Foto & Nama -->
+
 				<div class="relative">
 					<!-- Tombol Profil -->
 					<button onclick="toggleDropdown()"
@@ -179,128 +177,69 @@
 							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
 								style="background-image: url('image/admin.jpg');">
 							</div>
-							<p class="mt-2 font-semibold text-blue-800">siswa</p>
+							<p class="mt-2 font-semibold text-green-500">Kesiswaan</p>
 						</div>
 
 						<hr class="border-gray-200" />
 
 						<!-- Menu -->
 						<a href="edit-profil.html" class="block px-4 py-2 hover:bg-blue-50 text-center">Edit Profil</a>
-						<a href="#" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
+						<a href="/laporan-masyarakat/index.html" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Form Buat Laporan -->
-		<div class="w-full bg-white p-4 rounded-lg shadow-md border border-gray-200">
-			<div class="text-center mb-4">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-600 mx-auto mb-1" fill="none"
-					viewBox="0 0 24 24" stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="M12 20h9M12 4h9M3 4h.01M3 20h.01M4 12h16M4 12l4-4m0 8l-4-4" />
-				</svg>
-				<h2 class="text-lg font-semibold text-gray-800">Form Aduan</h2>
-			</div>
-
-			<form class="space-y-3">
-				<!-- Nama -->
-				<div>
-					<label for="nama" class="block text-sm font-medium text-gray-600 mb-1">Nama Pengadu</label>
-					<input type="text" id="nama" name="nama" placeholder="Nama lengkap"
-						class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring focus:ring-blue-200" />
-				</div>
-
-				<!-- Judul -->
-				<div>
-					<label for="judul" class="block text-sm font-medium text-gray-600 mb-1">Judul </label>
-					<input type="text" id="judul" name="judul" placeholder="Judul singkat aduan"
-						class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring focus:ring-blue-200" />
-				</div>
-
-				<!-- Aduan -->
-				<div>
-					<label for="aduan" class="block text-sm font-medium text-gray-600 mb-1">Isi Aduan</label>
-					<textarea id="aduan" name="aduan" rows="2" placeholder="Tuliskan aduan singkat..."
-						class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm resize-none focus:outline-none focus:ring focus:ring-blue-200"></textarea>
-				</div>
-
-				<!-- Upload Foto dan Tujuan Aduan (1 baris) -->
-				<div class="flex flex-col md:flex-row gap-4">
-					<!-- Upload Foto -->
-					<div class="flex-1">
-						<label for="foto" class="block text-sm font-medium text-gray-600 mb-1">Upload Foto</label>
-						<input type="file" id="foto" name="foto" class="block w-full text-sm text-gray-700 border border-gray-300 rounded-lg bg-white file:mr-3 file:py-2 file:px-4
-								 file:rounded-md file:border-0 file:text-sm file:font-medium
-								 file:bg-blue-50 file:text-blue-700
-								 hover:file:bg-blue-100 transition duration-200" />
-					</div>
-
-					<!-- Tujuan Aduan -->
-					<div class="flex-1">
-						<label for="jenis" class="block text-sm font-medium text-gray-600 mb-1">Tujuan Aduan</label>
-						<select id="jenis" name="jenis"
-							class="w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring focus:ring-blue-200">
-							<option value="">-- Pilih --</option>
-							<option value="BK">BK</option>
-							<option value="Kesiswaan">Kesiswaan</option>
-							<option value="Kurikulum">Kurikulum</option>
-							<option value="TU">Tata Usaha</option>
-						</select>
-					</div>
-				</div>
-
-				<!-- Tombol -->
-				<div class="text-right pt-2">
-					<button type="submit"
-						class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-md transition">
-						Kirim
-					</button>
-				</div>
-			</form>
-		</div>
-
-
-
-
-	</main>
-
-	<script>
-		function toggleDropdown() {
-			const dropdown = document.getElementById("dropdown-menu");
-			dropdown.classList.toggle("hidden");
-		}
-
-		const toggleSidebarBtn = document.getElementById("toggleSidebar");
-		const sidebar = document.getElementById("sidebar");
-
-		toggleSidebarBtn.addEventListener("click", () => {
-			sidebar.classList.toggle("-translate-x-full");
-		});
-
-		function toggleDropdown() {
-			const menu = document.getElementById("dropdown-menu");
-			menu.classList.toggle("hidden");
-		}
-
-		// Tutup dropdown saat klik di luar
-		window.addEventListener("click", function (e) {
-			const btn = document.querySelector("button[onclick='toggleDropdown()']");
-			const menu = document.getElementById("dropdown-menu");
-
-			if (!btn.contains(e.target) && !menu.contains(e.target)) {
-				menu.classList.add("hidden");
-			}
-		});
-
-		// Close dropdown when clicking outside
-		window.addEventListener("click", function (e) {
-			const menu = document.getElementById("dropdown-menu");
-			if (!e.target.closest("button") && !e.target.closest("#dropdown-menu")) {
-				menu.classList.add("hidden");
-			}
-		});
-
-	</script>
-</body>
-
-</html>
+        <div class="max-w-3xl mx-auto bg-white shadow-md rounded-xl p-6 mt-6">
+            <div class="mb-6 border-b pb-4">
+              <h2 class="text-2xl font-bold text-red-600 mb-1">Detail Pengaduan - Ditolak</h2>
+              <p class="text-sm text-gray-500">Status laporan kamu: <span class="font-semibold text-red-600">Ditolak</span></p>
+            </div>
+          
+            <div class="flex flex-col md:flex-row gap-6">
+              <img src="image/logo-smkn2kra.webp" alt="Logo Sekolah" class="w-24 h-24 rounded-lg object-cover shadow-md" />
+          
+              <div class="flex-1 space-y-2">
+                <div>
+                  <h3 class="font-semibold text-gray-800">Judul Pengaduan:</h3>
+                  <p class="text-gray-700">Kantin Sekolah</p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Nama Pengadu:</h3>
+                  <p class="text-gray-700">Nur Hasanah</p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Tanggal Pengaduan:</h3>
+                  <p class="text-gray-700">19 Juli 2025, 09:00</p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Ditujukan Kepada:</h3>
+                  <p class="text-gray-700">Tata Usaha (TU)</p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Isi Pengaduan:</h3>
+                  <p class="text-gray-700 text-justify">
+                    Banyak sampah menumpuk di sekitar kantin dan belum dibersihkan sejak pagi. Harap ditindak.
+                  </p>
+                </div>
+          
+                <div>
+                  <h3 class="font-semibold text-gray-800">Alasan Penolakan:</h3>
+                  <p class="text-red-600 italic">
+                    Laporan sudah pernah diajukan sebelumnya dan sedang dalam proses penanganan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+            <div class="mt-8 text-right">
+              <a href="riwayat.html"
+                class="inline-block bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md transition text-sm font-semibold">
+                Kembali ke Riwayat
+              </a>
+            </div>
+          </div>
+          

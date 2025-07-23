@@ -35,23 +35,22 @@
 				Dashboard
 			</a>
 
-			<a href="tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="laporan_buat.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H7l-4 4V10a2 2 0 012-2h2" />
+						d="M8 16h8M8 12h8m-8-4h8M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 				</svg>
-				Tanggapan
+				Buat Laporan
 			</a>
 
-			<a href="riwayat_tanggapan.html"
-				class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
+			<a href="riwayat.html" class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 						d="M9 5h6m2 0a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h2m2-1h2a1 1 0 011 1v0a1 1 0 01-1 1h-2a1 1 0 01-1-1v0a1 1 0 011-1z" />
 				</svg>
-				Riwayat Tanggapan
+				Riwayat Laporan
 			</a>
 
 			<a href="cetak-laporan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
@@ -197,69 +196,56 @@
 		<!-- Foto & Judul -->
 		<div class="flex flex-col items-center mb-6">
 			<!-- Ganti dengan ikon ceklis hijau -->
-			<div class="p-3 rounded-full border-4 border-yellow-300 hover:border-yellow-400 transition-all duration-300">
-				<svg xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 24 24"
-					fill="currentColor"
-					class="w-24 h-24 text-yellow-500 hover:text-yellow-600 animate-pulse transition duration-300 ease-in-out">
-					<path fill-rule="evenodd" d="M6 3.75A.75.75 0 016.75 3h10.5a.75.75 0 01.75.75v2.25c0 .621-.504 1.125-1.125 1.125h-.27a.75.75 0 00-.53.22l-2.71 2.71a.75.75 0 000 1.06l2.71 2.71c.14.14.22.33.22.53v.27c0 .621.504 1.125 1.125 1.125h.27a.75.75 0 01.75.75v2.25a.75.75 0 01-.75.75H6.75a.75.75 0 01-.75-.75v-2.25c0-.621.504-1.125 1.125-1.125h.27a.75.75 0 00.53-.22l2.71-2.71a.75.75 0 000-1.06l-2.71-2.71a.75.75 0 00-.53-.22h-.27A1.125 1.125 0 016 6V3.75z" clip-rule="evenodd" />
-				</svg>
+			<div class="p-3 rounded-full border-4 border-green-200 hover:border-green-500 transition-all duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 text-green-500 hover:text-green-600 animate-spin transition-colors duration-300" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 4v5h.582m15.356-.028A9.003 9.003 0 0012 3a9 9 0 00-8.418 5.972M20 20v-5h-.581m-15.357.028A9.003 9.003 0 0012 21a9 9 0 008.418-5.972" />
+                </svg>
+            </div>
 
 
-				<script>module.exports = {
-					theme: {
-					  extend: {
-						animation: {
-						  'spin-slow': 'spin 3s linear infinite',
-						},
-					  },
-					},
-				  }
-				  </script>
-			</div>
-
-
-			<!-- Judul diubah jadi "Selesai" -->
-			<h1 class="text-xl font-bold text-yellow-600">Diterima</h1>
+			<!-- Judul diubah jadi "Proses" -->
+			<h1 class="text-xl font-bold text-green-600">Proses</h1>
 		</div>
 
 
 		<!-- Progress Status -->
 		<div id="progressBar" class="flex items-center justify-between max-w-md mx-auto mb-6 relative">
-			<!-- Diterima -->
-			<div class="flex flex-col items-center z-10">
-				<div id="dot-diterima"
-					class="w-5 h-5 rounded-full border-4 border-yellow-300 bg-yellow-400 transition-colors duration-300 shadow-md">
-				</div>
-				<span class="text-sm text-yellow-600 mt-1">Diterima</span>
-			</div>
+            <!-- Pending -->
+            <div class="flex flex-col items-center z-10">
+                <div id="dot-pending"
+                    class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
+                </div>
+                <span class="text-sm text-gray-600 mt-1">Pending</span>
+            </div>
 
-			<!-- Garis 1: z -> Proses -->
-			<div id="bar-pending-proses"
-				class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
-			</div>
+            <!-- Garis 1: Pending -> Proses -->
+            <div id="bar-pending-proses"
+                class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
+            </div>
 
-			<!-- Proses -->
-			<div class="flex flex-col items-center z-10">
-				<div id="dot-proses"
-					class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
-				</div>
-				<span class="text-sm text-gray-600 mt-1">Proses</span>
-			</div>
+            <!-- Proses -->
+            <div class="flex flex-col items-center z-10">
+                <div id="dot-proses"
+                    class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
+                </div>
+                <span class="text-sm text-gray-600 mt-1">Proses</span>
+            </div>
 
-			<!-- Garis 2: Proses -> Selesai -->
-			<div id="bar-pending-selesai"
-				class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
-			</div>
+            <!-- Garis 2: Proses -> Selesai -->
+            <div id="bar-pending-selesai"
+                class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
+            </div>
 
-			<!-- Selesai -->
-			<div class="flex flex-col items-center z-10">
-				<div id="dot-selesai"
-					class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
-				</div>
-				<span class="text-sm text-gray-600 mt-1">Selesai</span>
-			</div>
-		</div>
+            <!-- Selesai -->
+            <div class="flex flex-col items-center z-10">
+                <div id="dot-selesai"
+                    class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
+                </div>
+                <span class="text-sm text-gray-600 mt-1">Selesai</span>
+            </div>
+        </div>
 
 
 		<!-- Isi Aduan -->
@@ -314,22 +300,45 @@
 		<!-- Riwayat Tanggapan -->
 		<div class="bg-white rounded-lg p-4 shadow mb-4 h-64 overflow-y-auto space-y-4 flex flex-col">
 
-			<!-- Pesan dari Admin -->
-			<div class="flex items-center space-x-3 space-x-reverse self-end flex-row-reverse">
-				<!-- Gambar -->
+			<!-- Pesan dari Admin (di kiri) -->
+			<div class="flex items-start space-x-3">
 				<img src="image/admin.jpg" alt="Admin" class="w-12 h-12 rounded-full object-cover" />
-
-				<!-- Konten -->
-				<div>
-					<div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs mt-1 ">
-						<span class="block text-green-500 font-semibold">Kesiswaan</span>
-						<p>Aduan telah kami terima. Akan segera kami tindak lanjuti.</p>
-					</div>
+				<div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs mt-1">
+					<span class="block text-green-500 font-semibold">Kesiswaan</span>
+					<p>Terima kasih atas laporannya</p>
 				</div>
 			</div>
-
-			<!-- Pesan dari Pengadu -->
+		
+			<!-- Pesan dari Siswa (di kanan) -->
+			<div class="flex items-start space-x-3 space-x-reverse self-end flex-row-reverse">
+				<img src="image/user.jpg" alt="Pengadu" class="w-12 h-12 rounded-full object-cover" />
+				<div class="bg-blue-100 text-sm p-2 rounded-lg max-w-xs mt-1">
+					<span class="block text-blue-500 font-semibold">Rina Maulida</span>
+					<p>Laporan saya bagaimana ya?</p>
+				</div>
+			</div>
+		
+			<!-- Balasan Admin (di kiri) -->
+			<div class="flex items-start space-x-3">
+				<img src="image/admin.jpg" alt="Admin" class="w-12 h-12 rounded-full object-cover" />
+				<div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs">
+					<span class="block text-green-500 font-semibold">Kesiswaan</span>
+					<p>Sedang kami proses</p>
+				</div>
+			</div>
+		
+			<!-- Balasan Siswa (di kanan) -->
+			<div class="flex items-start space-x-3 space-x-reverse self-end flex-row-reverse">
+				<img src="image/user.jpg" alt="Pengadu" class="w-12 h-12 rounded-full object-cover" />
+				<div class="bg-blue-100 text-sm p-2 rounded-lg max-w-xs">
+					<span class="block text-blue-500 font-semibold">Rina Maulida</span>
+					<p>Baik terimakasih</p>
+				</div>
+			</div>
+		
 		</div>
+		
+
 
 
 		<!-- Input Chat -->
@@ -351,21 +360,21 @@
 			<!-- Tombol Kirim -->
 			<button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm">Kirim</button>
 		</div>
-	</div>
+
 
 	</main>
 	<script>
 		document.addEventListener("DOMContentLoaded", function () {
-			const status = localStorage.getItem("statusLaporan") || "diterima";
+			const status = localStorage.getItem("statusLaporan") || "pending";
 
 			const dots = {
-				diterima: document.getElementById("dot-diterima"),
+				pending: document.getElementById("dot-pending"),
 				proses: document.getElementById("dot-proses"),
 				selesai: document.getElementById("dot-selesai")
 			};
 
 			const bars = {
-				diterima_proses: document.getElementById("bar-diterima-proses"),
+				pending_proses: document.getElementById("bar-pending-proses"),
 				proses_selesai: document.getElementById("bar-proses-selesai")
 			};
 
@@ -381,21 +390,21 @@
 			});
 
 			// Aktifkan status sesuai progress baru
-			if (status === "diterima") {
-				dots.diterima.classList.replace("border-gray-300", "border-yellow-400");
+			if (status === "pending") {
+				dots.pending.classList.replace("border-gray-300", "border-yellow-400");
 			}
 
 			if (status === "proses") {
-				dots.diterima.classList.replace("border-gray-300", "border-yellow-400");
+				dots.pending.classList.replace("border-gray-300", "border-yellow-400");
 				dots.proses.classList.replace("border-gray-300", "border-blue-500");
-				bars.diterima_proses.classList.replace("bg-gray-300", "bg-blue-400"); // biru
+				bars.pending_proses.classList.replace("bg-gray-300", "bg-blue-400"); // biru
 			}
 
 			if (status === "selesai") {
-				dots.diterima.classList.replace("border-gray-300", "border-yellow-400");
+				dots.pending.classList.replace("border-gray-300", "border-yellow-400");
 				dots.proses.classList.replace("border-gray-300", "border-blue-500");
 				dots.selesai.classList.replace("border-gray-300", "border-green-400");
-				bars.diterima_proses.classList.replace("bg-gray-300", "bg-blue-400");
+				bars.pending_proses.classList.replace("bg-gray-300", "bg-blue-400");
 				bars.proses_selesai.classList.replace("bg-gray-300", "bg-green-300"); // hijau
 			}
 		});
@@ -408,17 +417,17 @@
 
 		const status = 'proses'; // ganti ini sesuai status aktual
 
-		const dotditerima = document.getElementById('dot-z');
+		const dotPending = document.getElementById('dot-pending');
 		const dotProses = document.getElementById('dot-proses');
 		const dotSelesai = document.getElementById('dot-selesai');
 
-		if (status === 'z') {
-			dotz.classList.replace('bg-gray-300', 'bg-yellow-500');
+		if (status === 'pending') {
+			dotPending.classList.replace('bg-gray-300', 'bg-yellow-500');
 		} else if (status === 'proses') {
-			dotz.classList.replace('bg-gray-300', 'bg-yellow-500');
+			dotPending.classList.replace('bg-gray-300', 'bg-yellow-500');
 			dotProses.classList.replace('bg-gray-300', 'bg-blue-500');
 		} else if (status === 'selesai') {
-			dotz.classList.replace('bg-gray-300', 'bg-yellow-500');
+			dotPending.classList.replace('bg-gray-300', 'bg-yellow-500');
 			dotProses.classList.replace('bg-gray-300', 'bg-blue-500');
 			dotSelesai.classList.replace('bg-gray-300', 'bg-green-500'); // atau abu-abu gelap jika lebih cocok
 		}
@@ -447,23 +456,23 @@
 			const status = localStorage.getItem("statusLaporan");
 
 			// Reset semua ke abu-abu
-			const diterima = document.getElementById("dot-diterima");
+			const pending = document.getElementById("dot-pending");
 			const proses = document.getElementById("dot-proses");
 			const selesai = document.getElementById("dot-selesai");
 
-			[diterima, proses, selesai].forEach(dot => {
+			[pending, proses, selesai].forEach(dot => {
 				dot.classList.remove("bg-yellow-400", "bg-green-400", "bg-blue-500");
 				dot.classList.add("bg-gray-300");
 			});
 
 			// Atur warna sesuai status
-			if (status === "diterima") {
-				diterima.classList.replace("bg-gray-300", "bg-yellow-400");
+			if (status === "pending") {
+				pending.classList.replace("bg-gray-300", "bg-yellow-400");
 			} else if (status === "proses") {
-				diterima.classList.replace("bg-gray-300", "bg-yellow-400");
+				pending.classList.replace("bg-gray-300", "bg-yellow-400");
 				proses.classList.replace("bg-gray-300", "bg-green-400");
 			} else if (status === "selesai") {
-				diterima.classList.replace("bg-gray-300", "bg-yellow-400");
+				pending.classList.replace("bg-gray-300", "bg-yellow-400");
 				proses.classList.replace("bg-gray-300", "bg-green-400");
 				selesai.classList.replace("bg-gray-300", "bg-blue-500");
 			}
