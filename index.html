@@ -192,7 +192,7 @@
       <!-- Kartu utama besar (kiri) -->
       <article id="main-card" class="lg:col-span-2 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
         data-aos="fade-right" data-aos-delay="100">
-        <img id="main-image" src="assets/image/Sejarah.webp"
+        <img id="main-image" src="assets/image/kantin.jpg"
           alt="Ilustrasi Aduan" class="w-full md:w-1/2 h-60 md:h-auto object-cover">
         <div class="p-6 flex flex-col justify-between">
           <div>
@@ -231,6 +231,8 @@
 
       <!-- Daftar kartu mini (kanan) -->
       <div class="space-y-6">
+
+      <a href="detail1.html" class="block">
         <article onclick="updateMainCard(this)"
           class="flex bg-white shadow-2xl rounded-2xl p-2 space-x-4 cursor-pointer"
           data-aos="fade-left" data-aos-delay="200"
@@ -241,7 +243,7 @@
           data-status="Pending"
           data-status-color="bg-yellow-100 text-yellow-800"
           data-detail="detail1.html">
-          <img src="assets/image/Sejarah.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
+          <img src="assets/image/labkomputer.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
           <div class="flex-1">
             <div class="flex items-center justify-between mb-1">
               <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full font-semibold">Pending</span>
@@ -251,7 +253,9 @@
             <p class="text-xs text-gray-500 mt-1">Kegiatan praktik terganggu dan tidak efektif.</p>
           </div>
         </article>
+      </a>
 
+      <a href="detail2.html" class="block">
         <article onclick="updateMainCard(this)"
           class="flex bg-white shadow-2xl rounded-2xl p-2 space-x-4 cursor-pointer"
           data-aos="fade-left" data-aos-delay="300"
@@ -262,7 +266,7 @@
           data-status="Proses"
           data-status-color="bg-green-100 text-green-800"
           data-detail="detail2.html">
-          <img src="assets/image/Sejarah.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
+          <img src="assets/image/toilet.jpg" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
           <div class="flex-1">
             <div class="flex items-center justify-between mb-1">
               <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-semibold">Proses</span>
@@ -272,7 +276,9 @@
             <p class="text-xs text-gray-500 mt-1">Toilet tidak nyaman bagi siswa perempuan.</p>
           </div>
         </article>
+      </a>
 
+      <a href="detail3.html" class="block">
         <article onclick="updateMainCard(this)"
           class="flex bg-white shadow-2xl rounded-2xl p-2 space-x-4 cursor-pointer"
           data-aos="fade-left" data-aos-delay="400"
@@ -283,7 +289,7 @@
           data-status="Selesai"
           data-status-color="bg-blue-100 text-blue-800"
           data-detail="detail3.html">
-          <img src="assets/image/Sejarah.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
+          <img src="assets/image/jalan.jpg" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
           <div class="flex-1">
             <div class="flex items-center justify-between mb-1">
               <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full font-semibold">Selesai</span>
@@ -293,6 +299,8 @@
             <p class="text-xs text-gray-500 mt-1">Membahayakan siswa saat pergi dan pulang sekolah.</p>
           </div>
         </article>
+      </a>
+
       </div>
     </div>
   </section>
@@ -407,12 +415,11 @@
   </section>
 
   <!-- Footer Section -->
-  <footer class="bg-green-500 text-white mt-auto  rounded-t-3xl ">
+  <footer class="bg-blue-600 text-white mt-auto rounded-t-3xl">
     <div class="container mx-auto px-5 lg:px-10 py-12 grid grid-cols-1 md:grid-cols-3 gap-12">
       <div>
         <h3 class="font-semibold text-xl text-white mb-4">Lokasi Sekolah</h3>
         <div class="overflow-hidden rounded-lg shadow-lg mb-4">
-
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126548.37462387834!2d110.84279492421925!3d-7.614450917054266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e654b99ab219bfd%3A0x4e63f4d5cebe448a!2sSMK%20Negeri%202%20Karanganyar!5e0!3m2!1sid!2sid!4v1752927749666!5m2!1sid!2sid"
             class="w-full h-48 md:h-52 border-0" style="border:0;" allowfullscreen="" loading="lazy"
@@ -422,10 +429,8 @@
       <div>
         <h3 class="font-semibold text-xl text-white mb-4">Kontak</h3>
         <address class="not-italic space-y-2 text-white">
-          <p>Jl. Yos Sudarso, Jengglong, Bejen, Kec. Karanganyar, Kabupaten Karanganyar, Jawa Tengah 57716
-          </p>
-          <p>Email: <a href="mailto:info@smkn2karanganyar.sch.id"
-              class="hover:text-gray-200 transition">info@smkn2karanganyar.sch.id</a></p>
+          <p>Jl. Yos Sudarso, Jengglong, Bejen, Kec. Karanganyar, Kabupaten Karanganyar, Jawa Tengah 57716</p>
+          <p>Email: <a href="mailto:info@smkn2karanganyar.sch.id" class="hover:text-blue-200 transition">info@smkn2karanganyar.sch.id</a></p>
           <p>Telp: (0271) 123456</p>
           <p>Fax: (0271) 654321</p>
         </address>
@@ -438,11 +443,11 @@
         </p>
       </div>
     </div>
-
-    <div class="border-t border-white text-center py-6 text-sm text-white">
+  
+    <div class="border-t border-blue-300 text-center py-6 text-sm text-blue-100">
       © 2025 SMKN 2 Karanganyar - <br> Pengaduan Masyarakat. skanda.dev
     </div>
-  </footer>
+  </footer>  
 
  <!-- AOS (Animate On Scroll) -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
