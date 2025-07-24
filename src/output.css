@@ -2387,6 +2387,11 @@
       line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
+  .md\:relative {
+    @media (width >= 48rem) {
+      position: relative;
+    }
+  }
   .md\:mt-4 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 4);
@@ -2445,6 +2450,12 @@
   .md\:w-\[60\%\] {
     @media (width >= 48rem) {
       width: 60%;
+    }
+  }
+  .md\:translate-x-0 {
+    @media (width >= 48rem) {
+      --tw-translate-x: calc(var(--spacing) * 0);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .md\:grid-cols-2 {
