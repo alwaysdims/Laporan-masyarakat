@@ -228,6 +228,10 @@
 				class="filter-button text-green-600 border-b-2 border-green-600 pb-2 font-medium">
 				Riwayat
 			</button>
+			<button onclick="filterLaporan('pending', this)" id="btn-pending"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Pending
+			</button>
 			<button onclick="filterLaporan('proses', this)" id="btn-proses"
 				class="filter-button text-gray-500 pb-2 hover:text-black">
 				Proses
@@ -245,7 +249,7 @@
 		<!-- Laporan Items -->
 		<div id="laporan-container" class="space-y-4 lg:px-10">
 			<!-- DITERIMA - BK -->
-			<div onclick="window.location.href='detail-riwayat-pending.html'" data-status="proses"
+			<div onclick="window.location.href='detail-riwayat-pending.html'" data-status="pending"
 				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
