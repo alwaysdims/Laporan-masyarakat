@@ -15,37 +15,62 @@
     }
   </style>
 </head>
-<body class="bg-blue-50 text-gray-900 min-h-screen flex flex-col">
+<body class="relative bg-white text-gray-800 overflow-x-hidden min-h-screen flex flex-col">
 
-  <!-- Navbar -->
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <img src="assets/image/logo-smkn2kra.webp" alt="Logo" class="w-8 h-8" />
-        <span class="font-bold text-blue-800 text-lg">SMK Negeri 2 Karanganyar</span>
-      </div>
+  <!-- SVG Lingkaran Kiri-Atas -->
+    <div class="absolute top-[-200px] left-[-200px] z-0 pointer-events-none">
+        <svg width="800" height="800" viewBox="0 0 800 800" fill="none">
+        <circle cx="400" cy="400" r="350" fill="url(#gradient)" />
+        <defs>
+            <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#93C5FD" />
+            <stop offset="100%" stop-color="#BFDBFE" />
+            </linearGradient>
+        </defs>
+        </svg>
+    </div>  
+
+  <!-- Blur Latar Kanan-Bawah -->
+  <div class="absolute bottom-[-200px] right-[-200px] w-[500px] h-[500px] bg-blue-200 rounded-full filter blur-[120px] opacity-50 z-0"></div>
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 border-b bg-white sticky top-0 z-50 shadow-sm">
+    <div class="flex items-center space-x-4">
+      <img src="assets/image/OIP.jpg" alt="Logo SMK" class="h-10 w-10 object-cover rounded-full" />
+      <h1 class="text-xl sm:text-2xl font-bold text-blue-700">SMK Negeri 2 Karanganyar</h1>
     </div>
+    <a href="index.html" class="group inline-flex items-center gap-1 px-4 py-2 bg-white border border-blue-600 text-blue-600 font-semibold rounded-full hover:bg-blue-600 hover:text-white transition duration-300">
+      <svg class="w-4 h-4 group-hover:translate-x-[-3px] transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+      Kembali
+    </a>
   </header>
 
+  <!-- Main Content -->
+  <main class="relative z-10 max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-start flex-grow" data-aos="fade-up">
+    
+    <!-- Gambar Pengaduan -->
+    <div class="rounded-xl overflow-hidden shadow-lg">
+      <img src="assets/image/Sejarah.webp" alt="Foto pengaduan" class="w-full h-full object-cover">
+    </div>
 
-  <!-- Isi Utama -->
-  <main class="flex-grow flex items-center justify-center px-4">
-    <div class="bg-white rounded-2xl shadow-lg p-8 max-w-3xl w-full mt-10 mb-10 animate-fade-in">
-      <h1 class="text-2xl md:text-3xl font-bold text-blue-800 mb-3">
+    <!-- Detail Pengaduan -->
+    <div class="space-y-5">
+      <span class="inline-block bg-blue-100 text-blue-700 text-sm px-4 py-1 rounded-full font-semibold">Selesai</span>
+      
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">
         Harga makanan di kantin sekolah tidak konsisten
-      </h1>
-
-      <div class="flex items-center gap-4 text-sm text-blue-600 mb-4">
-        <span class="bg-blue-100 text-blue-800 font-semibold px-3 py-1 rounded-full text-xs">Selesai</span>
-        <span>Diposting: 18 Juli 2024</span>
-      </div>
-
-      <div class="flex items-center gap-3 mb-4">
-        <img src="assets/image/Gemini_Generated_Image_7fi74c7fi74c7fi7.png" alt="User" class="w-10 h-10 rounded-full bg-blue-200 object-cover" />
-        <div>
-          <p class="font-semibold text-blue-900">A*** P********</p>
-          <p class="text-sm text-blue-600">Pengadu</p>
-        </div>
+      </h2>
+      
+      <p class="text-sm text-gray-500">
+        Dikirim oleh <strong>A*** P*******</strong> pada <strong>18 Juli 2024</strong>
+      </p>
+      
+      <div class="bg-gray-100 p-4 rounded-lg text-gray-700 shadow-sm">
+        <p>
+          Beberapa siswa mengeluhkan harga yang terlalu mahal tanpa daftar harga yang jelas. Hal ini menyebabkan kebingungan dan ketidaknyamanan dalam membeli makanan saat istirahat.
+        </p>
       </div>
 
       <p class="text-base leading-relaxed text-gray-800">
@@ -62,8 +87,13 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white text-center text-sm text-blue-700 py-4 shadow-inner">
-    &copy; 2025 SMK Negeri 2 Karanganyar. Seluruh hak cipta dilindungi.
+  <footer class="relative z-10 text-center text-sm text-gray-400 py-6 border-t">
+    &copy; 2025 SMK Negeri 2 Karanganyar
   </footer>
+
+  <!-- AOS Init -->
+  <script>
+    AOS.init({ duration: 800 });
+  </script>
 </body>
 </html>

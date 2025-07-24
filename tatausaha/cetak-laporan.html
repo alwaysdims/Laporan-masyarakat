@@ -4,9 +4,9 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Detail Aduan</title>
+	<title>cetak-laporan</title>
 	<script src="https://cdn.tailwindcss.com"></script>
-
+	
 	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
 	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </head>
@@ -26,7 +26,8 @@
 		</div>
 
 		<nav class="space-y-2">
-			<a href="dashboard.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="dashboard.html"
+				class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -34,27 +35,26 @@
 				</svg>
 				Dashboard
 			</a>
+            
+            <a href="tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H7l-4 4V10a2 2 0 012-2h2" />
+                </svg>
+                Tanggapan
+            </a>
 
-			<a href="laporan_buat.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-					stroke="currentColor">
-					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="M8 16h8M8 12h8m-8-4h8M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-				</svg>
-				Buat Laporan
-			</a>
-
-			<a href="riwayat.html"
-				class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
+			<a href="riwayat_tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 						d="M9 5h6m2 0a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h2m2-1h2a1 1 0 011 1v0a1 1 0 01-1 1h-2a1 1 0 01-1-1v0a1 1 0 011-1z" />
 				</svg>
-				Riwayat Laporan
+				Riwayat Tanggapan
 			</a>
 
-			<a href="cetak-laporan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+			<a href="cetak-laporan.html" class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -62,6 +62,7 @@
 				</svg>
 				Cetak Laporan
 			</a>
+
 		</nav>
 	</aside>
 
@@ -71,7 +72,7 @@
 		<!-- Topbar -->
 		<div class="flex justify-between items-center bg-blue-900 text-white px-6 py-4 rounded-lg shadow mb-6">
 			<div class="breadcrumb hidden sm:flex space-x-2 items-center">
-				<a href="#" class="text-2xl text-white font-semibold">Riwayat Laporan</a>
+				<a href="#" class="text-2xl text-white font-semibold">Cetak Laporan</a>
 			</div>
 			<div class="flex items-center space-x-4">
 				<button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
@@ -114,14 +115,13 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Kesiswaan</span></div>
-
-								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
-									consectetur ullam repellat...</span>
-
+										
+									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
+									
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-
+						
 						<a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
 							<div class="shrink-0">
 								<img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
@@ -139,15 +139,14 @@
 							<div class="w-full ps-3">
 								<div class="text-gray-500 text-sm light:text-gray-400"> <span
 										class="font-semibold text-gray-900 light:text-white">Waka Kurikulum</span></div>
-
-								<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet
-									consectetur ullam repellat...</span>
-
+										
+									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
+									
 								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
 							</div>
 						</a>
-
-
+						
+						
 					</div>
 					<a href="notifikasi.html"
 						class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 light:bg-gray-800 light:hover:bg-gray-700 light:text-white">
@@ -162,7 +161,7 @@
 					</a>
 				</div>
 
-				<!-- Header: Foto & Nama -->
+
 				<div class="relative">
 					<!-- Tombol Profil -->
 					<button onclick="toggleDropdown()"
@@ -180,185 +179,76 @@
 							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
 								style="background-image: url('image/admin.jpg');">
 							</div>
-							<p class="mt-2 font-semibold text-blue-800">siswa</p>
+							<p class="mt-2 font-semibold text-green-500">Tata Usaha</p>
 						</div>
 
 						<hr class="border-gray-200" />
 
 						<!-- Menu -->
 						<a href="edit-profil.html" class="block px-4 py-2 hover:bg-blue-50 text-center">Edit Profil</a>
-						<a href="#" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
+						<a href="/laporan-masyarakat/index.html" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Foto & Judul -->
-		<div class="flex flex-col items-center mb-6">
-			<img src="image/logo-smkn2kra.webp" alt="Foto" class="w-24 h-24 rounded-full object-cover mb-2 shadow" />
-			<h1 class="text-xl font-bold text-gray-800">Progress</h1>
-		</div>
+		<div class="bg-blue-50  flex flex-col justify-center items-center p-6">
+			<div class="container mx-auto px-4 pt-10">
+				<div class="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8 mx-auto">
+					<h1 class="text-2xl font-bold text-gray-800 mb-8 text-center">Cetak Laporan</h1>
 
-		<!-- Progress Status -->
-		<div id="progressBar" class="flex items-center justify-between max-w-md mx-auto mb-6 relative">
-			<!-- Pending -->
-			<div class="flex flex-col items-center z-10">
-				<div id="dot-pending"
-					class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
+					<form action="cetak-laporan.php" method="GET" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+						<!-- Pilih Bulan -->
+						<div>
+							<label for="bulan" class="block text-gray-700 font-semibold mb-2">Bulan</label>
+							<select id="bulan" name="bulan"
+								class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option value="">Pilih Bulan</option>
+								<option value="01">Januari</option>
+								<option value="02">Februari</option>
+								<option value="03">Maret</option>
+								<option value="04">April</option>
+								<option value="05">Mei</option>
+								<option value="06">Juni</option>
+								<option value="07">Juli</option>
+								<option value="08">Agustus</option>
+								<option value="09">September</option>
+								<option value="10">Oktober</option>
+								<option value="11">November</option>
+								<option value="12">Desember</option>
+							</select>
+						</div>
+
+						<!-- Pilih Tahun -->
+						<div>
+							<label for="tahun" class="block text-gray-700 font-semibold mb-2">Tahun</label>
+							<select id="tahun" name="tahun"
+								class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+								<option value="">Pilih Tahun</option>
+								<option value="2023">2023</option>
+								<option value="2024">2024</option>
+								<option value="2025">2025</option>
+							</select>
+						</div>
+
+						<!-- Tombol Cetak -->
+						<div class="flex items-end">
+							<button onclick="window.open('cetak.html', '_blank')"
+								class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow transition">
+								Cetak Laporan
+							</button>
+						</div>
+					</form>
 				</div>
-				<span class="text-sm text-gray-600 mt-1">Pending</span>
+
 			</div>
 
-			<!-- Garis 1: Pending -> Proses -->
-			<div id="bar-pending-proses"
-				class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
-			</div>
-
-			<!-- Proses -->
-			<div class="flex flex-col items-center z-10">
-				<div id="dot-proses"
-					class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
-				</div>
-				<span class="text-sm text-gray-600 mt-1">Proses</span>
-			</div>
-
-			<!-- Garis 2: Proses -> Selesai -->
-			<div id="bar-pending-selesai"
-				class="flex-1 h-1 bg-gray-300 mx-2 rounded-full transition-colors duration-300 relative top-1/2 -translate-y-1/2">
-			</div>
-
-			<!-- Selesai -->
-			<div class="flex flex-col items-center z-10">
-				<div id="dot-selesai"
-					class="w-5 h-5 rounded-full border-4 border-gray-300 bg-white transition-colors duration-300 shadow-md">
-				</div>
-				<span class="text-sm text-gray-600 mt-1">Selesai</span>
-			</div>
-		</div>
-
-
-		<!-- Isi Aduan -->
-		<div class="bg-white rounded-lg p-4 shadow mb-4">
-			<h2 class="text-lg font-semibold mb-2 text-gray-700">Isi Aduan</h2>
-			<p class="text-sm text-gray-600">
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, molestias!
-			</p>
-		</div>
-
-		<!-- Riwayat Tanggapan -->
-		<div class="bg-white rounded-lg p-4 shadow mb-4 h-64 overflow-y-auto space-y-4 flex flex-col">
-
-			<!-- Pesan dari Admin -->
-			<div class="flex items-center space-x-3">
-				<!-- Gambar -->
-				<img src="image/admin.jpg" alt="Admin" class="w-12 h-12 rounded-full object-cover" />
-
-				<!-- Konten -->
-				<div>
-					<div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs mt-1">
-						<span class="block text-green-500 font-semibold">Kesiswaan</span>
-						<p>Terima kasih atas laporannya</p>
-					</div>
-				</div>
-			</div>
-
-
-
-			<!-- Pesan dari Pengadu -->
-			<div class="flex items-start space-x-2 self-end">
-				<div class="bg-blue-100 text-sm p-2 rounded-lg max-w-xs">
-
-					<span class="block text-blue-500 font-semibold">Rina Maulida</span>
-					<p>Laporan saya bagaimana ya?</p>
-				</div>
-				<img src="image/user.jpg" alt="Pengadu" class="w-12 h-12 rounded-full object-cover" />
-			</div>
-
-			<!-- Balasan Admin -->
-			<div class="flex items-start space-x-2">
-				<img src="image/admin.jpg" alt="Admin" class="w-12 h-12 rounded-full object-cover" />
-				<div class="bg-gray-100 text-sm p-2 rounded-lg max-w-xs">
-					<span class="block text-green-500 font-semibold">Kesiswaan</span>
-					<p>Sedang kami proses</p>
-				</div>
-			</div>
-
-		</div>
-
-
-		<!-- Input Chat -->
-		<div class="flex items-center bg-white rounded-lg shadow p-2">
-			<input type="text" placeholder="Ketik tanggapan..." class="flex-1 px-3 py-2 outline-none text-sm" />
-			<button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm ml-2">Kirim</button>
-		</div>
 
 	</main>
 	<script>
-		document.addEventListener("DOMContentLoaded", function () {
-			const status = localStorage.getItem("statusLaporan") || "pending";
-
-			const dots = {
-				pending: document.getElementById("dot-pending"),
-				proses: document.getElementById("dot-proses"),
-				selesai: document.getElementById("dot-selesai")
-			};
-
-			const bars = {
-				pending_proses: document.getElementById("bar-pending-proses"),
-				proses_selesai: document.getElementById("bar-proses-selesai")
-			};
-
-			// Reset semua warna
-			Object.values(dots).forEach(dot => {
-				dot.classList.remove("border-yellow-400", "border-green-400", "border-blue-500");
-				dot.classList.add("border-gray-300");
-			});
-
-			Object.values(bars).forEach(bar => {
-				bar.classList.remove("bg-yellow-300", "bg-green-300", "bg-blue-400");
-				bar.classList.add("bg-gray-300");
-			});
-
-			// Aktifkan status sesuai progress
-			if (status === "pending") {
-				dots.pending.classList.replace("border-gray-300", "border-yellow-400");
-			}
-
-			if (status === "proses") {
-				dots.pending.classList.replace("border-gray-300", "border-yellow-400");
-				dots.proses.classList.replace("border-gray-300", "border-green-400");
-				bars.pending_proses.classList.replace("bg-gray-300", "bg-yellow-300"); // kuning
-			}
-
-			if (status === "selesai") {
-				dots.pending.classList.replace("border-gray-300", "border-yellow-400");
-				dots.proses.classList.replace("border-gray-300", "border-green-400");
-				dots.selesai.classList.replace("border-gray-300", "border-blue-500");
-				bars.pending_proses.classList.replace("bg-gray-300", "bg-yellow-300");
-				bars.proses_selesai.classList.replace("bg-gray-300", "bg-green-300"); // hijau
-			}
-		})
-
 		function toggleDropdown() {
 			const dropdown = document.getElementById("dropdown-menu");
 			dropdown.classList.toggle("hidden");
-		}
-
-		const status = 'proses'; // ganti ini sesuai status aktual
-
-		const dotPending = document.getElementById('dot-pending');
-		const dotProses = document.getElementById('dot-proses');
-		const dotSelesai = document.getElementById('dot-selesai');
-
-		if (status === 'pending') {
-			dotPending.classList.replace('bg-gray-300', 'bg-yellow-500');
-		} else if (status === 'proses') {
-			dotPending.classList.replace('bg-gray-300', 'bg-yellow-500');
-			dotProses.classList.replace('bg-gray-300', 'bg-green-500');
-		} else if (status === 'selesai') {
-			dotPending.classList.replace('bg-gray-300', 'bg-yellow-500');
-			dotProses.classList.replace('bg-gray-300', 'bg-green-500');
-			dotSelesai.classList.replace('bg-gray-300', 'bg-blue-500'); // atau abu-abu gelap jika lebih cocok
 		}
 
 		const toggleSidebarBtn = document.getElementById("toggleSidebar");
@@ -381,31 +271,6 @@
 			menu.classList.toggle("hidden");
 		}
 
-		document.addEventListener("DOMContentLoaded", function () {
-			const status = localStorage.getItem("statusLaporan");
-
-			// Reset semua ke abu-abu
-			const pending = document.getElementById("dot-pending");
-			const proses = document.getElementById("dot-proses");
-			const selesai = document.getElementById("dot-selesai");
-
-			[pending, proses, selesai].forEach(dot => {
-				dot.classList.remove("bg-yellow-400", "bg-green-400", "bg-blue-500");
-				dot.classList.add("bg-gray-300");
-			});
-
-			// Atur warna sesuai status
-			if (status === "pending") {
-				pending.classList.replace("bg-gray-300", "bg-yellow-400");
-			} else if (status === "proses") {
-				pending.classList.replace("bg-gray-300", "bg-yellow-400");
-				proses.classList.replace("bg-gray-300", "bg-green-400");
-			} else if (status === "selesai") {
-				pending.classList.replace("bg-gray-300", "bg-yellow-400");
-				proses.classList.replace("bg-gray-300", "bg-green-400");
-				selesai.classList.replace("bg-gray-300", "bg-blue-500");
-			}
-		});
 		// Tutup dropdown saat klik di luar
 		window.addEventListener("click", function (e) {
 			const btn = document.querySelector("button[onclick='toggleDropdown()']");
