@@ -182,7 +182,8 @@
 							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
 								style="background-image: url('image/admin.jpg');">
 							</div>
-							<a href="profil.html" class="mt-2 font-semibold text-green-800 hover:underline hover:text-green-600 transition">
+							<a href="profil.html"
+								class="mt-2 font-semibold text-green-800 hover:underline hover:text-green-600 transition">
 								Tata Usaha
 							</a>
 						</div>
@@ -466,10 +467,10 @@ Data absensi telah diperiksa dan sesuai, tidak ditemukan kesalahan dari sistem T
 							</div>
 
 							<!-- Row 3 -->
-						<tr class="hover:bg-gray-50" data-title="Permintaan legalisir ijazah" data-status="Selesai"
+						<tr class="hover:bg-gray-50" data-title="Kabel wifi terputus" data-status="Selesai"
 							data-date="2025-05-16T12:56:00">
 							<td class="px-4 py-3">3</td>
-							<td class="px-4 py-3">Permintaan legalisir ijazah</td>
+							<td class="px-4 py-3">Lemari Arsip</td>
 							<td class="px-4 py-3 flex items-center space-x-2">
 								<div
 									class="w-7 h-7 rounded-full bg-blue-700 text-white flex items-center justify-center text-xs font-semibold">
@@ -480,11 +481,10 @@ Data absensi telah diperiksa dan sesuai, tidak ditemukan kesalahan dari sistem T
 								<span
 									class="bg-blue-100 text-blue-700 text-xs font-semibold px-2.5 py-1 rounded-full">Selesai</span>
 							</td>
-							<td class="px-4 py-3">16 May 2025 12:56</td>
+							<td class="px-4 py-3">22 Juli 2025 12:56</td>
 							<td class="px-4 py-3">
 								<span
-									class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Tata
-									Usaha</span>
+									class="bg-green-100 text-green-700 text-xs font-semibold px-2.5 py-1 rounded-full">Tata Usaha</span>
 							</td>
 							<td class="px-4 py-3 text-center">
 								<button
@@ -497,19 +497,16 @@ Data absensi telah diperiksa dan sesuai, tidak ditemukan kesalahan dari sistem T
 									<span>Jawab</span>
 								</button>
 							</td>
-
-
-							<!-- Modal -->
-							<div id="modalJawabPending"
+							<div id="modalJawabSelesai"
 								class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden overflow-y-auto">
-
 								<div class="bg-white rounded-lg w-full max-w-2xl mx-4 my-2 p-6 relative max-h-[90vh] h-fit overflow-y-auto"
 									style="margin-top: 10px; margin-bottom: 10px;">
 									<!-- Judul -->
 									<h2 class="text-xl font-bold mb-4 text-center">Detail Laporan</h2>
+
 									<div class="flex justify-center mb-4">
-										<img src="image/user.jpg"
-											onclick="showFullImage('modalfotoSelesai', 'image/user.jpg')"
+										<img src="image/lemari.jpg"
+											onclick="showFullImage('modalfotoSelesai', 'image/lemari.jpg')"
 											class="cursor-pointer rounded-lg shadow-md w-48 h-48 object-cover hover:scale-105 duration-200">
 									</div>
 
@@ -539,7 +536,7 @@ Data absensi telah diperiksa dan sesuai, tidak ditemukan kesalahan dari sistem T
 										<label class="block mb-1 font-medium text-gray-700">Deskripsi laporan</label>
 										<textarea rows="3"
 											class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-blue-500 focus:border-blue-500 text-sm py-2 px-3"
-											readonly>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, fuga debitis maxime, ut illum sequi eius non excepturi ipsa atque quae dicta qui impedit illo. Obcaecati ipsa non eligendi fugiat?</textarea>
+											readonly>Lemari arsip dokumen di ruang TU rusak pada engselnya, terima kasih sudah diperbaiki dengan cepat.</textarea>
 									</div>
 
 									<!-- Pilihan Aksi -->
@@ -584,7 +581,6 @@ Data absensi telah diperiksa dan sesuai, tidak ditemukan kesalahan dari sistem T
 									</div>
 								</div>
 							</div>
-
 						</tr>
 
 					</tbody>
@@ -668,6 +664,7 @@ Data absensi telah diperiksa dan sesuai, tidak ditemukan kesalahan dari sistem T
 		searchInput.addEventListener("input", filterTable);
 		statusFilter.addEventListener("change", filterTable);
 		dateFilter.addEventListener("change", filterTable);
+
 	</script>
 </body>
 

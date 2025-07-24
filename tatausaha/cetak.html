@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Laporan Pengaduan Masyarakat</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="p-8 text-black font-sans bg-white">
+
+	<!-- Header -->
+	<div class="text-center mb-8">
+		<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 mx-auto " />
+		<h2 class="text-lg font-semibold">Laporan Pengaduan Masyarakat
+			<br>SMK Negeri 2 Karanganyar</h2>
+		</h2>
+	</div>
+
+	<!-- Tanggal -->
+	<div class="mb-4">
+		<table class="text-sm">
+			<tr>
+				<td class="pr-4">Tanggal Cetak</td>
+				<td>:</td>
+				<td>19 Juli 2025</td>
+			</tr>
+		</table>
+	</div>
+
+	<!-- Tabel Laporan -->
+	<div class="overflow-x-auto">
+		<table class="min-w-full border border-gray-400 text-sm text-center">
+			<thead class="bg-gray-200">
+				<tr>
+					<th class="border px-2 py-1">No</th>
+					<th class="border px-2 py-1">Nama</th>
+					<th class="border px-2 py-1">Judul Laporan</th>
+					<th class="border px-2 py-1">Isi Laporan</th>
+					<th class="border px-2 py-1">Tanggal</th>
+					<th class="border px-2 py-1">Ditujukan</th>
+					<th class="border px-2 py-1">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- PENDING - Tata Usaha -->
+				<tr class="hover:bg-gray-50">
+					<td class="border px-2 py-1">1</td>
+					<td class="border px-2 py-1">Galih Putra</td>
+					<td class="border px-2 py-1">Ruangan TU</td>
+					<td class="border px-2 py-1">Beberapa dokumen penting tidak tertata dengan rapi, mohon ditertibkan
+						agar pelayanan administrasi lebih cepat.</td>
+					<td class="border px-2 py-1">20 Juli 2025, 09:30</td>
+					<td class="border px-2 py-1">Tata Usaha</td>
+					<td class="border px-2 py-1 text-yellow-600 font-medium">Pending</td>
+				</tr>
+
+				<!-- PROSES - Tata Usaha -->
+				<tr class="hover:bg-gray-50">
+					<td class="border px-2 py-1">2</td>
+					<td class="border px-2 py-1">Laila Wulandari</td>
+					<td class="border px-2 py-1">Gudang Alat Tulis</td>
+					<td class="border px-2 py-1">Persediaan ATK seperti kertas dan pulpen sudah hampir habis, mohon
+						dilakukan pengadaan ulang.</td>
+					<td class="border px-2 py-1">21 Juli 2025, 11:00</td>
+					<td class="border px-2 py-1">Tata Usaha</td>
+					<td class="border px-2 py-1 text-green-600 font-medium">Proses</td>
+				</tr>
+
+				<!-- SELESAI - Tata Usaha -->
+				<tr class="hover:bg-gray-50">
+					<td class="border px-2 py-1">3</td>
+					<td class="border px-2 py-1">Reza Maulana</td>
+					<td class="border px-2 py-1">Lemari Arsip</td>
+					<td class="border px-2 py-1">Lemari arsip dokumen di ruang TU rusak pada engselnya, terima kasih
+						sudah diperbaiki dengan cepat.</td>
+					<td class="border px-2 py-1">22 Juli 2025, 08:45</td>
+					<td class="border px-2 py-1">Tata Usaha</td>
+					<td class="border px-2 py-1 text-blue-600 font-medium">Selesai</td>
+				</tr>
+
+				<!-- DITOLAK - Tata Usaha -->
+				<tr class="hover:bg-gray-50">
+					<td class="border px-2 py-1">4</td>
+					<td class="border px-2 py-1">Indah Ramadhani</td>
+					<td class="border px-2 py-1">Permintaan Cetak Ijazah</td>
+					<td class="border px-2 py-1">Saya ingin mencetak ulang ijazah karena hilang, namun belum melengkapi
+						syarat dokumen yang diminta.</td>
+					<td class="border px-2 py-1">22 Juli 2025, 14:15</td>
+					<td class="border px-2 py-1">Tata Usaha</td>
+					<td class="border px-2 py-1 text-red-600 font-medium">Ditolak</td>
+				</tr>
+			</tbody>
+
+
+		</table>
+	</div>
+
+	<!-- Tanda Tangan -->
+	<div class="flex justify-end mt-10">
+		<div class="text-center">
+			<p>Karanganyar, 19 Juli 2025</p>
+			<p class="font-semibold">Petugas Admin</p>
+			<div class="mt-16">
+				<p>_________________________</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Cetak Otomatis -->
+	<script>
+		window.print();
+
+	</script>
+
+</body>
+
+</html>
