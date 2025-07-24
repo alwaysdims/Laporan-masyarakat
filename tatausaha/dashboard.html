@@ -11,14 +11,9 @@
 </head>
 
 <body class="bg-gray-100 min-h-screen flex">
-	<!-- Tombol Toggle Sidebar (untuk mobile) -->
-	<button id="toggleSidebar" class="sm:hidden fixed top-4 left-4 z-50 p-2 bg-blue-900 text-white rounded">
-		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-		</svg>
-	</button>
 	<!-- Sidebar -->
-	<aside id="sidebar"  class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg">
+	<aside id="sidebar"  
+	class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg">
 		<div class="text-center mb-10">
 			<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 mx-auto rounded-full mb-2" />
 			<h1 class="text-sm font-bold leading-tight">PENGADUAN<br />SKANDAKRA</h1>
@@ -177,7 +172,9 @@
 							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
 								style="background-image: url('image/admin.jpg');">
 							</div>
-							<p class="mt-2 font-semibold text-green-500">Tata Usaha</p>
+							<a href="profil.html" class="mt-2 font-semibold text-green-800 hover:underline hover:text-green-600 transition">
+								Tata Usaha
+							</a>
 						</div>
 
 						<hr class="border-gray-200" />
@@ -246,47 +243,49 @@
 				<div class="bg-white rounded-2xl shadow-md p-6 col-span-2">
 					<div class="flex items-center justify-between mb-6">
 					  <h2 class="text-xl font-bold text-gray-800">Aduan Terbaru</h2>
-					  <a href="riwayat.html" class="text-sm text-blue-600 hover:underline hover:text-blue-800 transition">Lihat Semua</a>
+					  <a href="riwayat_tanggapan.html" class="text-sm text-blue-600 hover:underline hover:text-blue-800 transition">Lihat Semua</a>
 					</div>
 				  
 					<div class="space-y-5">
 					<!-- Tiket 1 -->
 					<div class="flex items-start gap-4 border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-all duration-200 bg-gray-50">
-						<a href="detail-riwayat.html">
-						<div class="flex-1">
+						<a href="detail-riwayat-selesai.html">
+						  <div class="flex-1">
 							<div class="flex justify-between items-start">
-							<div>
-								<p class="font-semibold text-gray-900">Kesalahan data absensi siswa</p>
-								<p class="text-xs text-gray-500 mt-1">19 May 2025</p>
-							</div>
-							<span class="text-xs font-semibold bg-red-100 text-red-600 px-2 py-1 rounded-full">Ditolak</span>
+							  <div>
+								<p class="font-semibold text-gray-900">Lemari Arsip</p>
+								<p class="text-xs text-gray-500 mt-1">22 Juli 2025</p>
+							  </div>
+							  <span class="text-xs font-semibold bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Selesai</span>
 							</div>
 							<p class="text-sm text-gray-700 mt-3 line-clamp-2">
-								Terdapat kesalahan data absensi siswa kelas 10 RPL yang tidak sesuai dengan daftar hadir kelas.
+							  Lemari arsip dokumen di ruang TU rusak pada engselnya, terima kasih sudah diperbaiki dengan cepat.
 							</p>
-							<p class="text-xs text-gray-400 mt-2">🧑‍💼 Nur Hasanah</p>
-						</div>
+							<p class="text-xs text-gray-400 mt-2">Reza Maulana</p>
+						  </div>
 						</a>
-					</div>
+					  </div>
+					  
 
 					<!-- Tiket 2 -->
 					<div class="flex items-start gap-4 border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-all duration-200 bg-gray-50">
-						<a href="detail-riwayat.html">
-						<div class="flex-1">
+						<a href="detail-riwayat-ditolak.html">
+						  <div class="flex-1">
 							<div class="flex justify-between items-start">
-							<div>
-								<p class="font-semibold text-gray-900">Permintaan Legalisir Ijazah</p>
-								<p class="text-xs text-gray-500 mt-1">18 Juli 2025</p>
-							</div>
-							<span class="text-xs font-semibold bg-green-100 text-green-700 px-2 py-1 rounded-full">Selesai</span>
+							  <div>
+								<p class="font-semibold text-gray-900">Permintaan Cetak Ijazah</p>
+								<p class="text-xs text-gray-500 mt-1">22 Juli 2025</p>
+							  </div>
+							  <span class="text-xs font-semibold bg-red-100 text-red-600 px-2 py-1 rounded-full">Ditolak</span>
 							</div>
 							<p class="text-sm text-gray-700 mt-3 line-clamp-2">
-								Saya mengajukan permintaan legalisir ijazah sebagai syarat pendaftaran kerja dan kebutuhan administratif lainnya. Mohon bantuan dari pihak Tata Usaha untuk memproses legalisir dokumen tersebut.
+							  Saya ingin mencetak ulang ijazah karena hilang, namun belum melengkapi syarat dokumen yang diminta.
 							</p>
-							<p class="text-xs text-gray-400 mt-2">🧑‍💼 Rina Maulida</p>
-						</div>
+							<p class="text-xs text-gray-400 mt-2">Indah Ramadhani</p>
+						  </div>
 						</a>
-					</div>
+					  </div>
+					  
 					</div>
 
 				  </div>
