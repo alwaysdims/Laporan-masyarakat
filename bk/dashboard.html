@@ -2,17 +2,17 @@
 <html lang="id">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Dashboard Pengaduan</title>
-	<script src="https://cdn.tailwindcss.com"></script>
-	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Pengaduan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </head>
 
 <body class="bg-gray-100 min-h-screen flex">
 
-	<aside id="sidebar"
+    <aside id="sidebar"
         class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg fixed inset-y-0 left-0 transform -translate-x-full sm:relative sm:translate-x-0 transition-transform duration-300 ease-in-out z-40">
         <div class="text-center mb-10">
             <img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 mx-auto rounded-full mb-2" />
@@ -63,8 +63,7 @@
     <main class="flex-1 p-6 overflow-y-auto">
         <div class="flex justify-between items-center bg-blue-900 text-white px-6 py-4 rounded-lg shadow mb-6">
             <div class="flex items-center space-x-4">
-                <button id="toggleSidebar"
-                    class="sm:hidden p-2 text-white rounded-lg hover:bg-blue-700 transition">
+                <button id="toggleSidebar" class="sm:hidden p-2 text-white rounded-lg hover:bg-blue-700 transition">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -98,10 +97,10 @@
                         Notifications
                     </div>
                     <div class="divide-y divide-gray-100 light:divide-gray-700">
-                        <a href="detail-riwayat-pending.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
+                        <a href="detail-riwayat-pending.html"
+                            class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
                             <div class="shrink-0">
-                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg"
-                                    alt="Jese image">
+                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
                                 <div
                                     class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-blue-600 border border-white rounded-full light:border-gray-800">
                                     <svg class="w-2 h-2 text-white" aria-hidden="true"
@@ -121,10 +120,10 @@
                             </div>
                         </a>
 
-                        <a href="detail-riwayat-proses.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
+                        <a href="detail-riwayat-proses.html"
+                            class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
                             <div class="shrink-0">
-                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg"
-                                    alt="Jese image">
+                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
                                 <div
                                     class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-blue-600 border border-white rounded-full light:border-gray-800">
                                     <svg class="w-2 h-2 text-white" aria-hidden="true"
@@ -144,10 +143,10 @@
                                 <div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
                             </div>
                         </a>
-						<a href="detail-riwayat-selesai.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
+                        <a href="detail-riwayat-selesai.html"
+                            class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
                             <div class="shrink-0">
-                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg"
-                                    alt="Jese image">
+                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
                                 <div
                                     class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-blue-600 border border-white rounded-full light:border-gray-800">
                                     <svg class="w-2 h-2 text-white" aria-hidden="true"
@@ -208,144 +207,149 @@
             </div>
         </div>
 
-		<!-- <div class="mb-6 sm:px-6 lg:px-10">
+        <!-- <div class="mb-6 sm:px-6 lg:px-10">
 			<h1 class="text-2xl font-bold text-gray-800">Selamat Datang, <span class="text-blue-700">Admin!</span></h1>
 			<p class="text-sm text-gray-500 mt-1">Berikut adalah ringkasan laporan terbaru hari ini.</p>
 		</div> -->
-		<div class="max-w-6xl mx-auto space-y-6 lg:px-10">
+        <div class="max-w-6xl mx-auto space-y-6 lg:px-10">
 
-			<!-- Top Cards -->
-			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-				<!-- Total Tiket -->
-				<div class="bg-white rounded-2xl shadow p-4">
-					<div class="flex items-center justify-between">
-						<h2 class="text-gray-500 text-sm font-medium">Total Aduan Masuk</h2>
-						<span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-md text-xs">📄</span>
-					</div>
-					<p class="text-2xl font-semibold mt-2">5</p>
-					<p class="text-green-500 text-xs mt-1">⬆ 12% vs bulan lalu</p>
-				</div>
+            <!-- Top Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Total Tiket -->
+                <div class="bg-white rounded-2xl shadow p-4">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-gray-500 text-sm font-medium">Total Aduan Masuk</h2>
+                        <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded-md text-xs">📄</span>
+                    </div>
+                    <p class="text-2xl font-semibold mt-2">5</p>
+                    <p class="text-green-500 text-xs mt-1">⬆ 12% vs bulan lalu</p>
+                </div>
 
-				<!-- Tiket Aktif -->
-				<div class="bg-white rounded-2xl shadow p-4">
-					<div class="flex items-center justify-between">
-						<h2 class="text-gray-500 text-sm font-medium">Aduan Masih Aktif</h2>
-						<span class="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-md text-xs">⏱</span>
-					</div>
-					<p class="text-2xl font-semibold mt-2">1</p>
-					<p class="text-red-500 text-xs mt-1">⬇ 3% vs bulan lalu</p>
-				</div>
+                <!-- Tiket Aktif -->
+                <div class="bg-white rounded-2xl shadow p-4">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-gray-500 text-sm font-medium">Aduan Masih Aktif</h2>
+                        <span class="bg-yellow-100 text-yellow-600 px-2 py-1 rounded-md text-xs">⏱</span>
+                    </div>
+                    <p class="text-2xl font-semibold mt-2">1</p>
+                    <p class="text-red-500 text-xs mt-1">⬇ 3% vs bulan lalu</p>
+                </div>
 
-				<!-- Selesai -->
-				<div class="bg-white rounded-2xl shadow p-4">
-					<div class="flex items-center justify-between">
-						<h2 class="text-gray-500 text-sm font-medium">Selesai</h2>
-						<span class="bg-green-100 text-green-600 px-2 py-1 rounded-md text-xs">✔</span>
-					</div>
-					<p class="text-2xl font-semibold mt-2">1</p>
-					<p class="text-green-500 text-xs mt-1">⬆ 8% vs bulan lalu</p>
-				</div>
+                <!-- Selesai -->
+                <div class="bg-white rounded-2xl shadow p-4">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-gray-500 text-sm font-medium">Selesai</h2>
+                        <span class="bg-green-100 text-green-600 px-2 py-1 rounded-md text-xs">✔</span>
+                    </div>
+                    <p class="text-2xl font-semibold mt-2">1</p>
+                    <p class="text-green-500 text-xs mt-1">⬆ 8% vs bulan lalu</p>
+                </div>
 
-				<!-- Rata-rata Waktu -->
-				<div class="bg-white rounded-2xl shadow p-4">
-					<div class="flex items-center justify-between">
-						<h2 class="text-gray-500 text-sm font-medium">Rata-rata Waktu</h2>
-						<span class="bg-purple-100 text-purple-600 px-2 py-1 rounded-md text-xs">⏳</span>
-					</div>
-					<p class="text-2xl font-semibold mt-2">1 Jam</p>
-					<p class="text-green-500 text-xs mt-1">⬇ 15% vs bulan lalu</p>
-				</div>
-			</div>
+                <!-- Rata-rata Waktu -->
+                <div class="bg-white rounded-2xl shadow p-4">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-gray-500 text-sm font-medium">Rata-rata Waktu</h2>
+                        <span class="bg-purple-100 text-purple-600 px-2 py-1 rounded-md text-xs">⏳</span>
+                    </div>
+                    <p class="text-2xl font-semibold mt-2">1 Jam</p>
+                    <p class="text-green-500 text-xs mt-1">⬇ 15% vs bulan lalu</p>
+                </div>
+            </div>
 
-			<!-- Bottom Section -->
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
+            <!-- Bottom Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
 
-				<!-- Tiket Terbaru -->
-				<div class="bg-white rounded-2xl shadow-md p-6 col-span-2">
-					<div class="flex items-center justify-between mb-6">
-					  <h2 class="text-xl font-bold text-gray-800">Aduan Terbaru</h2>
-					  <a href="riwayat.html" class="text-sm text-blue-600 hover:underline hover:text-blue-800 transition">Lihat Semua</a>
-					</div>
-				  
-					<div class="space-y-5">
-					<!-- Tiket 1 -->
-					<div class="flex items-start gap-4 border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-all duration-200 bg-gray-50">
-						<a href="detail-riwayat-ditolak.html">
-						<div class="flex-1">
-							<div class="flex justify-between items-start">
-							<div>
-								<p class="font-semibold text-gray-900">Permohonan Pindah Kelas</p>
-								<p class="text-xs text-gray-500 mt-1">19 Juli 2025</p>
-							</div>
-							<span class="text-xs font-semibold bg-red-100 text-red-600 px-2 py-1 rounded-full">Ditolak</span>
-							</div>
-							<p class="text-sm text-gray-700 mt-3 line-clamp-2">
-								Permintaan pindah kelas saya ditolak karena alasan tidak memenuhi kriteria BK.
-							</p>
-							<p class="text-xs text-gray-400 mt-2"> Bayu Saputra</p>
-						</div>
-						</a>
-					</div>
+                <!-- Tiket Terbaru -->
+                <div class="bg-white rounded-2xl shadow-md p-6 col-span-2">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-bold text-gray-800">Aduan Terbaru</h2>
+                        <a href="riwayat.html"
+                            class="text-sm text-blue-600 hover:underline hover:text-blue-800 transition">Lihat Semua</a>
+                    </div>
 
-					<!-- Tiket 2 -->
-					<div class="flex items-start gap-4 border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-all duration-200 bg-gray-50">
-						<a href="detail-riwayat-pending.html">
-						<div class="flex-1">
-							<div class="flex justify-between items-start">
-							<div>
-								<p class="font-semibold text-gray-900">Permintaan Konseling Pribadi</p>
-								<p class="text-xs text-gray-500 mt-1">18 Juli 2025</p>
-							</div>
-							<span class="text-xs font-semibold bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Pending</span>
-							</div>
-							<p class="text-sm text-gray-700 mt-3 line-clamp-2">
-							Saya merasa cemas akhir-akhir ini dan ingin berkonsultasi dengan guru BK.
-							</p>
-							<p class="text-xs text-gray-400 mt-2"> Sinta Lestari</p>
-						</div>
-						</a>
-					</div>
-					</div>
+                    <div class="space-y-5">
+                        <!-- Tiket 1 -->
+                        <div
+                            class="flex items-start gap-4 border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-all duration-200 bg-gray-50">
+                            <a href="detail-riwayat-ditolak.html">
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <p class="font-semibold text-gray-900">Permohonan Pindah Kelas</p>
+                                            <p class="text-xs text-gray-500 mt-1">19 Juli 2025</p>
+                                        </div>
+                                        <span
+                                            class="text-xs font-semibold bg-red-100 text-red-600 px-2 py-1 rounded-full">Ditolak</span>
+                                    </div>
+                                    <p class="text-sm text-gray-700 mt-3 line-clamp-2">
+                                        Permintaan pindah kelas saya ditolak karena alasan tidak memenuhi kriteria BK.
+                                    </p>
+                                    <p class="text-xs text-gray-400 mt-2"> Bayu Saputra</p>
+                                </div>
+                            </a>
+                        </div>
 
-				  </div>
-				  
-				<!-- Distribusi Status -->
-				<div class="bg-white rounded-2xl shadow p-4">
-					<canvas id="myChart" class="w-full max-w-xl h-96 mx-auto"></canvas>
-				</div>
+                        <!-- Tiket 2 -->
+                        <div
+                            class="flex items-start gap-4 border border-gray-200 rounded-xl p-4 hover:shadow-lg transition-all duration-200 bg-gray-50">
+                            <a href="detail-riwayat-pending.html">
+                                <div class="flex-1">
+                                    <div class="flex justify-between items-start">
+                                        <div>
+                                            <p class="font-semibold text-gray-900">Permintaan Konseling Pribadi</p>
+                                            <p class="text-xs text-gray-500 mt-1">18 Juli 2025</p>
+                                        </div>
+                                        <span
+                                            class="text-xs font-semibold bg-yellow-100 text-yellow-700 px-2 py-1 rounded-full">Pending</span>
+                                    </div>
+                                    <p class="text-sm text-gray-700 mt-3 line-clamp-2">
+                                        Saya merasa cemas akhir-akhir ini dan ingin berkonsultasi dengan guru BK.
+                                    </p>
+                                    <p class="text-xs text-gray-400 mt-2"> Sinta Lestari</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
 
-				<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+                </div>
 
-				<script>
-					const xValues = ["Pending", "Proses", "Selesai", "Ditolak"];
-					const yValues = [1, 2, 1, 1];
-					const barColors = ["#eab308", "#22c55e", "#2563eb", "#ef4444"];
+                <!-- Distribusi Status -->
+                <div class="bg-white rounded-2xl shadow p-4">
+                    <canvas id="myChart" class="w-full max-w-xl h-96 mx-auto"></canvas>
+                </div>
 
-					new Chart("myChart", {
-						type: "pie",
-						data: {
-							labels: xValues,
-							datasets: [{
-								backgroundColor: barColors,
-								data: yValues
-							}]
-						},
-						options: {
-							title: {
-								display: true,
-								text: "Distribusi Status Pengaduan"
-							},
-							responsive: true,
-							maintainAspectRatio: false
-						}
-					});
-				</script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-			</div>
+                <script>
+                    const xValues = ["Pending", "Proses", "Selesai", "Ditolak"];
+                    const yValues = [1, 2, 1, 1];
+                    const barColors = ["#eab308", "#22c55e", "#2563eb", "#ef4444"];
+
+                    new Chart("myChart", {
+                        type: "pie",
+                        data: {
+                            labels: xValues,
+                            datasets: [{
+                                backgroundColor: barColors,
+                                data: yValues
+                            }]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: "Distribusi Status Pengaduan"
+                            },
+                            responsive: true,
+                            maintainAspectRatio: false
+                        }
+                    });
+                </script>
+
+            </div>
 
 
-	</main>
-	
+    </main>
+
     <script>
         // Toggle Dropdown for User Profile
         function toggleDropdown() {
@@ -373,7 +377,8 @@
 
             // Close sidebar if open and clicked outside on small screens
             // Check if sidebar is NOT hidden (-translate-x-full) and click is outside sidebar and toggle button
-            if (window.innerWidth < 640 && !sidebar.contains(e.target) && !toggleSidebarBtn.contains(e.target) && !sidebar.classList.contains('-translate-x-full')) {
+            if (window.innerWidth < 640 && !sidebar.contains(e.target) && !toggleSidebarBtn.contains(e
+                .target) && !sidebar.classList.contains('-translate-x-full')) {
                 sidebar.classList.add("-translate-x-full");
             }
         });

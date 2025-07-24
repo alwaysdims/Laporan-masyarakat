@@ -2,24 +2,18 @@
 <html lang="id">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>cetak-laporan</title>
-	<script src="https://cdn.tailwindcss.com"></script>
-	
-	<link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
-	<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cetak-laporan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </head>
 
 <body class="bg-gray-100 min-h-screen flex">
-	<!-- Tombol Toggle Sidebar (untuk mobile) -->
-	<button id="toggleSidebar" class="sm:hidden fixed top-4 left-4 z-50 p-2 bg-blue-900 text-white rounded">
-		<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-		</svg>
-	</button>
-	<!-- Sidebar -->
-	<aside id="sidebar"
+    <!-- Sidebar -->
+    <aside id="sidebar"
         class="w-64 bg-blue-900 text-white p-5 flex flex-col shadow-lg fixed inset-y-0 left-0 transform -translate-x-full sm:relative sm:translate-x-0 transition-transform duration-300 ease-in-out z-40">
         <div class="text-center mb-10">
             <img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 mx-auto rounded-full mb-2" />
@@ -27,15 +21,14 @@
         </div>
 
         <nav class="space-y-2">
-			<a href="dashboard.html"
-			class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-				stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-					d="M9 5h6m2 0a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h2m2-1h2a1 1 0 011 1v0a1 1 0 01-1 1h-2a1 1 0 01-1-1v0a1 1 0 011-1z" />
-			</svg>
-			Dashboard
-		</a>
+            <a href="dashboard.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9 5h6m2 0a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h2m2-1h2a1 1 0 011 1v0a1 1 0 01-1 1h-2a1 1 0 01-1-1v0a1 1 0 011-1z" />
+                </svg>
+                Dashboard
+            </a>
 
             <a href="tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -71,8 +64,7 @@
     <main class="flex-1 p-6 overflow-y-auto">
         <div class="flex justify-between items-center bg-blue-900 text-white px-6 py-4 rounded-lg shadow mb-6">
             <div class="flex items-center space-x-4">
-                <button id="toggleSidebar"
-                    class="sm:hidden p-2 text-white rounded-lg hover:bg-blue-700 transition">
+                <button id="toggleSidebar" class="sm:hidden p-2 text-white rounded-lg hover:bg-blue-700 transition">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -108,8 +100,7 @@
                     <div class="divide-y divide-gray-100 light:divide-gray-700">
                         <a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
                             <div class="shrink-0">
-                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg"
-                                    alt="Jese image">
+                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
                                 <div
                                     class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-blue-600 border border-white rounded-full light:border-gray-800">
                                     <svg class="w-2 h-2 text-white" aria-hidden="true"
@@ -132,8 +123,7 @@
 
                         <a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
                             <div class="shrink-0">
-                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg"
-                                    alt="Jese image">
+                                <img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
                                 <div
                                     class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-blue-600 border border-white rounded-full light:border-gray-800">
                                     <svg class="w-2 h-2 text-white" aria-hidden="true"
@@ -195,60 +185,60 @@
             </div>
         </div>
 
-		<div class="bg-blue-50  flex flex-col justify-center items-center p-6">
-			<div class="container mx-auto px-4 pt-10">
-				<div class="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8 mx-auto">
-					<h1 class="text-2xl font-bold text-gray-800 mb-8 text-center">Cetak Laporan</h1>
+        <div class="bg-blue-50  flex flex-col justify-center items-center p-6">
+            <div class="container mx-auto px-4 pt-10">
+                <div class="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8 mx-auto">
+                    <h1 class="text-2xl font-bold text-gray-800 mb-8 text-center">Cetak Laporan</h1>
 
-					<form action="cetak-laporan.php" method="GET" class="grid grid-cols-1 md:grid-cols-3 gap-6">
-						<!-- Pilih Bulan -->
-						<div>
-							<label for="bulan" class="block text-gray-700 font-semibold mb-2">Bulan</label>
-							<select id="bulan" name="bulan"
-								class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-								<option value="">Pilih Bulan</option>
-								<option value="01">Januari</option>
-								<option value="02">Februari</option>
-								<option value="03">Maret</option>
-								<option value="04">April</option>
-								<option value="05">Mei</option>
-								<option value="06">Juni</option>
-								<option value="07">Juli</option>
-								<option value="08">Agustus</option>
-								<option value="09">September</option>
-								<option value="10">Oktober</option>
-								<option value="11">November</option>
-								<option value="12">Desember</option>
-							</select>
-						</div>
+                    <form action="cetak-laporan.php" method="GET" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Pilih Bulan -->
+                        <div>
+                            <label for="bulan" class="block text-gray-700 font-semibold mb-2">Bulan</label>
+                            <select id="bulan" name="bulan"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Pilih Bulan</option>
+                                <option value="01">Januari</option>
+                                <option value="02">Februari</option>
+                                <option value="03">Maret</option>
+                                <option value="04">April</option>
+                                <option value="05">Mei</option>
+                                <option value="06">Juni</option>
+                                <option value="07">Juli</option>
+                                <option value="08">Agustus</option>
+                                <option value="09">September</option>
+                                <option value="10">Oktober</option>
+                                <option value="11">November</option>
+                                <option value="12">Desember</option>
+                            </select>
+                        </div>
 
-						<!-- Pilih Tahun -->
-						<div>
-							<label for="tahun" class="block text-gray-700 font-semibold mb-2">Tahun</label>
-							<select id="tahun" name="tahun"
-								class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
-								<option value="">Pilih Tahun</option>
-								<option value="2023">2023</option>
-								<option value="2024">2024</option>
-								<option value="2025">2025</option>
-							</select>
-						</div>
+                        <!-- Pilih Tahun -->
+                        <div>
+                            <label for="tahun" class="block text-gray-700 font-semibold mb-2">Tahun</label>
+                            <select id="tahun" name="tahun"
+                                class="w-full px-4 py-3 border border-gray-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Pilih Tahun</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                            </select>
+                        </div>
 
-						<!-- Tombol Cetak -->
-						<div class="flex items-end">
-							<button onclick="window.open('cetak.html', '_blank')"
-								class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow transition">
-								Cetak Laporan
-							</button>
-						</div>
-					</form>
-				</div>
+                        <!-- Tombol Cetak -->
+                        <div class="flex items-end">
+                            <button onclick="window.open('cetak.html', '_blank')"
+                                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow transition">
+                                Cetak Laporan
+                            </button>
+                        </div>
+                    </form>
+                </div>
 
-			</div>
+            </div>
 
 
-	</main>
-	<script>
+    </main>
+    <script>
         // Toggle Dropdown for User Profile
         function toggleDropdown() {
             const dropdown = document.getElementById("dropdown-menu");
@@ -275,7 +265,8 @@
 
             // Close sidebar if open and clicked outside on small screens
             // Check if sidebar is NOT hidden (-translate-x-full) and click is outside sidebar and toggle button
-            if (window.innerWidth < 640 && !sidebar.contains(e.target) && !toggleSidebarBtn.contains(e.target) && !sidebar.classList.contains('-translate-x-full')) {
+            if (window.innerWidth < 640 && !sidebar.contains(e.target) && !toggleSidebarBtn.contains(e
+                .target) && !sidebar.classList.contains('-translate-x-full')) {
                 sidebar.classList.add("-translate-x-full");
             }
         });
