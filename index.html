@@ -17,6 +17,16 @@
     .counter {
       transition: all 0.3s ease-in-out;
     }
+
+
+      @keyframes fadeIn {
+      from { opacity: 0; transform: translateX(-10px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.5s ease-in-out;
+    }
   </style>
 
 </head>
@@ -160,10 +170,9 @@
           class="bg-white p-6 rounded-xl shadow-lg text-center hover:shadow-xl transition-shadow duration-300"
           data-aos="zoom-in" data-aos-delay="300">
           <div class="flex justify-center mb-4">
-            <svg class="w-12 h-12 text-purple-600" fill="none" stroke="currentColor" stroke-width="2"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M17 20h5v-2a4 4 0 00-5-4M9 20H4v-2a4 4 0 015-4m3-6a4 4 0 100-8 4 4 0 000 8zM17 9a4 4 0 100-8 4 4 0 000 8z" />
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5.121 17.804A4 4 0 019 16h6a4 4 0 013.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </div>
           <div class="text-5xl font-bold text-purple-700 counter" data-target="872">0</div>
@@ -173,109 +182,120 @@
     </div>
   </section>
 
-<section id="aduan" class="px-6 py-12 lg:px-20 bg-white">
-  <div class="text-center mb-10" data-aos="fade-down">
-    <p class="text-sm text-blue-500 font-semibold uppercase">Aduan Terbaru</p>
-    <h2 class="text-3xl font-bold text-gray-800">Cek Pengaduan <span class="text-blue-500">Terbaru</span></h2>
-  </div>
-
-  <div class="grid lg:grid-cols-3 gap-10 items-start">
-    <!-- Kartu utama besar (kiri) -->
-    <article id="main-card" class="lg:col-span-2 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
-      data-aos="fade-right" data-aos-delay="100">
-      <img id="main-image" src="assets/image/Sejarah.webp"
-        alt="Ilustrasi Aduan" class="w-full md:w-1/2 h-60 md:h-auto object-cover">
-      <div class="p-6 flex flex-col justify-between">
-        <div>
-          <div class="flex items-center justify-between mb-2">
-            <span id="main-status"
-              class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Selesai</span>
-            <span id="main-date" class="text-sm text-gray-500">18 Juli 2024</span>
-          </div>
-          <h3 id="main-title" class="text-lg font-semibold text-gray-800 mb-2">
-            Harga makanan di kantin sekolah tidak konsisten
-          </h3>
-          <p id="main-description" class="text-gray-600 text-sm mb-4">
-            Beberapa siswa mengeluhkan harga yang terlalu mahal tanpa daftar harga yang jelas.
-          </p>
-        </div>
-        <div class="flex items-center justify-between mt-2 pt-3 border-t border-gray-200">
-          <div class="flex items-center space-x-2">
-            <img src="https://placehold.co/32x32" alt="User" class="w-8 h-8 rounded-full object-cover">
-            <span class="text-sm font-medium text-gray-700">A*** P*******</span>
-          </div>
-          <a id="main-detail-link" href="detail.html" class="text-sm text-blue-600 hover:underline font-semibold">Detail</a>
-        </div>
-      </div>
-    </article>
-
-    <!-- Daftar kartu mini (kanan) -->
-    <div class="space-y-6">
-      <article onclick="updateMainCard(this)"
-        class="flex bg-white shadow-2xl rounded-2xl p-2 space-x-4 cursor-pointer"
-        data-aos="fade-left" data-aos-delay="200"
-        data-title="Banyak komputer di lab TIK rusak dan lambat"
-        data-description="Kegiatan praktik terganggu dan tidak efektif."
-        data-image="assets/image/Sejarah.webp"
-        data-date="12 Juli 2024"
-        data-status="Pending"
-        data-status-color="bg-yellow-100 text-yellow-800"
-        data-detail="detail1.html">
-        <img src="assets/image/Sejarah.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
-        <div class="flex-1">
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full font-semibold">Pending</span>
-            <span class="text-xs text-gray-500">12 Juli 2024</span>
-          </div>
-          <h4 class="text-sm font-semibold text-gray-800">Banyak komputer di lab TIK rusak dan lambat</h4>
-          <p class="text-xs text-gray-500 mt-1">Kegiatan praktik terganggu dan tidak efektif.</p>
-        </div>
-      </article>
-
-      <article onclick="updateMainCard(this)"
-        class="flex bg-white shadow-2xl rounded-2xl p-2 space-x-4 cursor-pointer"
-        data-aos="fade-left" data-aos-delay="300"
-        data-title="Kondisi toilet kotor dan tidak ada air"
-        data-description="Toilet tidak nyaman bagi siswa perempuan."
-        data-image="assets/image/Sejarah.webp"
-        data-date="8 Juli 2024"
-        data-status="Proses"
-        data-status-color="bg-green-100 text-green-800"
-        data-detail="detail2.html">
-        <img src="assets/image/Sejarah.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
-        <div class="flex-1">
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-semibold">Proses</span>
-            <span class="text-xs text-gray-500">8 Juli 2024</span>
-          </div>
-          <h4 class="text-sm font-semibold text-gray-800">Kondisi toilet kotor dan tidak ada air</h4>
-          <p class="text-xs text-gray-500 mt-1">Toilet tidak nyaman bagi siswa perempuan.</p>
-        </div>
-      </article>
-
-      <article onclick="updateMainCard(this)"
-        class="flex bg-white shadow-2xl rounded-2xl p-2 space-x-4 cursor-pointer"
-        data-aos="fade-left" data-aos-delay="400"
-        data-title="Jalan berlubang dekat asrama siswa"
-        data-description="Membahayakan siswa saat pergi dan pulang sekolah."
-        data-image="assets/image/Sejarah.webp"
-        data-date="5 Juli 2024"
-        data-status="Selesai"
-        data-status-color="bg-blue-100 text-blue-800"
-        data-detail="detail3.html">
-        <img src="assets/image/Sejarah.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
-        <div class="flex-1">
-          <div class="flex items-center justify-between mb-1">
-            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full font-semibold">Selesai</span>
-            <span class="text-xs text-gray-500">5 Juli 2024</span>
-          </div>
-          <h4 class="text-sm font-semibold text-gray-800">Jalan berlubang dekat asrama siswa</h4>
-          <p class="text-xs text-gray-500 mt-1">Membahayakan siswa saat pergi dan pulang sekolah.</p>
-        </div>
-      </article>
+  <section id="aduan" class="px-6 py-12 lg:px-20 bg-white">
+    <div class="text-center mb-10" data-aos="fade-down">
+      <p class="text-sm text-blue-500 font-semibold uppercase">Aduan Terbaru</p>
+      <h2 class="text-3xl font-bold text-gray-800">Cek Pengaduan <span class="text-blue-500">Terbaru</span></h2>
     </div>
-  </div>
-</section>
+
+    <div class="grid lg:grid-cols-3 gap-10 items-start">
+      <!-- Kartu utama besar (kiri) -->
+      <article id="main-card" class="lg:col-span-2 bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row"
+        data-aos="fade-right" data-aos-delay="100">
+        <img id="main-image" src="assets/image/Sejarah.webp"
+          alt="Ilustrasi Aduan" class="w-full md:w-1/2 h-60 md:h-auto object-cover">
+        <div class="p-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-2">
+              <span id="main-status"
+                class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Selesai</span>
+              <span id="main-date" class="text-sm text-gray-500">18 Juli 2024</span>
+            </div>
+            <h3 id="main-title" class="text-lg font-semibold text-gray-800 mb-2">
+              Harga makanan di kantin sekolah tidak konsisten
+            </h3>
+            <p id="main-description" class="text-gray-600 text-sm mb-4">
+              Beberapa siswa mengeluhkan harga yang terlalu mahal tanpa daftar harga yang jelas.
+            </p>
+          </div>
+          <div class="flex items-center justify-between mt-2 pt-3 border-t border-gray-200">
+            <div class="flex items-center space-x-2">
+              <img src="https://placehold.co/32x32" alt="User" class="w-8 h-8 rounded-full object-cover">
+              <span class="text-sm font-medium text-gray-700">A*** P*******</span>
+            </div>
+            <a id="main-detail-link" href="detail.html"
+              class="relative inline-flex items-center justify-center px-4 py-1.5 overflow-hidden
+                    text-sm font-medium text-blue-600 transition duration-300 ease-out border-2 border-blue-600
+                    rounded-full group hover:text-white">
+
+              <span class="absolute left-0 top-0 w-full h-full bg-blue-600 
+                          transition-transform duration-300 ease-out transform scale-x-0 
+                          origin-left group-hover:scale-x-100 rounded-full z-0">
+              </span>
+
+              <span class="relative z-10">Detail</span>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Daftar kartu mini (kanan) -->
+      <div class="space-y-6">
+        <article onclick="updateMainCard(this)"
+          class="flex bg-white shadow-2xl rounded-2xl p-2 space-x-4 cursor-pointer"
+          data-aos="fade-left" data-aos-delay="200"
+          data-title="Banyak komputer di lab TIK rusak dan lambat"
+          data-description="Kegiatan praktik terganggu dan tidak efektif."
+          data-image="assets/image/Sejarah.webp"
+          data-date="12 Juli 2024"
+          data-status="Pending"
+          data-status-color="bg-yellow-100 text-yellow-800"
+          data-detail="detail1.html">
+          <img src="assets/image/Sejarah.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
+          <div class="flex-1">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full font-semibold">Pending</span>
+              <span class="text-xs text-gray-500">12 Juli 2024</span>
+            </div>
+            <h4 class="text-sm font-semibold text-gray-800">Banyak komputer di lab TIK rusak dan lambat</h4>
+            <p class="text-xs text-gray-500 mt-1">Kegiatan praktik terganggu dan tidak efektif.</p>
+          </div>
+        </article>
+
+        <article onclick="updateMainCard(this)"
+          class="flex bg-white shadow-2xl rounded-2xl p-2 space-x-4 cursor-pointer"
+          data-aos="fade-left" data-aos-delay="300"
+          data-title="Kondisi toilet kotor dan tidak ada air"
+          data-description="Toilet tidak nyaman bagi siswa perempuan."
+          data-image="assets/image/Sejarah.webp"
+          data-date="8 Juli 2024"
+          data-status="Proses"
+          data-status-color="bg-green-100 text-green-800"
+          data-detail="detail2.html">
+          <img src="assets/image/Sejarah.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
+          <div class="flex-1">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full font-semibold">Proses</span>
+              <span class="text-xs text-gray-500">8 Juli 2024</span>
+            </div>
+            <h4 class="text-sm font-semibold text-gray-800">Kondisi toilet kotor dan tidak ada air</h4>
+            <p class="text-xs text-gray-500 mt-1">Toilet tidak nyaman bagi siswa perempuan.</p>
+          </div>
+        </article>
+
+        <article onclick="updateMainCard(this)"
+          class="flex bg-white shadow-2xl rounded-2xl p-2 space-x-4 cursor-pointer"
+          data-aos="fade-left" data-aos-delay="400"
+          data-title="Jalan berlubang dekat asrama siswa"
+          data-description="Membahayakan siswa saat pergi dan pulang sekolah."
+          data-image="assets/image/Sejarah.webp"
+          data-date="5 Juli 2024"
+          data-status="Selesai"
+          data-status-color="bg-blue-100 text-blue-800"
+          data-detail="detail3.html">
+          <img src="assets/image/Sejarah.webp" alt="Gambar" class="w-20 h-20 object-cover rounded-lg">
+          <div class="flex-1">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full font-semibold">Selesai</span>
+              <span class="text-xs text-gray-500">5 Juli 2024</span>
+            </div>
+            <h4 class="text-sm font-semibold text-gray-800">Jalan berlubang dekat asrama siswa</h4>
+            <p class="text-xs text-gray-500 mt-1">Membahayakan siswa saat pergi dan pulang sekolah.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <!-- Faq -->
   <section id="fag" class="bg-gray-50 py-12 px-6 lg:px-24">
@@ -424,17 +444,17 @@
     </div>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 800,
-      once: true
-    });
-  </script>
-  
+ <!-- AOS (Animate On Scroll) -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
 
-  <script>
-     // Toggle Mobile Menu
+<script>
+  // Toggle Mobile Menu
   const toggleBtn = document.getElementById('navbar-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
 
@@ -443,8 +463,11 @@
     mobileMenu.classList.toggle('max-h-[500px]');
   });
 
-  // Fungsi untuk animasi angka dari 0 ke target
+  // Fungsi untuk animasi angka dari 0 ke target (Counter)
   function animateCounter(counter) {
+    if (counter.dataset.animated === "true") return; // Sudah dijalankan? Skip
+    counter.dataset.animated = "true";
+
     counter.innerText = '0';
     const target = +counter.getAttribute('data-target');
     let current = 0;
@@ -463,7 +486,7 @@
     update();
   }
 
-  // Gunakan IntersectionObserver untuk trigger saat elemen terlihat
+  // Trigger animasi counter saat masuk viewport
   const counters = document.querySelectorAll('.counter');
   const observer = new IntersectionObserver(
     (entries) => {
@@ -474,7 +497,7 @@
       });
     },
     {
-      threshold: 0.6, // bisa disesuaikan, semakin tinggi semakin butuh banyak area terlihat
+      threshold: 0.6,
     }
   );
 
@@ -482,29 +505,21 @@
     observer.observe(counter);
   });
 
-    // const toggleBtn = document.getElementById('navbar-toggle');
-    // const mobileMenu = document.getElementById('mobile-menu');
+  // Toggle Dropdown FAQ
+  function toggleDropdown(faqId) {
+    const content = document.getElementById(faqId);
+    const icon = document.getElementById(faqId + '-icon');
 
-    // toggleBtn.addEventListener('click', () => {
-    //   mobileMenu.classList.toggle('hidden');
-    // });
-
-    function toggleDropdown(faqId) {
-      const content = document.getElementById(faqId);
-      const icon = document.getElementById(faqId + '-icon');
-
-      if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        icon.classList.add('rotate-180');
-      } else {
-        content.classList.add('hidden');
-        icon.classList.remove('rotate-180');
-      }
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      icon.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      icon.classList.remove('rotate-180');
     }
-  </script>
+  }
 
-<!-- script detail -->
-<script>
+  // Ganti Konten Utama dari Kartu (detail aduan)
   function updateMainCard(card) {
     const title = card.getAttribute('data-title');
     const desc = card.getAttribute('data-description');
@@ -526,23 +541,10 @@
 
     const mainCard = document.getElementById('main-card');
     mainCard.classList.remove('animate-fadeIn');
-    void mainCard.offsetWidth;
+    void mainCard.offsetWidth; // Force reflow
     mainCard.classList.add('animate-fadeIn');
   }
 </script>
-
-<style>
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateX(-10px); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-
-  .animate-fadeIn {
-    animation: fadeIn 0.5s ease-in-out;
-  }
-</style>
-
-
 
 </body>
 

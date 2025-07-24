@@ -85,12 +85,22 @@
     </div>
 
     <div class="space-y-5">
-      <!-- Tombol Kembali -->
-      <a href="index.html" class="inline-flex items-center text-sm font-medium  text-blue-600 hover:underline hover:text-blue-800 transition">
-        ← Kembali
+      <a href="index.html"
+        class="relative inline-flex items-center justify-center px-3 py-1 text-xs font-medium 
+              text-blue-600 transition duration-300 ease-out border-2 border-blue-600 
+              rounded-full group hover:text-white">
+        
+        <span class="absolute right-0 top-0 w-full h-full bg-blue-600 
+                    transition-transform duration-300 ease-out transform scale-x-0 
+                    origin-right group-hover:scale-x-100 rounded-full z-0">
+        </span>
+        
+        <span class="relative z-10">Kembali</span>
       </a>
-
-      <span class="inline-block bg-green-100 text-green-700 text-sm px-4 py-1 rounded-full font-semibold">Selesai</span>
+      
+      <span id="main-status"
+         class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs font-semibold">Selesai</span>
+       <span id="main-date" class="text-sm text-gray-500">18 Juli 2024</span>
 
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">
         Harga makanan di kantin sekolah tidak konsisten
