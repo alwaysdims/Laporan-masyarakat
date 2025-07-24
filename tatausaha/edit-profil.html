@@ -108,11 +108,38 @@
 						Notifications
 					</div>
 					<div class="divide-y divide-gray-100 light:divide-gray-700">
-						<a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
-							<div class="shrink-0">
-								<img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
+						<!-- Notifikasi 1 - Pending -->
+						<div class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
+							<div class="shrink-0 relative">
+								<img class="rounded-full object-cover w-11 h-11" src="image/logo-smkn2kra.webp"
+									alt="Galih image">
 								<div
-									class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-blue-600 border border-white rounded-full light:border-gray-800">
+									class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-yellow-500 border border-white rounded-full light:border-gray-800">
+									<svg class="w-2 h-2 text-white" aria-hidden="true"
+										xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+										<path
+											d="M10 2a8 8 0 1 0 0 16A8 8 0 0 0 10 2Zm.75 12.5h-1.5v-1.5h1.5v1.5Zm0-3h-1.5V6h1.5v3.5Z" />
+									</svg>
+								</div>
+							</div>
+							<div class="w-full ps-3">
+								<div class="text-gray-500 text-sm light:text-gray-400">
+									<span class="font-semibold text-gray-900 light:text-white">Tata Usaha</span>
+								</div>
+								<span class="text-gray-400 text-xs light:text-white">
+									Galih Putra melaporkan: "Beberapa dokumen penting tidak tertata dengan rapi..."
+								</span>
+								<div class="text-xs text-yellow-600 light:text-yellow-500">20 Juli 2025, 09:30</div>
+							</div>
+						</div>
+
+						<!-- Notifikasi 2 - Proses -->
+						<div class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
+							<div class="shrink-0 relative">
+								<img class="rounded-full object-cover w-11 h-11" src="image/logo-smkn2kra.webp"
+									alt="Laila image">
+								<div
+									class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-green-600 border border-white rounded-full light:border-gray-800">
 									<svg class="w-2 h-2 text-white" aria-hidden="true"
 										xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
 										<path
@@ -123,41 +150,17 @@
 								</div>
 							</div>
 							<div class="w-full ps-3">
-								<div class="text-gray-500 text-sm light:text-gray-400"> <span
-										class="font-semibold text-gray-900 light:text-white">Kesiswaan</span></div>
-										
-									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
-									
-								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
-							</div>
-						</a>
-						
-						<a href="detail-riwayat.html" class="flex px-4 py-3 hover:bg-gray-100 light:hover:bg-gray-700">
-							<div class="shrink-0">
-								<img class="rounded-full object-cover w-11 h-11" src="image/admin.jpg" alt="Jese image">
-								<div
-									class="absolute flex items-center justify-center w-5 h-5 ms-6 -mt-5 bg-blue-600 border border-white rounded-full light:border-gray-800">
-									<svg class="w-2 h-2 text-white" aria-hidden="true"
-										xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
-										<path
-											d="M1 18h16a1 1 0 0 0 1-1v-6h-4.439a.99.99 0 0 0-.908.6 3.978 3.978 0 0 1-7.306 0 .99.99 0 0 0-.908-.6H0v6a1 1 0 0 0 1 1Z" />
-										<path
-											d="M4.439 9a2.99 2.99 0 0 1 2.742 1.8 1.977 1.977 0 0 0 3.638 0A2.99 2.99 0 0 1 13.561 9H17.8L15.977.783A1 1 0 0 0 15 0H3a1 1 0 0 0-.977.783L.2 9h4.239Z" />
-									</svg>
+								<div class="text-gray-500 text-sm light:text-gray-400">
+									<span class="font-semibold text-gray-900 light:text-white">Tata Usaha</span>
 								</div>
+								<span class="text-gray-400 text-xs light:text-white">
+									Laila Wulandari mengajukan permintaan pengadaan ulang ATK...
+								</span>
+								<div class="text-xs text-green-600 light:text-green-500">21 Juli 2025, 11:00</div>
 							</div>
-							<div class="w-full ps-3">
-								<div class="text-gray-500 text-sm light:text-gray-400"> <span
-										class="font-semibold text-gray-900 light:text-white">Waka Kurikulum</span></div>
-										
-									<span class="text-gray-400 text-xs light:text-white">Lorem ipsum dolor sit amet consectetur ullam repellat...</span>
-									
-								<div class="text-xs text-blue-600 light:text-blue-500">a few moments ago</div>
-							</div>
-						</a>
-						
-						
+						</div>
 					</div>
+
 					<a href="notifikasi.html"
 						class="block py-2 text-sm font-medium text-center text-gray-900 rounded-b-lg bg-gray-50 hover:bg-gray-100 light:bg-gray-800 light:hover:bg-gray-700 light:text-white">
 						<div class="inline-flex items-center ">
@@ -169,7 +172,8 @@
 							View all
 						</div>
 					</a>
-					</div>
+				</div>
+
 
 				<!-- Header: Foto & Nama -->
 				<div class="relative">
@@ -189,7 +193,8 @@
 							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
 								style="background-image: url('image/admin.jpg');">
 							</div>
-							<a href="profil.html" class="mt-2 font-semibold text-green-800 hover:underline hover:text-green-600 transition">
+							<a href="profil.html"
+								class="mt-2 font-semibold text-green-800 hover:underline hover:text-green-600 transition">
 								Tata Usaha
 							</a>
 						</div>
@@ -198,7 +203,8 @@
 
 						<!-- Menu -->
 						<a href="edit-profil.html" class="block px-4 py-2 hover:bg-blue-50 text-center">Edit Profil</a>
-						<a href="/laporan-masyarakat/index.html" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
+						<a href="/laporan-masyarakat/index.html"
+							class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
 					</div>
 				</div>
 			</div>
