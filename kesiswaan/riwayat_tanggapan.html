@@ -180,7 +180,9 @@
 							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
 								style="background-image: url('image/admin.jpg');">
 							</div>
-							<p class="mt-2 font-semibold text-blue-800">siswa</p>
+							<a href="profil.html" class="mt-2 font-semibold text-green-800 hover:underline hover:text-green-600 transition">
+								Kesiswaan
+							</a>
 						</div>
 
 						<hr class="border-gray-200" />
@@ -210,6 +212,10 @@
 				class="filter-button text-green-600 border-b-2 border-green-600 pb-2 font-medium">
 				Riwayat
 			</button>
+			<button onclick="filterLaporan('pending', this)" id="btn-all"
+				class="filter-button text-gray-500 pb-2 hover:text-black">
+				Pending
+			</button>
 			<button onclick="filterLaporan('proses', this)" id="btn-proses"
 				class="filter-button text-gray-500 pb-2 hover:text-black">
 				Proses
@@ -227,76 +233,103 @@
 		<!-- Laporan Items -->
 		<div id="laporan-container" class="space-y-4 lg:px-10">
 
+			<div onclick="window.location.href='detail-riwayat-pending.html'" data-status="pending"
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Galang Pratama</div>
+					<div class="font-medium text-gray-900">Permohonan Perbaikan AC</div>
+					<div class="text-xs text-gray-600">AC di ruang kelas XI RPL B tidak berfungsi sejak kemarin, mohon
+						segera diperbaiki
+						agar proses belajar tetap nyaman.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Sarana Prasarana</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">22 Juli 2025, 08:30</div>
+					<button
+						class="text-xs font-semibold bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full">Pending</button>
+				</div>
+			</div>
+
+
 			<!-- DITERIMA - Kesiswaan -->
 			<div onclick="window.location.href='detail-riwayat-proses.html'" data-status="proses"
-			  class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
-			  <img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-			  <div class="flex-1">
-				<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Andini Kusuma</div>
-				<div class="font-medium text-gray-900">Peminjaman Ruang OSIS</div>
-				<div class="text-xs text-gray-600">Saya ingin meminjam ruang OSIS untuk rapat kegiatan sekolah, mohon
-				  persetujuan dari pihak kesiswaan.</div>
-				<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
-			  </div>
-			  <div class="flex flex-col items-end">
-				<div class="text-sm font-semibold text-gray-800 mb-2">21 Juli 2025, 10:10</div>
-				<button class="text-xs font-semibold bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full">proses</button>
-			  </div>
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Andini Kusuma</div>
+					<div class="font-medium text-gray-900">Peminjaman Ruang OSIS</div>
+					<div class="text-xs text-gray-600">Saya ingin meminjam ruang OSIS untuk rapat kegiatan sekolah,
+						mohon
+						persetujuan dari pihak kesiswaan.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">21 Juli 2025, 10:10</div>
+					<button
+						class="text-xs font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">Proses</button>
+				</div>
 			</div>
-		  
+
 			<!-- PROSES - Kesiswaan -->
 			<div onclick="window.location.href='detail-riwayat-proses.html'" data-status="proses"
-			  class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
-			  <img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-			  <div class="flex-1">
-				<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Rizky Hidayat</div>
-				<div class="font-medium text-gray-900">Surat Izin Tidak Masuk</div>
-				<div class="text-xs text-gray-600">Saya mengajukan surat izin karena keperluan keluarga, mohon diproses oleh
-				  bagian kesiswaan.</div>
-				<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
-			  </div>
-			  <div class="flex flex-col items-end">
-				<div class="text-sm font-semibold text-gray-800 mb-2">20 Juli 2025, 09:45</div>
-				<button class="text-xs font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">Proses</button>
-			  </div>
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Rizky Hidayat</div>
+					<div class="font-medium text-gray-900">Surat Izin Tidak Masuk</div>
+					<div class="text-xs text-gray-600">Saya mengajukan surat izin karena keperluan keluarga, mohon
+						diproses oleh
+						bagian kesiswaan.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">20 Juli 2025, 09:45</div>
+					<button
+						class="text-xs font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">Proses</button>
+				</div>
 			</div>
-		  
+
 			<!-- SELESAI - Kesiswaan -->
 			<div onclick="window.location.href='detail-riwayat-selesai.html'" data-status="selesai"
-			  class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
-			  <img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-			  <div class="flex-1">
-				<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Fahri Ramadhan</div>
-				<div class="font-medium text-gray-900">Pembuatan Kartu OSIS</div>
-				<div class="text-xs text-gray-600">Saya sudah menerima kartu OSIS yang saya ajukan minggu lalu, terima kasih atas
-				  bantuannya.</div>
-				<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
-			  </div>
-			  <div class="flex flex-col items-end">
-				<div class="text-sm font-semibold text-gray-800 mb-2">19 Juli 2025, 13:25</div>
-				<button class="text-xs font-semibold bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Selesai</button>
-			  </div>
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Fahri Ramadhan</div>
+					<div class="font-medium text-gray-900">Pembuatan Kartu OSIS</div>
+					<div class="text-xs text-gray-600">Saya sudah menerima kartu OSIS yang saya ajukan minggu lalu,
+						terima kasih atas
+						bantuannya.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">19 Juli 2025, 13:25</div>
+					<button
+						class="text-xs font-semibold bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Selesai</button>
+				</div>
 			</div>
-		  
+
 			<!-- DITOLAK - Kesiswaan -->
 			<div onclick="window.location.href='detail-riwayat-ditolak.html'" data-status="ditolak"
-			  class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
-			  <img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-			  <div class="flex-1">
-				<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Dwi Salsabila</div>
-				<div class="font-medium text-gray-900">Permintaan Dispensasi</div>
-				<div class="text-xs text-gray-600">Saya minta dispensasi keterlambatan karena bangun kesiangan, namun alasan
-				  tidak valid dan ditolak oleh kesiswaan.</div>
-				<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
-			  </div>
-			  <div class="flex flex-col items-end">
-				<div class="text-sm font-semibold text-gray-800 mb-2">18 Juli 2025, 07:55</div>
-				<button class="text-xs font-semibold bg-red-100 text-red-600 px-2 py-1 rounded-full">Ditolak</button>
-			  </div>
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
+				<div class="flex-1">
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Dwi Salsabila</div>
+					<div class="font-medium text-gray-900">Permintaan Dispensasi</div>
+					<div class="text-xs text-gray-600">Saya minta dispensasi keterlambatan karena bangun kesiangan,
+						namun alasan
+						tidak valid dan ditolak oleh kesiswaan.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
+				</div>
+				<div class="flex flex-col items-end">
+					<div class="text-sm font-semibold text-gray-800 mb-2">18 Juli 2025, 07:55</div>
+					<button
+						class="text-xs font-semibold bg-red-100 text-red-600 px-2 py-1 rounded-full">Ditolak</button>
+				</div>
 			</div>
-		  
-		  </div>
-		  
+
+		</div>
+
 
 	</main>
 
@@ -358,7 +391,6 @@
 				menu.classList.add("hidden");
 			}
 		});
-		
 
 	</script>
 </body>
