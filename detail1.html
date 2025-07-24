@@ -43,8 +43,8 @@
       </div>
       <div class="hidden md:flex items-center space-x-6">
         <ul class="flex space-x-6 font-medium text-gray-700">
-          <li><a href="#home" class="hover:text-blue-600 transition duration-300">Home</a></li>
-          <li><a href="#aduan" class="hover:text-blue-600 transition duration-300">Aduan</a></li>
+          <li><a href="index.html" class="hover:text-blue-600 transition duration-300">Home</a></li>
+          <li><a href="index.html#aduan" class="hover:text-blue-600 transition duration-300">Aduan</a></li>
           <li><a href="tentang.html#tentang" class="hover:text-blue-600 transition duration-300">Tentang</a></li>
         </ul>
         <div class="flex items-center space-x-3">
@@ -86,12 +86,19 @@
 
     <div class="space-y-5">
       <!-- Tombol Kembali -->
-      <a href="index.html" class="inline-flex items-center text-sm font-medium  text-blue-600 hover:underline hover:text-blue-800 transition">
-        ← Kembali
-      </a>
-
-      <span class="inline-block bg-green-100 text-green-700 text-sm px-4 py-1 rounded-full font-semibold">Selesai</span>
-
+      <div class="flex justify-between items-center w-full mb-4">
+        <!-- Badge Selesai di kiri -->
+        <span class="inline-block bg-yellow-100 text-yellow-700 text-sm px-4 py-1 rounded-full font-semibold">
+          Pending
+        </span>
+      
+        <!-- Tombol Kembali di kanan -->
+        <a href="index.html"
+           class="inline-flex items-center text-sm font-medium text-blue-600 hover:underline hover:text-blue-800 transition">
+          ← Kembali
+        </a>
+      </div>
+      
       <h2 class="text-2xl sm:text-3xl font-bold text-gray-800">
         Banyak komputer di lab TIK rusak dan lambat
       </h2>
