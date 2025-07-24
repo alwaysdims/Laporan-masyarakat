@@ -185,8 +185,8 @@
   <section id="aduan" class="px-6 py-12 lg:px-20 bg-white">
     <div class="text-center mb-10" data-aos="fade-down">
       <p class="text-sm text-blue-500 font-semibold uppercase">Aduan Terbaru</p>
-      <h2 class="text-3xl font-bold text-gray-800">Cek Pengaduan <span class="text-blue-500">Terbaru</span></h2>
     </div>
+
 
     <div class="grid lg:grid-cols-3 gap-10 items-start">
       <!-- Kartu utama besar (kiri) -->
@@ -296,7 +296,6 @@
       </div>
     </div>
   </section>
-
   <!-- Faq -->
   <section id="fag" class="bg-gray-50 py-12 px-6 lg:px-24">
     <div class="max-w-4xl mx-auto">
@@ -519,7 +518,19 @@
     }
   }
 
-  // Ganti Konten Utama dari Kartu (detail aduan)
+    function showDetail(element) {
+      document.getElementById('main-title').innerText = element.dataset.title;
+      document.getElementById('main-description').innerText = element.dataset.description;
+      document.getElementById('main-date').innerText = element.dataset.date;
+      document.getElementById('main-user').innerText = element.dataset.user;
+      document.getElementById('main-image').src = element.dataset.image;
+
+      const categorySpan = document.getElementById('main-category');
+      categorySpan.innerText = element.dataset.category;
+
+      const color = element.dataset.color;
+      categorySpan.className = text-sm px-3 py-1 rounded-full text-xs font-semibold bg-${color}-100 text-${color}-800;
+    }
   function updateMainCard(card) {
     const title = card.getAttribute('data-title');
     const desc = card.getAttribute('data-description');
@@ -545,6 +556,7 @@
     mainCard.classList.add('animate-fadeIn');
   }
 </script>
+
 
 </body>
 

@@ -34,22 +34,24 @@
 				</svg>
 				Dashboard
 			</a>
-			<a href="laporan_buat.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
+
+			<a href="tanggapan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-						d="M8 16h8M8 12h8m-8-4h8M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+						d="M17 8h2a2 2 0 012 2v7a2 2 0 01-2 2H7l-4 4V10a2 2 0 012-2h2" />
 				</svg>
-				Buat Laporan
+				Tanggapan
 			</a>
-			<a href="riwayat.html"
+
+			<a href="riwayat_tanggapan.html"
 				class="flex items-center gap-2 bg-white text-blue-700 font-semibold p-3 rounded-lg shadow ring-2 ring-blue-400 transition">
 				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
 					stroke="currentColor">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
 						d="M9 5h6m2 0a2 2 0 012 2v11a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h2m2-1h2a1 1 0 011 1v0a1 1 0 01-1 1h-2a1 1 0 01-1-1v0a1 1 0 011-1z" />
 				</svg>
-				Riwayat Laporan
+				Riwayat Tanggapan
 			</a>
 
 			<a href="cetak-laporan.html" class="flex items-center gap-2 hover:bg-blue-700 p-3 rounded-lg transition">
@@ -60,6 +62,7 @@
 				</svg>
 				Cetak Laporan
 			</a>
+
 		</nav>
 	</aside>
 
@@ -177,14 +180,15 @@
 							<div class="w-16 h-16 rounded-full bg-gray-200 bg-cover bg-center"
 								style="background-image: url('image/admin.jpg');">
 							</div>
-							<p class="mt-2 font-semibold text-blue-800">siswa</p>
+							<p class="mt-2 font-semibold text-blue-800">BK</p>
 						</div>
 
 						<hr class="border-gray-200" />
 
 						<!-- Menu -->
 						<a href="edit-profil.html" class="block px-4 py-2 hover:bg-blue-50 text-center">Edit Profil</a>
-						<a href="#" class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
+						<a href="/laporan-masyarakat/index.html"
+							class="block px-4 py-2 hover:bg-blue-50 text-center text-red-500">Logout</a>
 					</div>
 				</div>
 			</div>
@@ -206,10 +210,6 @@
 				class="filter-button text-green-600 border-b-2 border-green-600 pb-2 font-medium">
 				Riwayat
 			</button>
-			<button onclick="filterLaporan('pending', this)" id="btn-pending"
-				class="filter-button text-gray-500 pb-2 hover:text-black">
-				Pending
-			</button>
 			<button onclick="filterLaporan('proses', this)" id="btn-proses"
 				class="filter-button text-gray-500 pb-2 hover:text-black">
 				Proses
@@ -226,179 +226,76 @@
 
 		<!-- Laporan Items -->
 		<div id="laporan-container" class="space-y-4 lg:px-10">
-
-			<!-- KESISWAAN -->
-			<div onclick="window.location.href='detail-riwayat-selesai.html'" data-status="selesai"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+			<!-- DITERIMA - BK -->
+			<div onclick="window.location.href='detail-riwayat-pending.html'" data-status="proses"
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Siti Aminah</div>
-					<div class="font-medium text-gray-900">Toilet Belakang Gedung B</div>
-					<div class="text-xs text-gray-600">Toilet bagian belakang rusak dan air tidak mengalir, sudah
-						diperbaiki sekarang. Terima kasih.</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">16 Juli 2025, 08:10</div>
-					<button
-						class="text-xs font-semibold bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Selesai</button>
-				</div>
-			</div>
-
-			<!-- TATA USAHA -->
-			<div onclick="window.location.href='detail-riwayat-ditolak.html'" data-status="ditolak"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
-				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Nur Hasanah</div>
-					<div class="font-medium text-gray-900">Kantin Sekolah</div>
-					<div class="text-xs text-gray-600">Banyak sampah menumpuk di sekitar kantin dan belum dibersihkan
-						sejak pagi. Harap ditindak.</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Tata Usaha (TU)</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">19 Juli 2025, 09:00</div>
-					<button
-						class="text-xs font-semibold bg-red-100 text-red-600 px-2 py-1 rounded-full">Ditolak</button>
-				</div>
-			</div>
-
-			<!-- Laporan 6 -->
-			<div data-status="selesai"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4">
-				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Amnan Khoirul</div>
-					<div class="font-medium text-gray-900">Toilet Belakang Gedung A</div>
-					<div class="text-xs text-gray-600">Toilet bagian belakang rusak dan air tidak mengalir, sudah
-						diperbaiki sekarang. Terima kasih.</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Bimbingan Konseling (BK)</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">16 Juli 2025, 08:10</div>
-				</div>
-			</div>
-
-			<!-- BK -->
-			<div onclick="window.location.href='detail-riwayat-pending.html'" data-status="pending"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
-				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Aldo Saputra</div>
-					<div class="font-medium text-gray-900">Tindakan Bullying di Kelas</div>
-					<div class="text-xs text-gray-600">Terjadi dugaan bullying terhadap siswa baru di kelas XI TKJ.
-						Mohon ditindaklanjuti.</div>
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Sinta Lestari</div>
+					<div class="font-medium text-gray-900">Permintaan Konseling Pribadi</div>
+					<div class="text-xs text-gray-600">Saya merasa cemas akhir-akhir ini dan ingin berkonsultasi dengan
+						guru BK.</div>
 					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : BK</div>
 				</div>
 				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">19 Juli 2025, 12:30</div>
+					<div class="text-sm font-semibold text-gray-800 mb-2">21 Juli 2025, 14:20</div>
 					<button
 						class="text-xs font-semibold bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full">Pending</button>
 				</div>
 			</div>
 
-			<!-- WAKA KURIKULUM -->
+
+			<!-- PROSES - BK -->
 			<div onclick="window.location.href='detail-riwayat-proses.html'" data-status="proses"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Intan Wulandari</div>
-					<div class="font-medium text-gray-900">Jadwal Kelas Tidak Sinkron</div>
-					<div class="text-xs text-gray-600">Jadwal pelajaran kelas X RPL tidak sinkron dengan guru yang
-						mengajar. Perlu penyesuaian agar tidak bentrok.</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Waka Kurikulum</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">18 Juli 2025, 15:20</div>
-					<button
-						class="text-xs font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">Proses</button>
-				</div>
-			</div>
-			<!-- BK -->
-			<div onclick="window.location.href='detail-riwayat-selesai.html'" data-status="selesai"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
-				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Rendi Pratama</div>
-					<div class="font-medium text-gray-900">Permasalahan Pribadi Siswa</div>
-					<div class="text-xs text-gray-600">Ada siswa yang mengalami tekanan emosional dan butuh pendampingan
-						segera.</div>
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Riko Prasetyo</div>
+					<div class="font-medium text-gray-900">Masalah Pergaulan</div>
+					<div class="text-xs text-gray-600">Saya ingin membicarakan tentang tekanan dari teman sebaya yang
+						saya alami.</div>
 					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : BK</div>
 				</div>
 				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">14 Juli 2025, 10:15</div>
-					<button
-						class="text-xs font-semibold bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Selesai</button>
-				</div>
-			</div>
-
-			<!-- Kesiswaan -->
-			<div onclick="window.location.href='detail-riwayat-proses.html'" data-status="proses"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
-				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Vania Destiara</div>
-					<div class="font-medium text-gray-900">Terlambat Masuk Sekolah</div>
-					<div class="text-xs text-gray-600">Banyak siswa terlambat masuk kelas tanpa tindakan. Mohon
-						pengawasan lebih lanjut.</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Kesiswaan</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">18 Juli 2025, 06:50</div>
+					<div class="text-sm font-semibold text-gray-800 mb-2">20 Juli 2025, 11:00</div>
 					<button
 						class="text-xs font-semibold bg-green-100 text-green-600 px-2 py-1 rounded-full">Proses</button>
 				</div>
 			</div>
 
-			<!-- Tata Usaha -->
-			<div onclick="window.location.href='detail-riwayat-pending.html'" data-status="pending"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
-				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
-				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Rika Ayu</div>
-					<div class="font-medium text-gray-900">Kesalahan Data Nilai Rapor</div>
-					<div class="text-xs text-gray-600">Nilai pada rapor semester genap tidak sesuai dengan hasil ujian.
-						Mohon klarifikasi.</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Tata Usaha (TU)</div>
-				</div>
-				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">20 Juli 2025, 13:40</div>
-					<button
-						class="text-xs font-semibold bg-yellow-100 text-yellow-600 px-2 py-1 rounded-full">Pending</button>
-				</div>
-			</div>
 
-			<!-- Waka Kurikulum -->
+			<!-- SELESAI - BK -->
 			<div onclick="window.location.href='detail-riwayat-selesai.html'" data-status="selesai"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Dini Karlina</div>
-					<div class="font-medium text-gray-900">Ketidaksesuaian Jadwal Guru</div>
-					<div class="text-xs text-gray-600">Guru Matematika tidak masuk sesuai jadwal karena konflik jadwal
-						antar kelas.</div>
-					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : Waka Kurikulum</div>
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Nur Aisyah</div>
+					<div class="font-medium text-gray-900">Konseling Akademik</div>
+					<div class="text-xs text-gray-600">Saya sudah menerima arahan dari guru BK terkait pilihan jurusan
+						saya. Terima kasih.</div>
+					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : BK</div>
 				</div>
 				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">13 Juli 2025, 09:05</div>
+					<div class="text-sm font-semibold text-gray-800 mb-2">19 Juli 2025, 10:30</div>
 					<button
 						class="text-xs font-semibold bg-blue-100 text-blue-600 px-2 py-1 rounded-full">Selesai</button>
 				</div>
 			</div>
 
-			<!-- BK -->
+
+			<!-- DITOLAK - BK -->
 			<div onclick="window.location.href='detail-riwayat-ditolak.html'" data-status="ditolak"
-				class="laporan-card bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
+				class="laporan-card cursor-pointer bg-white rounded-xl shadow-lg border px-4 py-3 flex items-start space-x-4 hover:bg-gray-50 transition">
 				<img src="image/logo-smkn2kra.webp" alt="Logo" class="w-16 h-16 rounded-lg object-cover" />
 				<div class="flex-1">
-					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Rafi Nurhadi</div>
-					<div class="font-medium text-gray-900">Permintaan Surat Rekomendasi</div>
-					<div class="text-xs text-gray-600">Mengajukan surat rekomendasi untuk lomba debat namun belum
-						ditanggapi oleh BK.</div>
+					<div class="text-sm text-gray-500 mb-1">Nama Pengadu: Bayu Saputra</div>
+					<div class="font-medium text-gray-900">Permohonan Pindah Kelas</div>
+					<div class="text-xs text-gray-600">Permintaan pindah kelas saya ditolak karena alasan tidak memenuhi
+						kriteria BK.</div>
 					<div class="text-sm text-gray-500 mb-1">Ditujukan Kepada : BK</div>
 				</div>
 				<div class="flex flex-col items-end">
-					<div class="text-sm font-semibold text-gray-800 mb-2">12 Juli 2025, 14:25</div>
+					<div class="text-sm font-semibold text-gray-800 mb-2">18 Juli 2025, 08:40</div>
 					<button
 						class="text-xs font-semibold bg-red-100 text-red-600 px-2 py-1 rounded-full">Ditolak</button>
 				</div>
@@ -468,7 +365,6 @@
 				menu.classList.add("hidden");
 			}
 		});
-
 	</script>
 </body>
 
